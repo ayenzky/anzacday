@@ -17,8 +17,8 @@
   position: absolute;
   top:0;
   left:0;
-  /* opacity:0; */
-  /* overflow:hidden; */
+  visibility:hidden;
+  overflow:hidden;
   overflow-y:scroll;
   width:calc(100% + 50px);
   height: 100vh;
@@ -32,8 +32,8 @@
   outline:none;
 }
 
-.menu__level--current {
-  /* opacity:1; */
+.menu__level.menu__level--current {
+ visibility:visible !important;
 }
 
 .menu__item {
