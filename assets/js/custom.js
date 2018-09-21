@@ -1,5 +1,5 @@
 $("#menu").sticky({topSpacing:0});
-(function() {
+$(document).ready(function() {
     var menuEl = document.getElementById('ml-menu'),
         mlmenu = new MLMenu(menuEl, {
             // breadcrumbsCtrl : true, // show breadcrumbs
@@ -14,10 +14,7 @@ $("#menu").sticky({topSpacing:0});
     var openMenuCtrl = document.querySelector('.action--open'),
         closeMenuCtrl = document.querySelector('.action--close');
 
-    openMenuCtrl.addEventListener('click', function(){
-        $('.menu').toggleClass('menu--open');
-        $('body').toggleClass('menu--opened')
-    });
+    openMenuCtrl.addEventListener('click', openMenu);
     closeMenuCtrl.addEventListener('click', closeMenu);
 
     function openMenu() {
@@ -31,7 +28,7 @@ $("#menu").sticky({topSpacing:0});
         openMenuCtrl.focus();
     }
 
-})();
+});
 var $menu = $('.menu');
 
 $(document).mouseup(function (e) {
