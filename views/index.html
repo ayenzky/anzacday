@@ -1,15 +1,127 @@
 <extends src='layout.html'>
   <block name='content'>
-    <h1>{{ site.sitedata[0].sitename }}</h1>
-    <p>{{ site.sitedata[0].metadesc }}</p>
-    <br />
-    <h2>Recent Blogs:</h2>
-    <ul>
-      <each loop="post, index of _collections.posts">
-        <li>
-          <a href='{{ post._path }}'>{{ post.title }}</a>
-        </li>
-      </each>
-    </ul>
-  </block>  
+    <section id="welcome">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6">
+            <div data-aos="fade-right" data-aos-once="true" class="content py-7">
+              <h1 class="heading-1 text-dark-brown">Welcome to the ANZAC Day Commemoration Committee</h1>
+              <p>ABN 46 457 412 054</p>
+              <p>“ANZAC” was the name given to a combined force of First Australian Imperial Force and New Zealand Army troops who landed on Turkey’s Gallipoli Peninsula at around dawn on Sunday, the 25th day of April, 1915, barely nine months after the outbreak of World War I.</p>
+              <p>Galvanised by the example of courage and sacrifice demonstrated on that bloody battlefield, on the 10th day of January 1916 a public meeting of Brisbane citizens voted unanimously to establish the ANZAC Day Commemoration Committee to lay the groundwork for a nationwide, solemn day of public remembrance on the first anniversary of the landings.</p>
+              <p>On every 25th day of April for the past 100 years, “ANZAC Day” has been observed in Australia and New Zealand, becoming an honoured and sacred institution along the way.</p>
+              <p>This site includes a host of information about the origins of ANZAC Day, the Spirit of ANZAC and gives an overview of the conflicts in which Australian Defence Force personnel have served in times of war and peace.</p>
+              <p>We hope you will find something of value in the following pages and that you will join with us in continuing the tradition of honouring ANZAC Day.</p>
+              <p>Be sure to like us on&nbsp;<a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld">Facebook</a></p>
+              <p>2018 Brisbane Dawn Service Programme available&nbsp;<a href="http://main.anzacday.org.au/uploads/site_anzacday/pages/pdf/2018_Dawn_Servcie.pdf">here</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="list-unstyled mb-0 d-flex flex-wrap" id="box-menu">
+        <li data-aos="zoom-in" data-aos-duration="50" data-aos-once="true" class="bg-dark-brown"><a href="#"><img src="/img/online-shop-icon.png">Online Shop Including Catalogue</a></li>
+        <li data-aos="zoom-in" data-aos-duration="100" data-aos-once="true" class="bg-light-brown"><a href="#"><img src="/img/about-ADDC.png">About the ADCC</a></li>
+        <li data-aos="zoom-in" data-aos-duration="200" data-aos-once="true" class="bg-light-brown"><a href="#"><img src="/img/school.png">School Orders and Information</a></li>
+        <li data-aos="zoom-in" data-aos-duration="300" data-aos-once="true" class="bg-dark-brown"><a href="#"><img src="/img/commemoration.png">Graves &amp; Memorials Grants Program</a></li>
+        <li data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" class="bg-dark-brown"><a href="#"><img src="/img/services.png">ANZAC Service Schedule and Guides</a></li>
+        <li data-aos="zoom-in" data-aos-duration="500" data-aos-once="true" class="bg-light-brown"><a href="#"><img src="/img/spirit.png">ANZAC Traditions Facts &amp; Folklore</a></li>
+      </ul>
+    </section>
+    <section id="war-identity-education">
+      <div id="war-identity-img"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 ml-md-auto" data-aos="fade-left" data-aos-once="true">
+            <div class="content">
+              <h2>War &amp; Identity Education</h2>
+              <p>The ADCC education site has a wealth of resources about Australia's military history and heritage for teachers and students.</p>
+              <p>These are at Early Childhood, Primary and Secondary levels.
+                <br>
+              </p>
+              <p>You can find what you are looking for by Themes, or Individual Wars.
+                <br>
+              </p>
+              <p>The list of relevant resources under the theme or war you select is colour-coded:
+                <br>
+              </p>
+              <ul class="list-unstyled d-flex legend flex-wrap">
+                <li class="pr-3 pb-3"><img src="/img/ec.jpg" width="25">Early Childhood</li>
+                <li class="pr-3 pb-3"><img src="/img/primary.jpg" width="25">Primary</li>
+                <li class="pr-3 pb-0"><img src="/img/secondary.jpg" width="25">Secondary</li>
+              </ul>
+              <p>There is also a brief description for each resource.</p>
+              <p>The description will:</p>
+              <ul class="list-unstyled checked">
+                <li>Indicate a summary of the contents</li>
+                <li>Indicate if it is a Queensland related resource</li>
+                <li>Advise whether it is a *classroom-ready unit, or an *interactive resource, or *supplementary information about the topic</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="latest-news" class="section">
+      <div class="container">
+        <div class="intro">
+          <h2>Latest News</h2>
+        </div>
+        <div data-aos="fade-up" data-aos-once="true" class="content blog-list">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="blog-lead">
+                <div class="blog-lead-img"><img class="img-fluid" src="/img/blogthumb.png"></div>
+                <div class="blog-lead-content mt-3">
+                  <h4 class="mt-0">7News - ANZAC Day Commemoration Committee</h4>
+                  <ul class="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
+                    <li><img src="/img/001-male.svg">Admin</li>
+                    <li><img src="/img/002-clock-with-white-face.svg">Jan 21, 2016</li>
+                  </ul>
+                  <p>A highlight from Channel 7 about the ANZAC Day Commemoration Committee of Queensland - this was aired on the 10th January 2016
+                    <br>
+                  </p>
+                  <p class="readmore"><a href="#">Read More<img src="/img/arrow-pointing-to-right.svg"></a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="blog-lead">
+                <div class="blog-lead-img text-center"><img class="img-fluid" src="/img/blogthumb2.jpg"></div>
+                <div class="blog-lead-content mt-3">
+                  <h4 class="mt-0">ADCC 100 Year Celebration</h4>
+                  <ul class="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
+                    <li><img src="/img/001-male.svg">Admin</li>
+                    <li><img src="/img/002-clock-with-white-face.svg">Jan 21, 2016</li>
+                  </ul>
+                  <p>“On Sunday January 10th&nbsp;2016 ADCC hosted a function at the Old Museum for 100 VIP guests to celebrate the fact that the origins of ANZAC Day happened right here in Brisbane on January 10 1916..</p>
+                  <p class="readmore"><a href="#">Read More<img src="/img/arrow-pointing-to-right.svg"></a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div id="fb-root"></div>
+              <div class="fb-page" data-href="https://www.facebook.com/anzacdaycommemorationcommitteeqld/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/anzacdaycommemorationcommitteeqld/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld/">ANZAC Day Commemoration Committee of Queensland Incorporated</a></blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="anzac-day-student" class="section" style="background-image:url(//res.cloudinary.com/dazemr1k4/image/upload/v1445928759/anzac/img/bgimg.jpg);background-size:cover;background-repeat:no-repeat;background-position:center;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 mx-auto">
+            <div class="content text-white text-center">
+              <h3>The ANZAC Day Student Service</h3>
+              <p>This solemn ceremony is conducted every year in Brisbane's ANZAC Square prior to ANZAC Day from 10am and noon approximately. The 2016 event took place on Thursday, the 21st day of April, and several thousand Queensland school students took part.</p>
+              <h3>The ANZAC Day Dawn Service</h3>
+              <p>Every year on the 25th day of April, the ANZAC Day Dawn Service starts at 04:28am sharp at Brisbane's Shrine of Remembrance, ANZAC Square, located between Ann and Adelaide Streets. All are welcome to attend.</p>
+              <p class="learnmore d-flex"><a href="#">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </block>
 </extends>

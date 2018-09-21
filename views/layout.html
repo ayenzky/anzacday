@@ -3,22 +3,89 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='description' content='{{ metadesc }}'>
-    <meta name='keywords' content='{{ metakeywords }}'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
-    <block name='title'>
-      <title>Title of Your Site</title>
+    <block name='metas'>
+      <meta name='description' content='{{ site.sitedata[0].metadesc }}'>
+      <meta name='keywords' content='{{ site.sitedata[0].metakeyword }}'>
+      <!-- Facebook -->
+      <meta property="og:url" content="https://anzacday.org.au" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content="{{ site.sitedata[0].sitename }}" />
+      <meta property="og:description" content="{{ site.sitedata[0].metadesc }}" />
+      <meta property="og:image" content="{{ site.sitedata[0].logo }}" />
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@twitter_username" />
+      <meta name="twitter:creator" content="@twitter_username" />
+      <meta property="og:url" content="https://anzacday.org.au" />
+      <meta property="og:title" content="{{ site.sitedata[0].sitename }}" />
+      <meta property="og:description" content="{{ site.sitedata[0].metadesc }}" />
+      <meta property="og:image" content="{{ site.sitedata[0].logo }}" />
+      <!-- Google Plus -->
+      <meta property="og:title" content="{{ site.sitedata[0].sitename }}" />
+      <meta property="og:image" content="{{ site.sitedata[0].logo }}" />
+      <meta property="og:description" content="{{ site.sitedata[0].metadesc }}" />
     </block>
 
-    <link rel='stylesheet' href='css/index.css' />
+    <block name='title'>
+      <title>{{ site.sitedata[0].sitename }}</title>
+    </block>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/component.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel='stylesheet' href='/css/index.css' />
   </head>
 
-  <body>
+  <body class='{{ pageId === "index" ? "home" : "page"}}'>
+    <include src='includes/_header.html'></include>
+    <if condition='{{ pageId !== "index"}}'>
+      <div class="hero-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-8">
+                    <block name='pageTitle'>
+                      <h1>Title Page</h1>
+                    </block>
+                </div>
+            </div>
+        </div>
+    </div>
+    </if>
     <main id='{{ pageId }}'>
-      <block name='content'></block>
+      <if condition='{{ pageId === "index"}}'>
+        <block name='content'></block>
+      </if>
+      <else>
+        <div class="container py-9">
+          <div class="row">
+              <div class="col-lg-8 mb-5">
+                  <block name='maincontent'></block>
+              </div>
+              <div class="col-md-12 col-lg-4 px-0 px-lg-3">
+                  <include src='includes/_sidebar.html'></include>
+              </div>
+          </div>
+        </div>
+      </else>
     </main>
-
+    
+     
+    
+    <include src='includes/_footer.html'></include>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.min.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/modernizr-custom.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/custom.js"></script>
     <block name='javascript'>
       <script src='js/main.js' defer></script>
     </block>

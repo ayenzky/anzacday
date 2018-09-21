@@ -1,14 +1,20 @@
 {
   "sitedata": [
     {
-      "footer": "All rights reserved! 2018 WebriQ Pte Ltd",
       "icon": "/img/favicon.png",
-      "logo": "/img/logo-webservices.png",
-      "metadesc": "WebriQ Spike Template",
-      "metakeyword": "cms",
-      "metauthor": "WebriQ",
-      "sitename": "WebriQ Starter"
+      "logo": "/img/logo.png",
+      "metadesc": "anzac day",
+      "metakeyword": "anzac day, history, education",
+      "metauthor": "ANZAC Day",
+      "sitename": "ANZAC Day"
     }
   ],
-  "updatedDate": "2017-11-28T06:24:37.530Z"
+  "info": [
+    {
+      "mail_address": "ADCC PO Box 3246 STAFFORD DC QLD 4053 21 Wolverhampton Street STAFFORD QLD 4053",
+      "contact_number": "07 3263 7118",
+      "fax_number": "07 3175 0608",
+      "email_address": "office.adcc@anzacday.org.au"
+    }
+  ]
 }
