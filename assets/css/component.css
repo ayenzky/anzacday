@@ -17,7 +17,7 @@
   position: relative;
   top:0;
   left:0;
-  opacity:0;
+  /* opacity:0; */
   /* overflow:hidden; */
   overflow-y:scroll;
   width:calc(100% + 50px);
@@ -33,7 +33,7 @@
 }
 
 .menu__level--current {
-  opacity:1;
+  /* opacity:1; */
 }
 
 .menu__item {
