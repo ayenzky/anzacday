@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="/css/component.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel='stylesheet' href='/css/index.css' />
+    <script src="/js/jquery.min.js"></script>
     <script src="/js/modernizr-custom.js"></script>
   </head>
 
@@ -78,7 +79,9 @@
      
     
     <include src='includes/_footer.html'></include>
-    <script src="/js/jquery.min.js"></script>
+    <block name='javascript'>
+      <script src='js/main.js' defer></script>
+    </block>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/bs-animation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
@@ -86,8 +89,6 @@
     <script src="/js/classie.js"></script>
     <script src="/js/menu.js"></script>
     <script src="/js/custom.js"></script>
-    <block name='javascript'>
-      <script src='js/main.js' defer></script>
-    </block>
+    
   </body>
 </html>
