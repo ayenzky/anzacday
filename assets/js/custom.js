@@ -10,23 +10,6 @@ $(document).ready(function() {
             direction: 'l2r'
         });
 
-    // mobile menu toggle
-    var openMenuCtrl = document.querySelector('.action--open'),
-        closeMenuCtrl = document.querySelector('.action--close');
-
-    openMenuCtrl.addEventListener('click', openMenu);
-    closeMenuCtrl.addEventListener('click', closeMenu);
-
-    function openMenu() {
-        classie.add(menuEl, 'menu--open');
-        closeMenuCtrl.focus();
-    }
-
-    function closeMenu() {
-        classie.remove(menuEl, 'menu--open');
-        $('body').removeClass('menu--opened')
-        openMenuCtrl.focus();
-    }
 
 });
 var $menu = $('.menu');
