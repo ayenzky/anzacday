@@ -5,7 +5,7 @@
 }
 
 .menu__wrap {
-  position: relative;
+  position: absolute;
   top:5em;
   bottom:0;
   /* overflow:hidden; */
@@ -14,7 +14,7 @@
 }
 
 .menu__level {
-  position: relative;
+  position: absolute;
   top:0;
   left:0;
   /* opacity:0; */
