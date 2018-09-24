@@ -1,27 +1,45 @@
-$("#menu").sticky({topSpacing:0});
 $(document).ready(function() {
-    var menuEl = document.getElementById('ml-menu'),
-        mlmenu = new MLMenu(menuEl, {
-            // breadcrumbsCtrl : true, // show breadcrumbs
-            // initialBreadcrumb : 'all', // initial breadcrumb text
-            backCtrl : false, // show back button
-            // itemsDelayInterval : 60, // delay between each menu item sliding animation
-            onItemClick: false, // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
-            direction: 'l2r'
-        });
+   $("#menu").sticky({topSpacing:0});
+   $(".navigation").navigation({
+      type: "overlay",
+      gravity: "right",
+      maxWidth: "180000px",
+      labels: {
+          closed: "<img src='/img/menu-button.svg'>",
+          open: "<img src='/img/menu-button.svg'>"
+      }
+    });
+   $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', function ( e ) {
+        var $el = $( this );
+        var $parent = $( this ).offsetParent( ".dropdown-menu" );
+        if ( !$( this ).next().hasClass( 'show' ) ) {
+            $( this ).parents( '.dropdown-menu' ).first().find( '.show' ).removeClass( "show" );
+        }
+        var $subMenu = $( this ).next( ".dropdown-menu" );
+        $subMenu.toggleClass( 'show' );
+        
+        $( this ).parent( "li" ).toggleClass( 'show' );
 
+        $( this ).parents( 'li.nav-item.dropdown.show' ).on( 'hidden.bs.dropdown', function ( e ) {
+            $( '.dropdown-menu .show' ).removeClass( "show" );
+        } );
+        
+        
+
+        return false;
+    } );
 
 });
-var $menu = $('.menu');
+// var $menu = $('.menu');
 
-$(document).mouseup(function (e) {
-   if (!$menu.is(e.target) // if the target of the click isn't the container...
-   && $menu.has(e.target).length === 0) // ... nor a descendant of the container
-   {
-	 $('body').removeClass('menu-opened');
-     $menu.removeClass('menu-open');
-  }
- });
+// $(document).mouseup(function (e) {
+//    if (!$menu.is(e.target) // if the target of the click isn't the container...
+//    && $menu.has(e.target).length === 0) // ... nor a descendant of the container
+//    {
+// 	 $('body').removeClass('menu-opened');
+//      $menu.removeClass('menu-open');
+//   }
+//  });
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

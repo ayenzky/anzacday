@@ -131,10 +131,12 @@ small, .font_small {
   -webkit-transition:500ms ease-in-out;
   transition:500ms ease-in-out;
 }
+
 #menu .container {
   -webkit-transition:500ms ease-in-out;
   transition:500ms ease-in-out;
 }
+
 .is-sticky #menu .container {
   padding:0.25em 15px !important;
 }
@@ -148,7 +150,6 @@ small, .font_small {
 .is-sticky .hvr-ripple-out:before {
    border: none;
 }
-
 
 .hero-main {
   background:url(//res.cloudinary.com/dazemr1k4/image/upload/v1445928759/anzac/img/bgimg.jpg) no-repeat right center;
@@ -355,12 +356,12 @@ section {
   border-color:#c68d4a;
 }
 
-.menu__item.legends {
+.legends {
   padding-left:2em;
   
 }
 
-.menu__item.legends a::before {
+.legends a::before {
   background-size: contain !important;
   content:'';
   position:absolute;
@@ -369,24 +370,24 @@ section {
   height:18px;
 }
 
-.menu__item.legends a {
+.legends a {
   padding-left:4.2em;
   position:relative;
 }
 
-.menu__item.ecps a::before {
+.ecps a::before {
   background: url(/img/ecps.jpg) no-repeat right center;  
 }
 
-.menu__item.ecp a::before {
+.ecp a::before {
   background: url(/img/ecp.jpg) no-repeat right center;  
 }
 
-.menu__item.ps a::before {
+.ps a::before {
   background: url(/img/ps.jpg) no-repeat right center;  
 }
 
-.menu__item.p a::before {
+.p a::before {
   background: url(/img/primary.jpg) no-repeat right center;  
 }
 
@@ -399,6 +400,7 @@ footer {
 
 footer .bottom-menu li {
   width:50%;
+  margin-bottom: 4px;
 }
 
 footer .bottom-menu li a {
@@ -506,8 +508,22 @@ footer .bottom-menu li a {
     width:50%;
   }
 }
-
+@media (max-width:640px) {
+  h1 {
+    font-size:7vw;
+  }
+  h2 {
+    font-size:6vw;
+  }
+}
 @media (max-width:414px) {
+  h1 {
+    font-size:9vw;
+  }
+  h2 {
+    font-size:8vw;
+    margin-bottom:1em;
+  }
   #box-menu li {
     width:100%;
     background-color:#c68d4a;
