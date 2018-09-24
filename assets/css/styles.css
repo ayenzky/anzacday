@@ -355,6 +355,19 @@ section {
   background-color:#c68d4a;
   border-color:#c68d4a;
 }
+.classification {
+  padding-top:45px;
+}
+.classification li {
+  padding-left:45px;
+  font-size:15px;
+  color:rgba(255, 255, 255, 0.5);
+  margin-bottom:0.25em;
+}
+.classification li img{
+  width:18px;
+  margin-right:0.5em;
+}
 
 .legends {
   padding-left:2em;
@@ -508,6 +521,7 @@ footer .bottom-menu li a {
     width:50%;
   }
 }
+
 @media (max-width:640px) {
   h1 {
     font-size:7vw;
@@ -516,6 +530,7 @@ footer .bottom-menu li a {
     font-size:6vw;
   }
 }
+
 @media (max-width:414px) {
   h1 {
     font-size:9vw;
