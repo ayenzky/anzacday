@@ -4,7 +4,7 @@
   background:#1c1d22;
 }
 
-.menu__wrap {
+.menu-wrap {
   position: absolute;
   top:5em;
   bottom:0;
@@ -13,7 +13,7 @@
   height: 100vh;
 }
 
-.menu__level {
+.menu-level {
   position: absolute;
   top:0;
   left:0;
@@ -28,20 +28,20 @@
   padding-bottom: 20px;
 }
 
-.menu__level:focus {
+.menu-level:focus {
   outline:none;
 }
 
-.menu__level.menu__level--current {
+.menu-level.menu-level-current {
  visibility:visible !important;
 }
 
-.menu__item {
+.menu-item {
   display:block;
   width:calc(100% - 50px);
 }
 
-.menu__link {
+.menu-link {
   font-weight:500;
   position:relative;
   display:block;
@@ -54,7 +54,7 @@
   font-size:15px;
 }
 
-.menu__link[data-submenu]::after {
+.menu-link[data-submenu]::after {
   content:'\f141';
   font-family:'FontAwesome';
   position:absolute;
@@ -63,11 +63,11 @@
   color:#2a2b30;
 }
 
-.menu__link:hover, .menu__link:focus, .menu__link[data-submenu]:hover::after, .menu__link[data-submenu]:focus::after {
+.menu-link:hover, .menu-link:focus, .menu-link[data-submenu]:hover::after, .menu-link[data-submenu]:focus::after {
   color:#c68d4a;
 }
 
-.menu__link--current::before {
+.menu-link-current::before {
 /*  content:'\00B7';
   font-size:1.5em;
   line-height:0;
@@ -82,7 +82,7 @@
   visibility:visible;
 }
 
-.animate-outToRight .menu__item {
+.animate-outToRight .menu-item {
   -webkit-animation:outToRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1);
   animation:outToRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -103,7 +103,7 @@
   }
 }
 
-.animate-outToLeft .menu__item {
+.animate-outToLeft .menu-item {
   -webkit-animation:outToLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1);
   animation:outToLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -124,7 +124,7 @@
   }
 }
 
-.animate-inFromLeft .menu__item {
+.animate-inFromLeft .menu-item {
   -webkit-animation:inFromLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1);
   animation:inFromLeft 0.6s both cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -155,7 +155,7 @@
   }
 }
 
-.animate-inFromRight .menu__item {
+.animate-inFromRight .menu-item {
   -webkit-animation:inFromRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1);
   animation:inFromRight 0.6s both cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -186,14 +186,14 @@
   }
 }
 
-.menu__breadcrumbs {
+.menu-breadcrumbs {
   font-size:0.65em;
   line-height:1;
   position:relative;
   padding:2.5em 3.75em 1.5em 3em;
 }
 
-.menu__breadcrumbs a {
+.menu-breadcrumbs a {
   font-family: 'Roboto', sans-serif;
   font-weight:bold;
   display:inline-block;
@@ -205,15 +205,15 @@
   margin-bottom: 0.5em;
 }
 
-.menu__breadcrumbs a:last-child {
+.menu-breadcrumbs a:last-child {
   pointer-events:none;
 }
 
-.menu__breadcrumbs a:hover, .menu__breadcrumbs a:focus {
+.menu-breadcrumbs a:hover, .menu-breadcrumbs a:focus {
   color:#cc9a5e;
 }
 
-.menu__breadcrumbs a:not(:last-child)::after {
+.menu-breadcrumbs a:not(:last-child)::after {
   content:'\f054';
   font-family:'FontAwesome';
   display:inline-block;
@@ -222,11 +222,11 @@
   font-size: 10px;
 }
 
-.menu__breadcrumbs a:not(:last-child):hover::after, .menu__breadcrumbs a:not(:last-child):focus::after {
+.menu-breadcrumbs a:not(:last-child):hover::after, .menu-breadcrumbs a:not(:last-child):focus::after {
   color:#33353e;
 }
 
-.menu__back {
+.menu-back {
   font-size:1.05em;
   position:absolute;
   z-index:100;
@@ -240,12 +240,12 @@
   background:none;
 }
 
-.menu__back--hidden {
+.menu-back-hidden {
   pointer-events:none;
   opacity:0;
 }
 
-.menu__back:hover, .menu__back:focus {
+.menu-back:hover, .menu-back:focus {
   color:#fff;
   outline:none;
 }
@@ -264,7 +264,7 @@
   outline:none;
 }
 
-.action--close {
+.action-close {
   font-size:1.1em;
   top:1.25em;
   right:1em;
@@ -287,12 +287,12 @@
   transition:transform 0.3s, -webkit-transform 0.3s;
 }
 
-.menu--open {
+.menu-open {
   -webkit-transform:translate3d(0, 0, 0);
   transform:translate3d(0, 0, 0);
 }
 
-.action--open {
+.action-open {
   border:none;
   padding:0;
   float:right;
@@ -307,7 +307,7 @@
   margin-top:7px;
 }
 
-.action--open img {
+.action-open img {
   width:30px;
   height:30px;
 }
@@ -316,7 +316,7 @@
   overflow:hidden!important;
 }
 
-.action--open {
+.action-open {
   display:block !important;
 }
 
@@ -371,7 +371,7 @@
 }
 
 @media screen and (max-width: 40em) {
-  .action--open, .action--close {
+  .action-open, .action-close {
     display:block;
   }
 }

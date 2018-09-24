@@ -47,7 +47,7 @@
 		extend( this.options, options );
 		
 		// the menus (<ul>´s)
-		this.menus = [].slice.call(this.el.querySelectorAll('.menu__level'));
+		this.menus = [].slice.call(this.el.querySelectorAll('.menu-level'));
 
 		// index of current menu
 		// Each level is actually a different menu so 0 is root, 1 is sub-1, 2 sub-2, etc.
@@ -56,11 +56,11 @@
 		/* Determine what current menu actually is */
 		var current_menu;
 		this.menus.forEach(function(menuEl, pos) {
-			var items = menuEl.querySelectorAll('.menu__item');
+			var items = menuEl.querySelectorAll('.menu-item');
 			items.forEach(function(itemEl, iPos) {
-				var currentLink = itemEl.querySelector('.menu__link--current');
+				var currentLink = itemEl.querySelector('.menu-link--current');
 				if (currentLink) {
-					// This is the actual menu__level that should have current
+					// This is the actual menu-level that should have current
 					current_menu = pos;
 				}
 			});
@@ -99,17 +99,17 @@
 
 		/* Loops over root level menu items */
 		this.menus.forEach(function(menuEl, pos) {
-			var menu = {menuEl : menuEl, menuItems : [].slice.call(menuEl.querySelectorAll('.menu__item'))};
+			var menu = {menuEl : menuEl, menuItems : [].slice.call(menuEl.querySelectorAll('.menu-item'))};
 			
 			self.menusArr.push(menu);
 
 			// set current menu class
 			if( pos === self.current_menu ) {
-				classie.add(menuEl, 'menu__level--current');
+				classie.add(menuEl, 'menu-level-current');
 			}
 
 			var menu_x = menuEl.getAttribute('data-menu');
-			var links = menuEl.querySelectorAll('.menu__link');
+			var links = menuEl.querySelectorAll('.menu-link');
 			links.forEach(function(linkEl, lPos) {
 				var submenu = linkEl.getAttribute('data-submenu');
 				if (submenu) {
@@ -140,7 +140,7 @@
 		// create breadcrumbs
 		if( self.options.breadcrumbsCtrl ) {
 			this.breadcrumbsCtrl = document.createElement('nav');
-			this.breadcrumbsCtrl.className = 'menu__breadcrumbs';
+			this.breadcrumbsCtrl.className = 'menu-breadcrumbs';
 			this.breadcrumbsCtrl.setAttribute('aria-label', 'You are here');
 			this.el.insertBefore(this.breadcrumbsCtrl, this.el.firstChild);
 			// add initial breadcrumb
@@ -163,9 +163,9 @@
 		if (this.options.backCtrl) {
 			this.backCtrl = document.createElement('button');
 			if (this.breadCrumbs) {
-				this.backCtrl.className = 'menu__back';	
+				this.backCtrl.className = 'menu-back';	
 			} else {
-				this.backCtrl.className = 'menu__back menu__back--hidden';
+				this.backCtrl.className = 'menu-back menu-back--hidden';
 			}
 			this.backCtrl.setAttribute('aria-label', 'Go back');
 			this.backCtrl.innerHTML = '<span class="fa fa-chevron-left" aria-hidden="true"></span>';
@@ -194,11 +194,11 @@
 					}
 					else {
 						// add class current
-						var currentlink = self.el.querySelector('.menu__link--current');
+						var currentlink = self.el.querySelector('.menu-link--current');
 						if( currentlink ) {
-							classie.remove(self.el.querySelector('.menu__link--current'), 'menu__link--current');
+							classie.remove(self.el.querySelector('.menu-link--current'), 'menu-link--current');
 						}
-						classie.add(ev.target, 'menu__link--current');
+						classie.add(ev.target, 'menu-link--current');
 						
 						// callback
 						self.options.onItemClick(ev, itemName);
@@ -301,8 +301,8 @@
 						classie.remove(currentMenu, isBackNavigation ? 'animate-outToLeft' : 'animate-outToRight');
 						classie.remove(nextMenuEl, isBackNavigation ? 'animate-inFromRight' : 'animate-inFromLeft');
 					}
-					classie.remove(currentMenu, 'menu__level--current');
-					classie.add(nextMenuEl, 'menu__level--current');
+					classie.remove(currentMenu, 'menu-level-current');
+					classie.add(nextMenuEl, 'menu-level-current');
 
 					//reset current
 					self.current_menu = nextMenuIdx;
@@ -311,7 +311,7 @@
 					if( !isBackNavigation ) {
 						// show back button
 						if( self.options.backCtrl ) {
-							classie.remove(self.backCtrl, 'menu__back--hidden');
+							classie.remove(self.backCtrl, 'menu-back--hidden');
 						}
 						
 						// add breadcrumb
@@ -319,7 +319,7 @@
 					}
 					else if( self.current_menu === 0 && self.options.backCtrl ) {
 						// hide back button
-						classie.add(self.backCtrl, 'menu__back--hidden');
+						classie.add(self.backCtrl, 'menu-back--hidden');
 					}
 
 					// we can navigate again..
