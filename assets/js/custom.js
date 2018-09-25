@@ -20,7 +20,7 @@ $(document).ready(function() {
         
         $( this ).parent( "li" ).toggleClass( 'show' );
 
-        $( this ).parents( 'li.nav-item.dropdown.show' ).on( 'hidden.bs.dropdown', function ( e ) {
+        $( this ).parents( 'li.menu-item.dropdown.show' ).on( 'hidden.bs.dropdown', function ( e ) {
             $( '.dropdown-menu .show' ).removeClass( "show" );
         } );
         
