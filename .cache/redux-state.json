@@ -231,7 +231,10 @@
           "noscript",
           "style"
         ],
-        "author": "Kyle Mathews <matthews.kyle@gmail.com>",
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "matthews.kyle@gmail.com"
+        },
         "license": "MIT",
         "dependencies": [
           {
@@ -278,7 +281,7 @@
       "resolve": "/Users/allen/Projects/htdocs/webriqpage-anzacday/node_modules/gatsby-plugin-manifest",
       "id": "Plugin gatsby-plugin-manifest",
       "name": "gatsby-plugin-manifest",
-      "version": "2.0.3",
+      "version": "2.0.2",
       "pluginOptions": {
         "plugins": [],
         "name": "gatsby-starter-default",
@@ -300,7 +303,7 @@
       "packageJson": {
         "name": "gatsby-plugin-manifest",
         "description": "Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps",
-        "version": "2.0.3",
+        "version": "2.0.2",
         "main": "index.js",
         "keywords": [
           "gatsby",
@@ -311,7 +314,10 @@
           "progressive-web-app",
           "pwa"
         ],
-        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
         "license": "MIT",
         "dependencies": [
           {
@@ -353,7 +359,7 @@
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "4da2b06b2173045bd573cd75dac02293",
+        "contentDigest": "9bc4ee9c0edd3843b7ab26601d5bd724",
         "type": "SitePlugin",
         "owner": "internal-data-bridge"
       }
@@ -389,7 +395,10 @@
           "precache",
           "service-worker"
         ],
-        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
         "license": "MIT",
         "dependencies": [
           {
@@ -463,6 +472,10 @@
         "license": "MIT",
         "dependencies": [
           {
+            "name": "bootstrap",
+            "version": "^4.1.3"
+          },
+          {
             "name": "gatsby",
             "version": "^2.0.0"
           },
@@ -481,6 +494,10 @@
           {
             "name": "react",
             "version": "^16.5.1"
+          },
+          {
+            "name": "react-bootstrap",
+            "version": "^1.0.0-beta.1"
           },
           {
             "name": "react-dom",
@@ -534,7 +551,10 @@
           "gatsby",
           "gatsby-plugin"
         ],
-        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
         "license": "MIT",
         "dependencies": [
           {
@@ -609,12 +629,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-09-26T07:25:14.222Z",
+      "buildTime": "2018-09-27T03:38:07.020Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "c3b3ae7dc09290a4a9113b055440f1f6",
+        "contentDigest": "8f37893275b15e4bea1db449574b0284",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -702,7 +722,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "ce2c52df29c0b6afe0b695da65b0317a"
+    "PLUGINS_HASH": "942774bc5431a9bda7f80ec88750c0fd"
   },
   "componentDataDependencies": {
     "nodes": {
