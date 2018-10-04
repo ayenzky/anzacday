@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 // import {Container, Row, Col, Button, ButtonToolbar, Jumbotron} from 'react-bootstrap'
-
+import Footer from './footer'
 import Header from './header'
 import './layout.css'
 import 'Bootstrap/dist/css/bootstrap.css'
@@ -40,6 +40,7 @@ const Layout = ({ children }) => (
           }}
         >
           {children}
+          <Footer/>
         </div>
       </>
     )}

@@ -629,12 +629,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-09-27T03:38:07.020Z",
+      "buildTime": "2018-10-04T02:12:38.178Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "8f37893275b15e4bea1db449574b0284",
+        "contentDigest": "2d13ddf0be32f71b4bcd27e394f969a0",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
