@@ -500,12 +500,20 @@
             "version": "^1.0.0-beta.1"
           },
           {
+            "name": "react-bootstrap-navbar-offcanvas",
+            "version": "^1.0.3"
+          },
+          {
             "name": "react-dom",
             "version": "^16.5.1"
           },
           {
             "name": "react-helmet",
             "version": "^5.2.0"
+          },
+          {
+            "name": "react-side-bar",
+            "version": "^0.3.5"
           }
         ],
         "devDependencies": [
@@ -629,12 +637,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2018-10-01T05:58:20.410Z",
+      "buildTime": "2018-10-10T01:10:29.799Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "d0f611cbec51dc5ee0d56b49c6b733ed",
+        "contentDigest": "a2fbc93ced4b4b98a633c95c315cb3f8",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -722,7 +730,7 @@
   },
   "status": {
     "plugins": {},
-    "PLUGINS_HASH": "942774bc5431a9bda7f80ec88750c0fd"
+    "PLUGINS_HASH": "30cbf6c4427ddac13352d7bf918c3884"
   },
   "componentDataDependencies": {
     "nodes": {
@@ -736,7 +744,7 @@
     "404-22d": "44/path---404-22-d-bce-NZuapzHg3X9TaN1iIixfv1W23E",
     "index": "173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E",
     "dev-404-page-5f9": "920/path---dev-404-page-5-f-9-fab-NZuapzHg3X9TaN1iIixfv1W23E",
-    "sq--src-components-layout-js": 755544856,
+    "sq--src-components-layout-js": 2183329306,
     "page-2-fbc": "53/path---page-2-fbc-5a8-NZuapzHg3X9TaN1iIixfv1W23E",
     "404-html-516": "164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E"
   },
@@ -760,12 +768,12 @@
   },
   "staticQueryComponents": {
     "sq--src-components-layout-js": {
-      "name": "SiteTitleQuery",
+      "name": "siteTitle",
       "componentPath": "/Users/allen/Projects/htdocs/webriqpage-anzacday/src/components/layout.js",
       "id": "sq--src-components-layout-js",
       "jsonName": "sq--src-components-layout-js",
-      "query": "query SiteTitleQuery {\n  site {\n    siteMetadata {\n      title\n    }\n  }\n}\n",
-      "hash": 755544856
+      "query": "query siteTitle {\n  site {\n    siteMetadata {\n      title\n    }\n  }\n}\n",
+      "hash": 2183329306
     }
   }
 }

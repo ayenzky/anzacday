@@ -1,17 +1,20 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+/*import PropTypes from 'prop-types'*/
+import 'Bootstrap/dist/css/bootstrap.css'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-// import {Container, Row, Col, Button, ButtonToolbar, Jumbotron} from 'react-bootstrap'
-
+import {Container} from 'react-bootstrap'
+import Footer from './footer'
 import Header from './header'
+import Hero from './hero'
 import './layout.css'
-import 'Bootstrap/dist/css/bootstrap.css'
 
-const Layout = ({ children }) => (
+
+export default ({children}) =>
+
   <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
+    query = { graphql`
+      query siteTitle {
         site {
           siteMetadata {
             title
@@ -19,35 +22,25 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <>
+    render = {data => (
+      <Container fluid className='p-0'>
         <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+          title = {data.site.siteMetadata.title}
+          meta ={[
+            {name: 'description', content: 'anzac day commemoration committee'},
+            {name: 'keywords', content: 'anzac day, history, education, commemoration'}
           ]}
         >
-          <html lang="en" />
+        <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </div>
-      </>
+        <Header/>
+        <Hero>About</Hero>
+        <main>
+        {children}
+        </main>
+        <Footer/>
+      </Container>
+
     )}
+    
   />
-)
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

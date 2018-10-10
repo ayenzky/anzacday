@@ -1,15 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
+// import { Link } from 'gatsby'
+import {Container} from 'react-bootstrap'
 import Layout from '../components/layout'
 
-
-const SecondPage = () => (
+export default () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+   <Container>
+    <h1>About me</h1>
+    <p>I’m good enough, I’m smart enough, and gosh darn it, people like me!</p>
+   </Container>
   </Layout>
-)
-
-export default SecondPage
+);

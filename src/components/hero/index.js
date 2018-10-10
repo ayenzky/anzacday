@@ -10,7 +10,7 @@ export default class Hero extends Component {
       return (
         <div className='hero'>
           <Media>
-            <img className='w-100' src='https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_414/v1538371271/slide.jpg' 
+            <img className='w-100 mb-0' src='https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_414/v1538371271/slide.jpg' 
             srcSet='https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_414/v1538371271/slide.jpg 414w,
                       https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_568/v1538371271/slide.jpg 568w,
                       https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_667/v1538371271/slide.jpg 667w,
