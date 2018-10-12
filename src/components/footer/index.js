@@ -11,7 +11,7 @@ export default () =>
           <div className="intro mb-4">
             <h4 className="mt-0">ANZAC Day</h4>
           </div>
-          <ul class="list-unstyled bottom-menu d-flex align-items-start flex-wrap flex-column flex-sm-row m-0">
+          <ul className="list-unstyled bottom-menu d-flex align-items-start flex-wrap flex-column flex-sm-row m-0">
               <li><a href="/">Home</a></li>
               <li><a href="/about-us">About Us</a></li>
               <li><a href="/history">History</a></li>
@@ -39,11 +39,11 @@ export default () =>
             </ul>
         </Col>
         <Col md={6} lg={4} className='mb-5'>
-            <div class="intro mb-4">
-              <h4 class="mt-0">Contact Details</h4>
+            <div className="intro mb-4">
+              <h4 className="mt-0">Contact Details</h4>
             </div>
             <p>ADCC PO Box 3246 STAFFORD DC QLD 4053<br/>21 Wolverhampton Street STAFFORD QLD 4053</p>
-            <ul class="list-unstyled mt-3 ml-0">
+            <ul className="list-unstyled mt-3 ml-0">
               <li>Tel.: 07 3263 7118</li>
               <li>Fax: 07 3175 0608</li>
               <li>Email:&nbsp;<a href="mailto:office.adcc@anzacday.org.au">office.adcc@anzacday.org.au</a></li>
@@ -55,7 +55,7 @@ export default () =>
         <Col md={6} lg={2} className='mb-5'>
         <p>Gallipoli Roses Available to Purchase Here</p>
             <a href="https://www.treloarroses.com.au/index.php?route=product/product&product_id=11151&search=Gallipoli" target="_blank" rel="noopener noreferrer"><Image fluid src="https://res.cloudinary.com/db6xmqefe/image/upload/v1538377200/treloar_zqjhof.jpg"/></a>
-            <p class="mt-4">
+            <p className="mt-4">
               <a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer">
                 <Image src="https://res.cloudinary.com/db6xmqefe/image/upload/v1538378894/facebook_e2subm.svg"/>
               </a>

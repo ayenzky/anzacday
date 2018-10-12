@@ -5,6 +5,23 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `https://serene-tor-48959.herokuapp.com`,
+        contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
+          `articles`,
+          `users`,
+        ]
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'gatsby-starter-default',

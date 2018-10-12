@@ -1,226 +1,263 @@
 import React, { Component } from 'react'
-// import {Container, Row, Col, Media} from 'react-bootstrap'
-import SideBar from 'react-side-bar'
+import {Nav, NavDropdown} from 'react-bootstrap'
+import Sidebar from 'react-sidebar'
+import './index.css'
 
 
 export default class Menu extends Component {
   constructor(props) {
-    super(props);
-    this.displayName = 'SideBarExample';
-    this.state = {
-      barOpened: false,
-      duration: 150,
-      fx: 'cubic-bezier(0, 1, 0.85, 1)',
-      mode: 'over',
-      side: 'left',
-      size: 256,
-      tolerance: 70,
-      topBarIncluded: false,
-      touch: true,
-      touchSize: 80
-    };
-  }
-  toggleBar() {
-    this.setState({ barOpened: !this.state.barOpened });
-  }
+      super(props);
+      this.state = {
+        sidebarOpen: false,
+        rightOpen: true
 
-  onOpen() {
-    this.setState({ barOpened: true });
-  }
-
-  onClose() {
-    this.setState({ barOpened: false });
-  }
-
-
-  render () {
-    const { barOpened, duration, fx, mode, side, size, tolerance,
-      topBarIncluded, touch, touchSize } = this.state;
-    const { BEHIND, OVER, PUSH } = SideBar.MODES;
-    const { LEFT, RIGHT } = SideBar.SIDES;
-    const navIconClassName = [ 'nav-icon' ];
-
-    if (barOpened) {
-      navIconClassName.push('open');
+      };
+      this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+      this.onSetrightOpen = this.onSetrightOpen.bind(this);
     }
-    const bar = (<div className='side'>Amazing SideBars</div>);
-    const topBar = (<div className='topBar'>
-      <div className='left'>
-        <div
-          className={navIconClassName.join(' ')}
-          onClick={this.toggleBar.bind(this)}>
-          <span/><span/><span/><span/>
-        </div>
-      </div>
-      <div className='center'>SideBar</div>
-      <div className='right'></div>
-    </div>);
-
-    const sideBarProps = {
-      bar: bar,
-      duration: duration,
-      fx: fx,
-      mode: mode,
-      opened: barOpened,
-      onOpen: this.onOpen.bind(this),
-      onClose: this.onClose.bind(this),
-      side: side,
-      size: size,
-      tolerance: tolerance,
-      touch: touch,
-      touchSize: touchSize,
-      veilStyle: {
-        opacity: 0.4
-      }
-    };
-
-    if (topBarIncluded) {
-      sideBarProps.topBar = topBar;
+    onSetSidebarOpen(open) {
+      this.setState({ sidebarOpen: open});
+    }
+    onSetrightOpen() {
+     this.setState({ rightOpen: true }); 
     }
 
-  return (
-    <SideBar {...sideBarProps}>
-      { !topBarIncluded && topBar }
-      <div className='main'>
-        <section className='duration-option'>
-          <div className='title'>Duration</div>
-          <div className='explain'>
-            Set the duration of the opening and closing in milisecons.
-            (default: 150ms)
-          </div>
-          <div className='option-wrapper'>
-            <input type='number'
-              onChange={this.handleChangeDuration.bind(this)}
-              value={duration} />
-            <span>ms</span>
-          </div>
-        </section>
-        <section className='fx-option'>
-          <div className='title'>FX</div>
-          <div className='explain'>
-            This option allows set the effect to open the sidebar.
-          </div>
-          <div className='option-wrapper'>
-            <input
-              type='text'
-              onChange={this.handleChangeFx.bind(this)}
-              value={fx} />
-          </div>
-        </section>
-        <section className='openingMode-option'>
-          <div className='title'>Mode</div>
-          <div className='explain'>
-            Set opening mode. <b>BEHIND</b>, the sidebar keep behind the
-            content of the app. <b>OVER</b>, the sidebar opens above the
-            content. <b>PUSH</b>, the sidebar moves the content of the app.
-          </div>
-          <div className='option-wrapper'>
-            <select value={mode} onChange={this.handleChangeMode.bind(this)}>
-              <option value={BEHIND}>{BEHIND}</option>
-              <option value={OVER}>{OVER}</option>
-              <option value={PUSH}>{PUSH}</option>
-            </select>
-          </div>
-        </section>
-        <section className='opened-option'>
-          <div className='title'>Opened</div>
-          <div className='explain'>
-            Set this option to open or close sidebar.
-          </div>
-          <div className='option-wrapper'>
-            <input
-              id='opened-option'
-              onChange={this.toggleBar.bind(this)}
-              type='checkbox'
-              checked={barOpened} />
-            <label htmlFor='opened-option'>Opened</label>
-          </div>
-        </section>
-        <section className='openingSide-option'>
-          <div className='title'>Side</div>
-          <div className='explain'>
-            Set the side where to place the sidebar, <b>LEFT</b> or
-            <b>RIGHT</b>.
-          </div>
-          <div className='option-wrapper'>
-            <select value={side} onChange={this.handleChangeSide.bind(this)}>
-              <option value={LEFT}>{LEFT}</option>
-              <option value={RIGHT}>{RIGHT}</option>
-            </select>
-          </div>
-        </section>
-        <section className='size-option'>
-          <div className='title'>Size</div>
-          <div className='explain'>
-            Set the width of the sidebar in pixels. (default: 256px)
-          </div>
-          <div className='option-wrapper'>
-            <input type='number'
-              onChange={this.handleChangeSize.bind(this)}
-              value={size} />
-            <span>px</span>
-          </div>
-        </section>
-        <section className='tolerance-option'>
-          <div className='title'>Tolerance</div>
-          <div className='explain'>
-            Set the tolerance of sidebar to decide if it has to open or close
-            when you slide de sidebar (default: 70px).
-          </div>
-          <div className='option-wrapper'>
-            <input type='number'
-              onChange={this.handleChangeTolerance.bind(this)}
-              value={tolerance} />
-            <span>px</span>
-          </div>
-        </section>
-        <section className='topBar-option'>
-          <div className='title'>TopBar</div>
-          <div className='explain'>
-            This option allows integrate the topBar of the app as part of the
-            SideBar component to open the sidebar ignoring the topBar.
-          </div>
-          <div className='option-wrapper'>
-            <input
-              id='topBar-option'
-              onChange={this.handleChangeTopBar.bind(this)}
-              type='checkbox'
-              checked={topBarIncluded} />
-            <label htmlFor='topBar-option'>Include TopBar</label>
-          </div>
-        </section>
-        <section className='touch-option'>
-          <div className='title'>Touch</div>
-          <div className='explain'>
-            Enable or disable touch option.
-          </div>
-          <div className='option-wrapper'>
-            <input
-              id='touch-option'
-              onChange={this.handleChangeTouch.bind(this)}
-              type='checkbox'
-              checked={touch} />
-            <label htmlFor='touch-option'>Enable touch</label>
-          </div>
-        </section>
-        { touch &&
-          <section className='touchSize-option'>
-            <div className='title'>TouchSize</div>
-            <div className='explain'>
-              If the touch option is enabled, this option allows set the size
-              of the touchable zone, depends of the side selected.
+    render() {
+      return (
+        <Sidebar
+          open={this.state.sidebarOpen}
+          onSetOpen={this.onSetSidebarOpen}
+          pullRight={this.onSetrightOpen}
+          sidebarClassName="sidebarmenu"
+          contentClassName="content"
+          rootClassName="navigation float-right"
+          styles={{ 
+            sidebar: { 
+              background: "#1c1d22",
+              position: "fixed",
+              width:"340px"
+            }, 
+            root: {position: "relative", overflow: 'visible'}, 
+            content: {
+              position: 'relative', 
+              overflow: 'visible',
+              cursor: 'pointer'
+            } 
+          }}
+          sidebar={
+            <div id="nav-brand-side">
+              <ul className="list-unstyled classification">
+                <li>
+                  <h5 className="mt-0 font-weight-light">Legend:</h5>
+                </li>
+                <li className="d-flex align-items-center">
+                  <img src="https://anzacday.sites.webriqs.com/img/ec.jpg" alt=""/>
+                  <span>Early Childhood</span>
+                </li>
+                <li className="d-flex align-items-center">
+                  <img src="https://anzacday.sites.webriqs.com/img/primary.jpg" alt=""/>
+                  <span>Primary</span>
+                </li>
+                <li className="d-flex align-items-center">
+                  <img src="https://anzacday.sites.webriqs.com/img/secondary.jpg" alt=""/>
+                  <span>Secondary</span>
+                </li>
+              </ul>
+              <Nav className="d-flex flex-column main-nav mb-0 mt-4">
+                <li className="menu-item"><Nav.Link href="/">Home</Nav.Link></li>
+                <li className="menu-item"><Nav.Link href="/">About Us</Nav.Link></li>
+                <NavDropdown title="Wars" id="basic-nav-dropdown">
+                  <li className="dropdown-item ecps legends"><NavDropdown.Item className="ecps legends" href="#action/3.1">1899-1902 BOER WAR</NavDropdown.Item></li>
+                  <NavDropdown.Divider className="mt-0" />
+                  <NavDropdown alignRight title="1914-1918 WORLD WAR 1" id="basic-nav-dropdown">
+                    <ul className="list-unstyled" aria-labelledby="navbarDropdown-1">
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/">WW1-General</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/">WW1-Gallipoli</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/">WW1-Western Front</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/">WW1-Middle East</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/">WW1-Home Front</Nav.Link>
+                      </li>
+                    </ul>
+                  </NavDropdown>
+                  <NavDropdown alignRight title="1939-1945 WORD WAR 2" id="basic-nav-dropdown">
+                    <ul className="list-unstyled" aria-labelledby="navbarDropdown-1-2">
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/ww2-general">WW2-General</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/ww2-europe-middle-east">WW2-Europe/Middle East</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/ww2-asia-pacific">WW2-Asia/Pacific</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/ww2-prisoner-of-war">WW2-Prisoner of War</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/ww2-home-front">WW2-Home Front</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/1945-49-bcof-british-commonwealth-occupation-force-japan">1945-49 BCOF (British Commonwealth Occupation Force - Japan)</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/1950-1953-korea">1950-1953 Korea</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/1950-1960-malayan-emergency">1950-1960 Malayan Emergency</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/1964-1966-indonesia">1964-1966 Indonesia</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/1962-1972-vietnam">1962-1972 Vietnam</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/1990-1991-gulf">1990-1991 Gulf</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/2003-2006-iraq-2003">2003-2006 Iraq 2003</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/1947-2006-peacekeeping-general">1947-2006 Peacekeeping - General</Nav.Link>
+                      </li>
+                      <li className="dropdown-item ecps legends" role="menuitem">
+                        <Nav.Link href="/1999-2000-peacekeeping-east-timor">1999-2000 Peacekeeping - East Timor</Nav.Link>
+                      </li>
+                    </ul>
+                  </NavDropdown>
+                </NavDropdown>
+                <NavDropdown alignRight title="Themes" id="basic-nav-dropdown">
+                  <ul className="list-unstyled" aria-labelledby="navbarDropdown2">
+                    <li className="dropdown-item ecps legends" role="menuitem">
+                      <Nav.Link href="/commemoration">Commemoration</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecps legends" role="menuitem">
+                      <Nav.Link href="/heroes">Heroes</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecps legends" role="menuitem">
+                      <Nav.Link href="/anzac-day">Anzac Day</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecps legends" role="menuitem">
+                      <Nav.Link href="/women">Women</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ps legends" role="menuitem">
+                      <Nav.Link href="/community">Community</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecps legends" role="menuitem">
+                      <Nav.Link href="/victoria-cross">Victoria Cross</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecps legends" role="menuitem">
+                      <Nav.Link href="/family">Family</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ps legends" role="menuitem">
+                      <Nav.Link href="/memorials">Memorials</Nav.Link>
+                    </li>
+                  </ul>
+                </NavDropdown>
+                <NavDropdown alignRight title="Interactives" id="basic-nav-dropdown">
+                  <ul className="list-unstyled" aria-labelledby="navbarDropdown3">
+                    <li className="dropdown-item ps legends" role="menuitem">
+                      <Nav.Link href="/last-voyage-of-ae2">Last Voyage of AE2</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ps legends" role="menuitem">
+                      <Nav.Link href="/charge-at-beersheba">Charge at Beersheba</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ps legends" role="menuitem">
+                      <Nav.Link href="/smithy-interactive">Smithy Interactive</Nav.Link>
+                    </li>
+                    <li className="dropdown-item p legends" role="menuitem">
+                      <Nav.Link href="/who-am-i">Who Am I?</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecps legends" role="menuitem">
+                      <Nav.Link href="/battle-casualties">Battle Casualties</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecps legends" role="menuitem">
+                      <Nav.Link href="/infantryman">Infantryman</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecp legends" role="menuitem">
+                      <Nav.Link href="/where-in-the-world">Where in the World?</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecp legends" role="menuitem">
+                      <Nav.Link href="/checking-your-gear">Checking Your Gear</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecp legends" role="menuitem">
+                      <Nav.Link href="/suitcase-treasure">Suitcase Treasure</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecp legends" role="menuitem">
+                      <Nav.Link href="/anzac-puzzles">ANZAC Puzzles</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecp legends" role="menuitem">
+                      <Nav.Link href="/uniforms-over-time">Uniforms Over Time</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecp legends" role="menuitem">
+                      <Nav.Link href="/flying-the-flag">Flying the Flag</Nav.Link>
+                    </li>
+                    <li className="dropdown-item ecp legends" role="menuitem">
+                      <Nav.Link href="/women-in-war">Women in War</Nav.Link>
+                    </li>
+                  </ul>
+                </NavDropdown>
+                <li class="menu-item" role="menuitem"><a class="menu-link" href="/">Education</a></li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Schools Orders &amp; Information</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">ANZAC Day Services</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Poetry</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Just Soldiers</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Speeches</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Annual ANZAC Day Ceremonies</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">The Spirit of ANZAC</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Current Catalogue</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Photo Gallery</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/download-tips">Download Tips</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Copying of Images</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/news">Latest News</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Shop</Nav.Link>
+                </li>
+                <li class="menu-item" role="menuitem">
+                  <Nav.Link href="/">Contact Us</Nav.Link>
+                </li>
+              </Nav>
             </div>
-            <div className='option-wrapper'>
-              <input type='number'
-                onChange={this.handleChangeTouchSize.bind(this)}
-                value={touchSize} />
-              <span>px</span>
-            </div>
-          </section>
-        }
-      </div>
-    </SideBar>
-    )
-  }
+          }
+        >
+          <h2 className="nav_handle hvr-ripple-out mb-0" onClick={() => this.onSetSidebarOpen(true)}>
+            <img src='https://anzacday.sites.webriqs.com/img/menu-button.svg' alt='menu'/>
+          </h2>
+        </Sidebar>
+      );
+    }
 }
 

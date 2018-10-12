@@ -3,10 +3,12 @@ import React from 'react'
 import 'Bootstrap/dist/css/bootstrap.css'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import {Container} from 'react-bootstrap'
+import {Container, Row, Col} from 'react-bootstrap'
+import Sticky from 'react-sticky-el';
 import Footer from './footer'
 import Header from './header'
 import Hero from './hero'
+import Sidebar from './sidebar'
 import './layout.css'
 
 
@@ -33,10 +35,20 @@ export default ({children}) =>
         >
         <html lang="en" />
         </Helmet>
-        <Header/>
-        <Hero>About</Hero>
+        <Sticky className='sticky-wrapper' stickyClassName='is-sticky'><Header/></Sticky>
+        <Hero/>
         <main>
-        {children}
+        <div className={window.location.pathname === '/' ? 'container-fluid' : 'container py-9'}>
+          <Row>
+            <Col lg={window.location.pathname === '/' ? '12 p-0' : '8 mb-5'}>
+              {children}    
+            </Col>
+            <div className={window.location.pathname !== '/' ? 'col-md-12 col-lg-4 px-0 px-lg-3' : 'd-none'}>
+              <Sidebar/>
+            </div>
+          </Row>
+        </div>
+        
         </main>
         <Footer/>
       </Container>
