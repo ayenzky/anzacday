@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 const makeRequest = (graphql, request) => new Promise((resolve, reject) => {  
-  // Query for article nodes to use in creating pages.
+  // Query for nodes to use in creating pages.
   resolve(
     graphql(request).then(result => {
       if (result.errors) {
@@ -12,7 +12,6 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
     })
   )
 });
-
 
 // Implement the Gatsby API “createPages”. This is called once the
 // data layer is bootstrapped to let plugins create pages from data.
@@ -25,23 +24,24 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
+            slug
           }
         }
       }
     }
     `).then(result => {
+
     // Create pages for each article.
     result.data.allStrapiArticles.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.id}`,
+        path: `/${node.slug}`,
         component: path.resolve(`src/templates/article.js`),
         context: {
-          id: node.id,
+          slug: node.slug,
         },
       })
     })
   });
-
   const getAuthors = makeRequest(graphql, `
     {
       allStrapiUsers {
@@ -64,10 +64,41 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
   });
+  const getPages = makeRequest(graphql,`
+  {
+    allStrapiPages {
+      edges {
+        node {
+          id
+          slug
+          parentPage {
+            id
+            slug
+          }
+          subPages {
+            id
+            slug
+          }
+        }
+      }
+    } 
+  }
+  `).then(result => {
+      result.data.allStrapiPages.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.slug}`,
+        component: path.resolve(`src/templates/single.js`),
+        context: {
+          slug: node.slug,
+        },
+      })
+    })
+  });
 
-  // Queries for articles and authors nodes to use in creating pages.
+  // Query for articles nodes to use in creating pages.
   return Promise.all([
     getArticles,
     getAuthors,
+    getPages
   ])
 };

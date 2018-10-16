@@ -8,18 +8,13 @@ export default class Menu extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        sidebarOpen: false,
-        rightOpen: true
+        sidebarOpen: false
 
       };
       this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-      this.onSetrightOpen = this.onSetrightOpen.bind(this);
     }
     onSetSidebarOpen(open) {
       this.setState({ sidebarOpen: open});
-    }
-    onSetrightOpen() {
-     this.setState({ rightOpen: true }); 
     }
 
     render() {
@@ -27,7 +22,7 @@ export default class Menu extends Component {
         <Sidebar
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
-          pullRight={this.onSetrightOpen}
+          pullRight={true}
           sidebarClassName="sidebarmenu"
           contentClassName="content"
           rootClassName="navigation float-right"
@@ -206,47 +201,47 @@ export default class Menu extends Component {
                     </li>
                   </ul>
                 </NavDropdown>
-                <li class="menu-item" role="menuitem"><a class="menu-link" href="/">Education</a></li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem"><a className="menu-link" href="/">Education</a></li>
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Schools Orders &amp; Information</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">ANZAC Day Services</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Poetry</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Just Soldiers</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Speeches</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Annual ANZAC Day Ceremonies</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">The Spirit of ANZAC</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Current Catalogue</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Photo Gallery</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/download-tips">Download Tips</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Copying of Images</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/news">Latest News</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Shop</Nav.Link>
                 </li>
-                <li class="menu-item" role="menuitem">
+                <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Contact Us</Nav.Link>
                 </li>
               </Nav>

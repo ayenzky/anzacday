@@ -4,7 +4,7 @@ import './index.css'
 
 
 const Sidebar = () => (
-  <ul className="list-unstyled m-0 d-flex flex-wrap" id="box-side">
+  <ul className="list-unstyled m-0 d-flex flex-wrap align-items-start" id="box-side">
     <li className="bg-dark-brown">
       <Link to="#"><img src="https://anzacday.sites.webriqs.com/img/online-shop-icon.png" alt="" />Online Shop Including Catalogue</Link>
     </li>

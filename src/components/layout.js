@@ -1,6 +1,6 @@
 import React from 'react'
 /*import PropTypes from 'prop-types'*/
-import 'Bootstrap/dist/css/bootstrap.css'
+// import 'Bootstrap/dist/css/bootstrap.css'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
@@ -36,10 +36,10 @@ export default ({children}) =>
         <html lang="en" />
         </Helmet>
         <Sticky className='sticky-wrapper' stickyClassName='is-sticky'><Header/></Sticky>
-        <Hero/>
+        <Hero title='test'/>
         <main>
         <div className={window.location.pathname === '/' ? 'container-fluid' : 'container py-9'}>
-          <Row>
+          <Row className='align-items-start'>
             <Col lg={window.location.pathname === '/' ? '12 p-0' : '8 mb-5'}>
               {children}    
             </Col>
