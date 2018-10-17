@@ -46,15 +46,15 @@ export default class Menu extends Component {
                   <h5 className="mt-0 font-weight-light">Legend:</h5>
                 </li>
                 <li className="d-flex align-items-center">
-                  <img src="https://anzacday.sites.webriqs.com/img/ec.jpg" alt=""/>
+                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752757/ec.jpg" alt=""/>
                   <span>Early Childhood</span>
                 </li>
                 <li className="d-flex align-items-center">
-                  <img src="https://anzacday.sites.webriqs.com/img/primary.jpg" alt=""/>
+                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752829/primary.jpg" alt=""/>
                   <span>Primary</span>
                 </li>
                 <li className="d-flex align-items-center">
-                  <img src="https://anzacday.sites.webriqs.com/img/secondary.jpg" alt=""/>
+                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752742/secondary.jpg" alt=""/>
                   <span>Secondary</span>
                 </li>
               </ul>
