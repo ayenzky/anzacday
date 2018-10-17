@@ -26,22 +26,22 @@ const IndexPage = () => (
         </Container>
         <ul className="list-unstyled mb-0 d-flex flex-wrap" id="box-menu">
           <li data-aos="zoom-in" data-aos-duration="50" data-aos-once="true" className="bg-dark-brown aos-init aos-animate">
-            <Link to="#"><img src="https://anzacday.sites.webriqs.com/img/online-shop-icon.png" alt=""/>Online Shop Including Catalogue</Link>
+            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753799/online-shop-icon.png" alt=""/>Online Shop Including Catalogue</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="100" data-aos-once="true" className="bg-light-brown aos-init aos-animate">
-            <Link to="#"><img src="https://anzacday.sites.webriqs.com/img/about-ADDC.png" alt=""/>About the ADCC</Link>
+            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753764/about-ADDC.png" alt=""/>About the ADCC</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="200" data-aos-once="true" className="bg-light-brown aos-init">
-            <Link to="#"><img src="https://anzacday.sites.webriqs.com/img/school.png" alt=""/>School Orders and Information</Link>
+            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753721/school.png" alt=""/>School Orders and Information</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="300" data-aos-once="true" className="bg-dark-brown aos-init">
-            <Link to="#"><img src="https://anzacday.sites.webriqs.com/img/commemoration.png" alt=""/>Graves &amp; Memorials Grants Program</Link>
+            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753681/commemoration.png" alt=""/>Graves &amp; Memorials Grants Program</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" className="bg-dark-brown aos-init">
-            <Link to="#"><img src="https://anzacday.sites.webriqs.com/img/services.png" alt=""/>ANZAC Service Schedule and Guides</Link>
+            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753532/services.png" alt=""/>ANZAC Service Schedule and Guides</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="500" data-aos-once="true" className="bg-light-brown aos-init">
-            <Link to="#"><img src="https://anzacday.sites.webriqs.com/img/spirit.png" alt=""/>ANZAC Traditions Facts &amp; Folklore</Link>
+            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753248/spirit.png" alt=""/>ANZAC Traditions Facts &amp; Folklore</Link>
           </li>
         </ul>
     </section>
@@ -57,9 +57,9 @@ const IndexPage = () => (
                 <p>You can find what you are looking for by Themes, or Individual Wars.</p>
                 <p>The list of relevant resources under the theme or war you select is colour-coded:</p>
                 <ul className="list-unstyled d-flex legend flex-wrap">
-                  <li className="pr-3 pb-3"><img className="mr-2" src="https://anzacday.sites.webriqs.com/img/ec.jpg" width="25" alt=""/>Early Childhood</li>
-                  <li className="pr-3 pb-3"><img className="mr-2" src="https://anzacday.sites.webriqs.com/img/primary.jpg" width="25" alt=""/>Primary</li>
-                  <li className="pr-3 pb-0"><img className="mr-2" src="https://anzacday.sites.webriqs.com/img/secondary.jpg" width="25" alt=""/>Secondary</li>
+                  <li className="pr-3 pb-3"><img className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752757/ec.jpg" width="25" alt=""/>Early Childhood</li>
+                  <li className="pr-3 pb-3"><img className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752829/primary.jpg" width="25" alt=""/>Primary</li>
+                  <li className="pr-3 pb-0"><img className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752742/secondary.jpg" width="25" alt=""/>Secondary</li>
                 </ul>
                 <p>There is also a brief description for each resource.</p>
                 <p>The description will:</p>
@@ -83,17 +83,17 @@ const IndexPage = () => (
               <Col md={4} sm={6} className="mb-4">
                 <div className="blog-lead">
                   <div className="blog-lead-img">
-                    <img className="img-fluid" src="https://anzacday.sites.webriqs.com/img/blogthumb.png" alt=""/>
+                    <img className="img-fluid" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753557/blogthumb.png" alt=""/>
                   </div>
                   <div className="blog-lead-content mt-3">
                     <h4 className="mt-0">7News - ANZAC Day Commemoration Committee</h4>
                     <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
-                      <li><img src="https://anzacday.sites.webriqs.com/img/001-male.svg" alt=""/>Admin</li>
-                      <li><img src="https://anzacday.sites.webriqs.com/img/002-clock-with-white-face.svg" alt=""/>Jan 21, 2016</li>
+                      <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt=""/>Admin</li>
+                      <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt=""/>Jan 21, 2016</li>
                     </ul>
                     <p>A highlight from Channel 7 about the ANZAC Day Commemoration Committee of Queensland - this was aired on the 10th January 2016</p>
                     <p className="readmore">
-                      <Link to="#">Read More<img src="https://anzacday.sites.webriqs.com/img/arrow-pointing-to-right.svg" alt=""/></Link>
+                      <Link to="#">Read More<img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753135/arrow-pointing-to-right.svg" alt=""/></Link>
                     </p>
                   </div>
                 </div>
@@ -101,17 +101,17 @@ const IndexPage = () => (
               <Col md={4} sm={6} className="mb-4">
                 <div className="blog-lead">
                   <div className="blog-lead-img text-center">
-                    <img className="img-fluid" src="https://anzacday.sites.webriqs.com/img/blogthumb2.jpg" alt=""/>
+                    <img className="img-fluid" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753123/blogthumb2.jpg" alt=""/>
                   </div>
                   <div className="blog-lead-content mt-3">
                     <h4 className="mt-0">ADCC 100 Year Celebration</h4>
                     <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
-                      <li><img src="https://anzacday.sites.webriqs.com/img/001-male.svg" alt=""/>Admin</li>
-                      <li><img src="https://anzacday.sites.webriqs.com/img/002-clock-with-white-face.svg" alt=""/>Jan 21, 2016</li>
+                      <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt=""/>Admin</li>
+                      <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt=""/>Jan 21, 2016</li>
                     </ul>
                     <p>“On Sunday January 10th&nbsp;2016 ADCC hosted a function at the Old Museum for 100 VIP guests to celebrate the fact that the origins of ANZAC Day happened right here in Brisbane on January 10 1916..</p>
                     <p className="readmore">
-                      <Link to="#">Read More<img src="https://anzacday.sites.webriqs.com/img/arrow-pointing-to-right.svg" alt=""/></Link>
+                      <Link to="#">Read More<img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753135/arrow-pointing-to-right.svg" alt=""/></Link>
                     </p>
                   </div>
                 </div>
