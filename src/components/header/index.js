@@ -9,8 +9,8 @@ const Header = () => (
         <Row className='align-items-center'>
           <Col sm={6} xs={3}>
             <Link to='/'>
-              <img className='d-none d-md-block' src='https://anzacday.sites.webriqs.com/img/logo.png' alt='anzac day commemoration committee'/>
-              <img className='d-block d-md-none' src='https://anzacday.sites.webriqs.com/img/logo-small.png' alt='anzac day commemoration committee'/>
+              <img className='d-none d-md-block' src='https://res.cloudinary.com/db6xmqefe/image/upload/v1539748240/logo.png' alt='anzac day commemoration committee'/>
+              <img className='d-block d-md-none' src='https://res.cloudinary.com/db6xmqefe/image/upload/v1539748335/logo-small.png' alt='anzac day commemoration committee'/>
             </Link>
           </Col>
           <Col sm={6} xs={9}>

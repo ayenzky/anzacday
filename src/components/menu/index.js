@@ -249,7 +249,7 @@ export default class Menu extends Component {
           }
         >
           <h2 className="nav_handle hvr-ripple-out mb-0" onClick={() => this.onSetSidebarOpen(true)}>
-            <img src='https://anzacday.sites.webriqs.com/img/menu-button.svg' alt='menu'/>
+            <img src='https://res.cloudinary.com/db6xmqefe/image/upload/v1539748353/menu-button.svg' alt='menu'/>
           </h2>
         </Sidebar>
       );
