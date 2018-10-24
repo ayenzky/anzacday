@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div style={{ marginLeft: "280px" }}>
+        <div style={{ marginLeft: "340px" }}>
           <div
             style={{
               margin: "0 auto",

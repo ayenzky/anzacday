@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        marginLeft: "280px",
+        marginLeft: "340px",
         maxWidth: 960,
         padding: "1.45rem 1.0875rem"
       }}
