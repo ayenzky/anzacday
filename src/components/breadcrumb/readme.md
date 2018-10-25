@@ -1,17 +1,18 @@
 ## Breadcrumb Component
 
 ### Setup
-- Import the following on your page or article template
+
+**Import the following on your page or article template**
 
 `import Breadcrumb from '../components/breadcrumb'`
 
 `import breadcrumbHelper from '../components/breadcrumb/helper'`
 
-- Initialize 
+**Initialize**
 
 For page template, initialize the following `helper1`
 
-ex.
+*ex.*
 
 ```
 const PageTemplate = ({ data }) => {
@@ -23,9 +24,9 @@ const PageTemplate = ({ data }) => {
 export default PageTemplate
 ```
 
-For article template, initialize thefollowing `helper2`
+For article template, initialize the following `helper2`
 
-ex.
+*ex.*
 
 ```
 const PageTemplate = ({ data }) => {
@@ -37,9 +38,9 @@ const PageTemplate = ({ data }) => {
 export default PageTemplate
 ```
 
-- Inside the `return {}` statement add the following
+**Inside the `return {}` statement add the following**
 
-ex.
+*ex.*
 
 ```
 const PageTemplate = ({ data }) => {
@@ -55,42 +56,44 @@ export default PageTemplate
 ### Graphql
 
 ```
-query PageTemplate($slug: String!) {
-  strapiPages(slug: {eq: $slug}) {
-    id
-    Title
-    Content
-    slug
-    subPages {
+export const query = graphql`  
+  query PageTemplate($slug: String!) {
+    strapiPages(slug: {eq: $slug}) {
       id
       Title
       Content
       slug
-    }
-    parentPage {
-      id
-      Title
-      slug
-    }
-  }
-  allStrapiPages {
-    edges {
-      node {
+      subPages {
+        id
+        Title
+        Content
+        slug
+      }
+      parentPage {
         id
         Title
         slug
-        parentPage {
+      }
+    }
+    allStrapiPages {
+      edges {
+        node {
           id
           Title
           slug
-        }
-        subPages {
-          id
-          Title
-          slug
+          parentPage {
+            id
+            Title
+            slug
+          }
+          subPages {
+            id
+            Title
+            slug
+          }
         }
       }
     }
   }
-}
+`
 ```
