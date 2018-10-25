@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
 import Layout from '../components/layout'
 import './index.css'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
       <section id="welcome">
         <Container>
@@ -80,42 +80,26 @@ const IndexPage = () => (
           </div>
           <div data-aos="fade-up" data-aos-once="true" className="content blog-list aos-init aos-animate">
             <Row>
-              <Col md={4} sm={6} className="mb-4">
-                <div className="blog-lead">
-                  <div className="blog-lead-img">
-                    <img className="img-fluid" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753557/blogthumb.png" alt=""/>
+              {data.allStrapiArticles.edges.map(document => (
+                <Col md={4} sm={6} className="mb-4" key={document.node.id}>
+                  <div className="blog-lead">
+                    <div className="blog-lead-img">
+                      <img className="img-fluid" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753557/blogthumb.png" alt=""/>
+                    </div>
+                    <div className="blog-lead-content mt-3">
+                      <h4 className="mt-0">{document.node.title}</h4>
+                      <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
+                        <li className="text-capitalize"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt=""/><Link to={`/authors/${document.node.author.id}`}>{document.node.author.username}</Link></li>
+                        <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt=""/>{document.node.date}</li>
+                      </ul>
+                      <p>{document.node.shortdesc}</p>
+                      <p className="readmore">
+                        <Link to={`/${document.node.slug}`}>Read More<img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753135/arrow-pointing-to-right.svg" alt=""/></Link>
+                      </p>
+                    </div>
                   </div>
-                  <div className="blog-lead-content mt-3">
-                    <h4 className="mt-0">7News - ANZAC Day Commemoration Committee</h4>
-                    <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
-                      <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt=""/>Admin</li>
-                      <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt=""/>Jan 21, 2016</li>
-                    </ul>
-                    <p>A highlight from Channel 7 about the ANZAC Day Commemoration Committee of Queensland - this was aired on the 10th January 2016</p>
-                    <p className="readmore">
-                      <Link to="#">Read More<img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753135/arrow-pointing-to-right.svg" alt=""/></Link>
-                    </p>
-                  </div>
-                </div>
-              </Col>
-              <Col md={4} sm={6} className="mb-4">
-                <div className="blog-lead">
-                  <div className="blog-lead-img text-center">
-                    <img className="img-fluid" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753123/blogthumb2.jpg" alt=""/>
-                  </div>
-                  <div className="blog-lead-content mt-3">
-                    <h4 className="mt-0">ADCC 100 Year Celebration</h4>
-                    <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
-                      <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt=""/>Admin</li>
-                      <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt=""/>Jan 21, 2016</li>
-                    </ul>
-                    <p>“On Sunday January 10th&nbsp;2016 ADCC hosted a function at the Old Museum for 100 VIP guests to celebrate the fact that the origins of ANZAC Day happened right here in Brisbane on January 10 1916..</p>
-                    <p className="readmore">
-                      <Link to="#">Read More<img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753135/arrow-pointing-to-right.svg" alt=""/></Link>
-                    </p>
-                  </div>
-                </div>
-              </Col>
+                </Col>
+              ))}
               <Col md={4} sm={6} className="mb-4">
                 
               </Col>
@@ -146,3 +130,22 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query NewsQuery {
+    allStrapiArticles(limit:2, sort: {fields: [date], order: ASC}) {
+      edges {
+        node {
+          id
+          title
+          shortdesc
+          date(formatString: "MMMM DD YYYY")
+          author {
+            id
+            username
+          }
+        }
+      }
+    }
+  }
+`

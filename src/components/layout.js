@@ -1,5 +1,5 @@
 import React from 'react'
-/*import PropTypes from 'prop-types'*/
+// import PropTypes from 'prop-types'
 // import 'Bootstrap/dist/css/bootstrap.css'
 import { Location } from '@reach/router'
 import Helmet from 'react-helmet'
@@ -13,7 +13,7 @@ import Sidebar from './sidebar'
 import './layout.css'
 
 
-export default ({children}) =>
+export default ({pageTitle, data, children}) =>
 
   <StaticQuery
     query = { graphql`
@@ -37,7 +37,7 @@ export default ({children}) =>
         <html lang="en" />
         </Helmet>
         <Sticky className='sticky-wrapper' stickyClassName='is-sticky'><Header/></Sticky>
-        <Hero title='test'/>
+        <Hero>{pageTitle}</Hero>
         <main>
         <Location>
           {({ location }) => {

@@ -3,8 +3,11 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 const UserTemplate = ({ data }) => (  
-  <Layout>
-    <h1 className='text-capitalize'>User: {data.strapiUsers.username}</h1>
+  <Layout pageTitle={data.strapiUsers.username}>
+    <ul className='d-flex list-unstyled breadcrumbs mb-5'>
+      <li className='bread-link'><Link to='/'>Home</Link></li>
+      <li className='bread-link'><Link to={`/authors/${data.strapiUsers.id}`}>{data.strapiUsers.username}</Link></li>
+    </ul>
     <ul className='list-unstyled'>
       {data.strapiUsers.article.map(post => (
         <li key={post.id}>

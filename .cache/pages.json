@@ -35,6 +35,11 @@
         "path": "/authors/5bbc4053711db50016f8bedb"
     },
     {
+        "componentChunkName": "component---src-templates-user-js",
+        "jsonName": "authors-5-bcfe-346-be-4183001625123-a-9e1",
+        "path": "/authors/5bcfe346be4183001625123a"
+    },
+    {
         "componentChunkName": "component---cache-dev-404-page-js",
         "jsonName": "dev-404-page-5f9",
         "path": "/dev-404-page/"
@@ -43,11 +48,6 @@
         "componentChunkName": "component---src-templates-single-js",
         "jsonName": "download-tips-be1",
         "path": "/download-tips"
-    },
-    {
-        "componentChunkName": "component---src-pages-download-tips-js",
-        "jsonName": "download-tips-d6a",
-        "path": "/download-tips/"
     },
     {
         "componentChunkName": "component---src-templates-single-js",

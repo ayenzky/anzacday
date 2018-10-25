@@ -201,7 +201,12 @@ export default class Menu extends Component {
                     </li>
                   </ul>
                 </NavDropdown>
-                <li className="menu-item" role="menuitem"><a className="menu-link" href="/">Education</a></li>
+                <li className="menu-item" role="menuitem">
+                  <Nav.Link href="/history">History</Nav.Link>
+                </li>
+                <li className="menu-item" role="menuitem">
+                  <Nav.Link href="/education">Education</Nav.Link>
+                </li>
                 <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Schools Orders &amp; Information</Nav.Link>
                 </li>

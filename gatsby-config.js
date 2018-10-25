@@ -1,6 +1,7 @@
+require('dotenv').config()
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'ANZAC Day Commemoration Committee',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,24 +15,28 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://serene-tor-48959.herokuapp.com`,
+        apiURL: process.env.API_URI ? process.env.API_URI : 'http://localhost/',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           `articles`,
           `users`,
           `pages`
-        ]
+        ],
+        loginData: {
+          identifier: process.env.STRAPI_USER,
+          password: process.env.STRAPI_PASSWORD,
+        }
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'ANZAC Day Commemoration Committee',
+        short_name: 'ANZAC Day',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#ffffff',
+        theme_color: '#c68d4a',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

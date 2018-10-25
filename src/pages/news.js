@@ -7,7 +7,11 @@ import './news.css'
 
 
 const IndexPage = ({ data }) => (  
-  <Layout>
+  <Layout pageTitle='News'>
+    <ul className='d-flex list-unstyled breadcrumbs mb-5'>
+      <li className='bread-link'><Link to='/'>Home</Link></li>
+      <li className='bread-link'><Link to='/news'>News</Link></li>
+    </ul>
     <Row>
       {data.allStrapiArticles.edges.map(document => (
         <Col xs={12} key={document.node.id}>

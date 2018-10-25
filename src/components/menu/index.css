@@ -35,15 +35,15 @@
 }
 
 .ecps a::before {
-  background: url(https://anzacday.sites.webriqs.com/img/ecps.jpg) no-repeat right center;  
+  background: url(https://res.cloudinary.com/db6xmqefe/image/upload/v1539932163/ecps.jpg) no-repeat right center;  
 }
 
 .ecp a::before {
-  background: url(https://anzacday.sites.webriqs.com/img/ecp.jpg) no-repeat right center;  
+  background: url(https://res.cloudinary.com/db6xmqefe/image/upload/v1539932196/ecp.jpg) no-repeat right center;  
 }
 
 .ps a::before {
-  background: url(https://anzacday.sites.webriqs.com/img/ps.jpg) no-repeat right center;  
+  background: url(https://res.cloudinary.com/db6xmqefe/image/upload/v1539932114/ps.jpg) no-repeat right center;  
 }
 
 .nav_handle {
