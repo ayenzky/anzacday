@@ -4,6 +4,7 @@
 - Import the following on your page or article template
 
 `import Breadcrumb from '../components/breadcrumb'`
+
 `import breadcrumbHelper from '../components/breadcrumb/helper'`
 
 - Initialize 
@@ -26,7 +27,7 @@ ex.
 
 ### Example
 
-`const PageTemplate = ({ data }) => {
+const PageTemplate = ({ data }) => {
     var breadcrumbData = breadcrumbHelper.helper1(data);
     return (
       <Layout pageTitle={data.strapiPages.Title}>
@@ -35,9 +36,7 @@ ex.
       </Layout>
     )
 }
-export default PageTemplate`
-
-``
+export default PageTemplate
 export const query = graphql`
   query PageTemplate($slug: String!) {
     strapiPages(slug: {eq: $slug}) {
@@ -78,4 +77,3 @@ export const query = graphql`
     }
   }
 `
-``
