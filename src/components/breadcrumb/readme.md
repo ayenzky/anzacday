@@ -27,6 +27,7 @@ ex.
 
 ### Example
 
+``
 const PageTemplate = ({ data }) => {
     var breadcrumbData = breadcrumbHelper.helper1(data);
     return (
@@ -37,6 +38,8 @@ const PageTemplate = ({ data }) => {
     )
 }
 export default PageTemplate
+``
+``
 export const query = graphql`
   query PageTemplate($slug: String!) {
     strapiPages(slug: {eq: $slug}) {
@@ -77,3 +80,4 @@ export const query = graphql`
     }
   }
 `
+``
