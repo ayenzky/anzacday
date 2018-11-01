@@ -60,7 +60,7 @@ export default class Menu extends Component {
               </ul>
               <Nav className="d-flex flex-column main-nav mb-0 mt-4">
                 <li className="menu-item"><Nav.Link href="/">Home</Nav.Link></li>
-                <li className="menu-item"><Nav.Link href="/">About Us</Nav.Link></li>
+                <li className="menu-item"><Nav.Link href="/about-us">About Us</Nav.Link></li>
                 <NavDropdown title="Wars" id="basic-nav-dropdown">
                   <li className="dropdown-item ecps legends"><NavDropdown.Item className="ecps legends" href="#action/3.1">1899-1902 BOER WAR</NavDropdown.Item></li>
                   <NavDropdown.Divider className="mt-0" />
@@ -208,16 +208,16 @@ export default class Menu extends Component {
                   <Nav.Link href="/education">Education</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Schools Orders &amp; Information</Nav.Link>
+                  <Nav.Link href="/adcc-merchandise-for-schools">Schools Orders &amp; Information</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">ANZAC Day Services</Nav.Link>
+                  <Nav.Link href="/service-activities">ANZAC Day Services</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Poetry</Nav.Link>
+                  <Nav.Link href="/poetry">Poetry</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Just Soldiers</Nav.Link>
+                  <Nav.Link href="/just-soldiers">Just Soldiers</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Speeches</Nav.Link>
@@ -241,7 +241,7 @@ export default class Menu extends Component {
                   <Nav.Link href="/">Copying of Images</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/news">Latest News</Nav.Link>
+                  <Nav.Link href="/anzac-news">Latest News</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
                   <Nav.Link href="/">Shop</Nav.Link>

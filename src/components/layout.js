@@ -13,7 +13,7 @@ import Sidebar from './sidebar'
 import './layout.css'
 
 
-export default ({pageTitle, data, children}) =>
+export default ({pageTitle, data, children, layoutClass}) =>
 
   <StaticQuery
     query = { graphql`
@@ -38,7 +38,7 @@ export default ({pageTitle, data, children}) =>
         </Helmet>
         <Sticky className='sticky-wrapper' stickyClassName='is-sticky'><Header/></Sticky>
         <Hero>{pageTitle}</Hero>
-        <main>
+        <main className={layoutClass}>
         <Location>
           {({ location }) => {
             return (

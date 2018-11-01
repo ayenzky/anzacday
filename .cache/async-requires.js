@@ -7,9 +7,9 @@ exports.components = {
   "component---src-templates-single-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/templates/single.js" /* webpackChunkName: "component---src-templates-single-js" */),
   "component---cache-dev-404-page-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/.cache/dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-404-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-pages-anzac-news-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/anzac-news.js" /* webpackChunkName: "component---src-pages-anzac-news-js" */),
   "component---src-pages-index-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
-  "component---src-pages-list-of-pages-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/list-of-pages.js" /* webpackChunkName: "component---src-pages-list-of-pages-js" */),
-  "component---src-pages-news-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/news.js" /* webpackChunkName: "component---src-pages-news-js" */)
+  "component---src-pages-list-of-pages-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/list-of-pages.js" /* webpackChunkName: "component---src-pages-list-of-pages-js" */)
 }
 
 exports.data = () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/.cache/data.json")

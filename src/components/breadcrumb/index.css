@@ -2,21 +2,24 @@
   background-color: #f8f9fa;
   padding: 10px;
 }
-li.bread-link {
+.breadcrumbs li.bread-link {
   position: relative;
   text-transform: capitalize;
+  background: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
 }
-li.bread-link a {
+.breadcrumbs li.bread-link a {
   color: #555;
   font-size:15px;
 }
-li.bread-link::after {
+.breadcrumbs li.bread-link::after {
   content: '/';
   padding: 0 0.5em;
 }
-li.bread-link:nth-last-child(1)::after {
+.breadcrumbs li.bread-link:nth-last-child(1)::after {
   display: none;
 }
-li.bread-link:nth-last-child(1) a {
+.breadcrumbs li.bread-link:nth-last-child(1) a {
   color: #cc9a5e;
 }

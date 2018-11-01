@@ -87,7 +87,7 @@ const IndexPage = ({data}) => (
                       <img className="img-fluid" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753557/blogthumb.png" alt=""/>
                     </div>
                     <div className="blog-lead-content mt-3">
-                      <h4 className="mt-0">{document.node.title}</h4>
+                      <h4 className="mt-0"><Link to={`/${document.node.slug}`}>{document.node.title}</Link></h4>
                       <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
                         <li className="text-capitalize"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt=""/><Link to={`/authors/${document.node.author.id}`}>{document.node.author.username}</Link></li>
                         <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt=""/>{document.node.date}</li>
@@ -140,6 +140,7 @@ export const query = graphql`
           title
           shortdesc
           date(formatString: "MMMM DD YYYY")
+          slug
           author {
             id
             username

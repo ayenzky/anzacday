@@ -8,11 +8,12 @@ import breadcrumbHelper from '../components/breadcrumb/helper'
 const ArticleTemplate = ({ data }) => {
   var breadcrumbData = breadcrumbHelper.helper2(data);
   // console.log(breadcrumbHelper.helper2)
+  
   return (  
     <Layout pageTitle={data.strapiArticles.title}>
-      <Breadcrumb breadData={breadcrumbData} title='News' slug='/news'/>
+      <Breadcrumb breadData={breadcrumbData} title='ANZAC News' slug='anzac-news'/>
       <p>by <Link className='text-capitalize' to={`/authors/${data.strapiArticles.author.id}`}>{data.strapiArticles.author.username}</Link></p>
-      <ReactMarkdown source={data.strapiArticles.content} />
+      <ReactMarkdown escapeHtml={false} source={data.strapiArticles.content} />
     </Layout>
   )
 
@@ -31,6 +32,10 @@ export const query = graphql`
         id
         username
       }
+      tag {
+        id
+        name
+      }
     }
     allStrapiArticles {
       edges {
@@ -45,7 +50,10 @@ export const query = graphql`
             id
             username
           }
-          
+          tag {
+            id
+            name
+          }
         }
       }
     }

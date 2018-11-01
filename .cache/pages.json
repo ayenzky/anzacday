@@ -30,14 +30,34 @@
         "path": "/adcc-100-year-celebration"
     },
     {
-        "componentChunkName": "component---src-templates-user-js",
-        "jsonName": "authors-5-bbc-4053711-db-50016-f-8-bedb-b6b",
-        "path": "/authors/5bbc4053711db50016f8bedb"
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "adcc-merchandise-for-schools-88a",
+        "path": "/adcc-merchandise-for-schools"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "annual-anzac-day-ceremonies-132",
+        "path": "/annual-anzac-day-ceremonies"
+    },
+    {
+        "componentChunkName": "component---src-pages-anzac-news-js",
+        "jsonName": "anzac-news-cd0",
+        "path": "/anzac-news/"
     },
     {
         "componentChunkName": "component---src-templates-user-js",
-        "jsonName": "authors-5-bcfe-346-be-4183001625123-a-9e1",
-        "path": "/authors/5bcfe346be4183001625123a"
+        "jsonName": "authors-5-bd-2809-fc-4-e-12-e-00166-b-2208-8a6",
+        "path": "/authors/5bd2809fc4e12e00166b2208"
+    },
+    {
+        "componentChunkName": "component---src-templates-user-js",
+        "jsonName": "authors-5-bd-7-f-76-fe-027-f-20016-ca-7-bb-0-918",
+        "path": "/authors/5bd7f76fe027f20016ca7bb0"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "awm-images-83f",
+        "path": "/awm-images"
     },
     {
         "componentChunkName": "component---cache-dev-404-page-js",
@@ -46,8 +66,8 @@
     },
     {
         "componentChunkName": "component---src-templates-single-js",
-        "jsonName": "download-tips-be1",
-        "path": "/download-tips"
+        "jsonName": "education-006",
+        "path": "/education"
     },
     {
         "componentChunkName": "component---src-templates-single-js",
@@ -55,14 +75,39 @@
         "path": "/history"
     },
     {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "just-soldiers-ece",
+        "path": "/just-soldiers"
+    },
+    {
         "componentChunkName": "component---src-pages-list-of-pages-js",
         "jsonName": "list-of-pages-7be",
         "path": "/list-of-pages/"
     },
     {
-        "componentChunkName": "component---src-pages-news-js",
-        "jsonName": "news-014",
-        "path": "/news/"
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "poetry-4d1",
+        "path": "/poetry"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "service-activities-829",
+        "path": "/service-activities"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "speeches-a00",
+        "path": "/speeches"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "the-spirit-of-anzac-adf",
+        "path": "/the-spirit-of-anzac"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "trooper-sloan-scotty-bolton-dcm-c17",
+        "path": "/trooper-sloan-scotty-bolton-dcm"
     },
     {
         "componentChunkName": "component---src-templates-single-js",
@@ -71,12 +116,7 @@
     },
     {
         "componentChunkName": "component---src-templates-single-js",
-        "jsonName": "ww-1-overview-4e8",
-        "path": "/ww1-overview"
-    },
-    {
-        "componentChunkName": "component---src-templates-single-js",
-        "jsonName": "ww-1-the-western-front-0e6",
-        "path": "/ww1-the-western-front"
+        "jsonName": "ww-1-supplementary-information-and-anecdotes-711",
+        "path": "/ww1-supplementary-information-and-anecdotes"
     }
 ]

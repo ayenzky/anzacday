@@ -22,11 +22,11 @@ const breadcrumbHelper = {
     getParentPage(data.strapiPages);
     breadcrumbPages.reverse();
     breadcrumbPages.push(data.strapiPages);
-    var breadcrumbData = breadcrumbPages.map(a => {
-      a.title = a.Title
-      return a;
-    })
-    return breadcrumbData;
+    // var breadcrumbData = breadcrumbPages.map(a => {
+    //   a.title = a.Title
+    //   return a;
+    // })
+    return breadcrumbPages;
   },
   helper2: (data) => {
     var breadcrumbPages = [];
@@ -51,11 +51,11 @@ const breadcrumbHelper = {
     getParentPage(data.strapiArticles);
     breadcrumbPages.reverse();
     breadcrumbPages.push(data.strapiArticles);
-    var breadcrumbData = breadcrumbPages.map(a => {
-      a.title = a.title
-      return a;
-    })
-    return breadcrumbData;
+    // var breadcrumbData = breadcrumbPages.map(a => {
+    //   a.title = a.title
+    //   return a;
+    // })
+    return breadcrumbPages;
   }
 
 }

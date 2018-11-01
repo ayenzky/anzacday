@@ -1,17 +1,28 @@
 import React from 'react'  
 import {graphql} from 'gatsby'
+import Helmet from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/layout'
 import Breadcrumb from '../components/breadcrumb'
 import breadcrumbHelper from '../components/breadcrumb/helper'
+import './single.css'
 
 
 const PageTemplate = ({ data }) => {
     var breadcrumbData = breadcrumbHelper.helper1(data);
     return (
-      <Layout pageTitle={data.strapiPages.Title}>
+      <Layout pageTitle={data.strapiPages.title} layoutClass='main-page'>
+          <Helmet
+          title = {data.strapiPages.title +" - "+ data.site.siteMetadata.title}
+          meta ={[
+            {name: 'description', content: 'anzac day commemoration committee'},
+            {name: 'keywords', content: 'anzac day, history, education, commemoration'}
+          ]}
+          >
+          <html lang="en" />
+          </Helmet>
           <Breadcrumb breadData={breadcrumbData}/>
-          <ReactMarkdown source={data.strapiPages.Content} />    
+          <ReactMarkdown escapeHtml={false} source={data.strapiPages.content} />    
       </Layout>
 
     )
@@ -23,18 +34,18 @@ export const query = graphql`
   query PageTemplate($slug: String!) {
     strapiPages(slug: {eq: $slug}) {
       id
-      Title
-      Content
+      title
+      content
       slug
       subPages {
         id
-        Title
-        Content
+        title
+        content
         slug
       }
       parentPage {
         id
-        Title
+        title
         slug
       }
     }
@@ -42,19 +53,24 @@ export const query = graphql`
       edges {
         node {
           id
-          Title
+          title
           slug
           parentPage {
             id
-            Title
+            title
             slug
           }
           subPages {
             id
-            Title
+            title
             slug
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }
