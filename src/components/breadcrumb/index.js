@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import './index.css'
 
 export default ({breadData, title, slug}) => {
-  console.log(breadData)
   return (
     <ul className='d-flex list-unstyled breadcrumbs mb-5 flex-wrap'>
       <li className='bread-link'><Link to='/'>Home</Link></li>

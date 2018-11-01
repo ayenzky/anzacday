@@ -19,7 +19,8 @@ module.exports = {
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           `articles`,
           `users`,
-          `pages`
+          `pages`,
+          `tags`
         ],
         loginData: {
           identifier: process.env.STRAPI_USER,
