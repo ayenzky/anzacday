@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/allen/Projects/htdocs/webriqpage-anzacday/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png"},
+      options: {"plugins":[],"name":"ANZAC Day Commemoration Committee","short_name":"ANZAC Day","start_url":"/","background_color":"#ffffff","theme_color":"#c68d4a","display":"minimal-ui","icon":"src/images/favicon.png"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

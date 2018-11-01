@@ -1,17 +1,23 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
+// import 'Bootstrap/dist/css/bootstrap.css'
+import { Location } from '@reach/router'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-// import {Container, Row, Col, Button, ButtonToolbar, Jumbotron} from 'react-bootstrap'
-
+import {Container, Row, Col} from 'react-bootstrap'
+import Sticky from 'react-sticky-el';
+import Footer from './footer'
 import Header from './header'
+import Hero from './hero'
+import Sidebar from './sidebar'
 import './layout.css'
-import 'Bootstrap/dist/css/bootstrap.css'
 
-const Layout = ({ children }) => (
+
+export default ({pageTitle, data, children, layoutClass}) =>
+
   <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
+    query = { graphql`
+      query siteTitle {
         site {
           siteMetadata {
             title
@@ -19,35 +25,41 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <>
+    render = {data => (
+      <Container fluid className='p-0'>
         <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+          title = {data.site.siteMetadata.title}
+          meta ={[
+            {name: 'description', content: 'anzac day commemoration committee'},
+            {name: 'keywords', content: 'anzac day, history, education, commemoration'}
           ]}
         >
-          <html lang="en" />
+        <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
+        <Sticky className='sticky-wrapper' stickyClassName='is-sticky'><Header/></Sticky>
+        <Hero>{pageTitle}</Hero>
+        <main className={layoutClass}>
+        <Location>
+          {({ location }) => {
+            return (
+               <div className={location.pathname === '/' ? 'container-fluid' : 'container py-9'}>
+                  <Row className='align-items-start'>
+                    <Col lg={location.pathname === '/' ? '12 p-0' : '8 mb-5'}>
+                      {children}    
+                    </Col>
+                    <div className={location.pathname !== '/' ? 'col-md-12 col-lg-4 px-0 px-lg-3' : 'd-none'}>
+                      <Sidebar/>
+                    </div>
+                  </Row>
+                </div>
+            )
           }}
-        >
-          {children}
-        </div>
-      </>
+        </Location>
+        
+        </main>
+        <Footer/>
+      </Container>
+
     )}
+    
   />
-)
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
