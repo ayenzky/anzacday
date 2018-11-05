@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-    <SideMenu right />
+    <SideMenu />
   </div>
 );
 
