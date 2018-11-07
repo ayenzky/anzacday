@@ -46,6 +46,7 @@ template {
   display: none;
 }
 a {
+  word-break: break-word;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -75,6 +76,14 @@ a:hover {
 .py-9 {
   padding-top:5rem;
   padding-bottom:5rem;
+}
+.w-10 {
+  width: 10%;
+}
+
+.list-unstyled li {
+  background: none !important;
+  padding-left: 0 !important;
 }
 
 p {
