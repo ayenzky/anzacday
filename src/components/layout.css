@@ -184,6 +184,9 @@ section {
   margin-bottom: .5em;
   list-style: none;
 }
+.main-page ol li {
+  margin-bottom: .5em;
+}
 @media (max-width:1024px) {
   h1 {
     font-size:6.5vw;
