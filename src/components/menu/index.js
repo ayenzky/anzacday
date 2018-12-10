@@ -41,7 +41,7 @@ export default class Menu extends Component {
           }}
           sidebar={
             <div id="nav-brand-side">
-              <ul className="list-unstyled classification">
+              <ul className="list-unstyled classification pl-5">
                 <li>
                   <h5 className="mt-0 font-weight-light">Legend:</h5>
                 </li>
@@ -62,29 +62,31 @@ export default class Menu extends Component {
                 <li className="menu-item"><Nav.Link href="/">Home</Nav.Link></li>
                 <li className="menu-item"><Nav.Link href="/about-us">About Us</Nav.Link></li>
                 <NavDropdown title="Wars" id="basic-nav-dropdown">
-                  <li className="dropdown-item ecps legends"><NavDropdown.Item className="ecps legends" href="#action/3.1">1899-1902 BOER WAR</NavDropdown.Item></li>
+                  <li className="dropdown-item ecps legends">
+                    <NavDropdown.Item className="ecps legends" href="#action/3.1">1899-1902 BOER WAR</NavDropdown.Item>
+                  </li>
                   <NavDropdown.Divider className="mt-0" />
                   <NavDropdown alignRight title="1914-1918 WORLD WAR 1" id="basic-nav-dropdown">
-                    <ul className="list-unstyled" aria-labelledby="navbarDropdown-1">
+                    <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown-1">
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/">WW1-General</Nav.Link>
+                        <Nav.Link href="/ww1-general">WW1-General</Nav.Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/">WW1-Gallipoli</Nav.Link>
+                        <Nav.Link href="/ww1-gallipoli">WW1-Gallipoli</Nav.Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/">WW1-Western Front</Nav.Link>
+                        <Nav.Link href="/ww1-western-front">WW1-Western Front</Nav.Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/">WW1-Middle East</Nav.Link>
+                        <Nav.Link href="/ww1-middle-east">WW1-Middle East</Nav.Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/">WW1-Home Front</Nav.Link>
+                        <Nav.Link href="/ww1-home-front">WW1-Home Front</Nav.Link>
                       </li>
                     </ul>
                   </NavDropdown>
                   <NavDropdown alignRight title="1939-1945 WORD WAR 2" id="basic-nav-dropdown">
-                    <ul className="list-unstyled" aria-labelledby="navbarDropdown-1-2">
+                    <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown-1-2">
                       <li className="dropdown-item ecps legends" role="menuitem">
                         <Nav.Link href="/ww2-general">WW2-General</Nav.Link>
                       </li>
@@ -131,7 +133,7 @@ export default class Menu extends Component {
                   </NavDropdown>
                 </NavDropdown>
                 <NavDropdown alignRight title="Themes" id="basic-nav-dropdown">
-                  <ul className="list-unstyled" aria-labelledby="navbarDropdown2">
+                  <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown2">
                     <li className="dropdown-item ecps legends" role="menuitem">
                       <Nav.Link href="/commemoration">Commemoration</Nav.Link>
                     </li>
@@ -159,7 +161,7 @@ export default class Menu extends Component {
                   </ul>
                 </NavDropdown>
                 <NavDropdown alignRight title="Interactives" id="basic-nav-dropdown">
-                  <ul className="list-unstyled" aria-labelledby="navbarDropdown3">
+                  <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown3">
                     <li className="dropdown-item ps legends" role="menuitem">
                       <Nav.Link href="/last-voyage-of-ae2">Last Voyage of AE2</Nav.Link>
                     </li>
@@ -220,34 +222,34 @@ export default class Menu extends Component {
                   <Nav.Link href="/just-soldiers">Just Soldiers</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Speeches</Nav.Link>
+                  <Nav.Link href="/speeches">Speeches</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Annual ANZAC Day Ceremonies</Nav.Link>
+                  <Nav.Link href="/annual-anzac-day-ceremonies">Annual ANZAC Day Ceremonies</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">The Spirit of ANZAC</Nav.Link>
+                  <Nav.Link href="/the-spirit-of-anzac">The Spirit of ANZAC</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Current Catalogue</Nav.Link>
+                  <Nav.Link href="/current-catalogue">Current Catalogue</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Photo Gallery</Nav.Link>
+                  <Nav.Link href="/photo-gallery">Photo Gallery</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
                   <Nav.Link href="/download-tips">Download Tips</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Copying of Images</Nav.Link>
+                  <Nav.Link href="/awm-images">Copying of Images</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
                   <Nav.Link href="/anzac-news">Latest News</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Shop</Nav.Link>
+                  <Nav.Link href="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</Nav.Link>
                 </li>
                 <li className="menu-item" role="menuitem">
-                  <Nav.Link href="/">Contact Us</Nav.Link>
+                  <Nav.Link href="/contact-us">Contact Us</Nav.Link>
                 </li>
               </Nav>
             </div>
