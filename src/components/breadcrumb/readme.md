@@ -96,4 +96,5 @@ export const query = graphql`
     }
   }
 `
+"staticWebsiteBuildURL": "${process.env.WEBSITE_BUILD_URL || 'https://api.netlify.com/build_hooks/5bda5cc9c6aed631e73d2c3a'}"
 ```
