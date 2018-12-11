@@ -1995,6 +1995,11 @@
         "path": "/thank-you"
     },
     {
+        "componentChunkName": "component---src-pages-thank-you-js",
+        "jsonName": "thank-you-a93",
+        "path": "/thank-you/"
+    },
+    {
         "componentChunkName": "component---src-templates-single-js",
         "jsonName": "the-anzacs-day-25-april-1915-e5d",
         "path": "/the-anzacs-day-25-april-1915"
