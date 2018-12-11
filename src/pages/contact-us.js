@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-// import Recaptcha from 'react-google-recaptcha'
+import Recaptcha from 'react-google-recaptcha'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
 import './pages.css'
-// const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
+const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
 
 function encode(data) {
   return Object.keys(data)
@@ -20,22 +20,20 @@ export default class Contact extends Component {
     this.setState({
       [e.target.name]: e.target.value });
   };
-  // handleRecaptcha = value => {
-  //   this.setState({ "g-recaptcha-response": value });
-  // };
+  handleRecaptcha = value => {
+    this.setState({ "g-recaptcha-response": value });
+  };
   handleSubmit = e => {
-    // e.preventDefault();
+    e.preventDefault();
     const form = e.target;
     fetch("/contact-us?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"), 
+        "form-name": form.getAttribute("name"),
         ...this.state
       })
-    })
-    .then(() => Link(form.getAttribute("action")))
-    .catch(error => alert(error));
+    }).then(() => Link(form.getAttribute("action"))).catch(error => alert(error));
   };
   render() {
     return (
@@ -69,14 +67,6 @@ export default class Contact extends Component {
             <p>We welcome comments on our site. Please advise us if you find any mistakes.</p>
             <p><strong>Note:</strong> Please address all correspondence to the Honorary Secretary.</p>
             <p>You can also reach us by fill out the form below.</p>
-            <form
-              name="contact"
-              method="post"
-              action="/thank-you"
-              data-netlify="true"
-              data-netlify-recaptcha="false"
-              onSubmit={this.handleSubmit}
-            >
             <div className="form-group mb-3">
               <label for="validationCustom01">Name</label>
               <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
@@ -97,11 +87,18 @@ export default class Contact extends Component {
               <label for="validationCustom05">Message</label>
               <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
             </div>
-            <button className="_submit" type="submit">Submit</button>
+            <div className="form-group mb-3">
+            <Recaptcha
+                ref="recaptcha"
+                sitekey={RECAPTCHA_KEY}
+                onChange={this.handleRecaptcha}
+              />
+            </div>
+            <button className="_submit" type="submit">Submit form</button>
             </form>
         </Col>
         </Row>
-    </Layout>
+              </Layout>
     )
   }
 }
