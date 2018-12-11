@@ -33,7 +33,9 @@ export default class Contact extends Component {
         "form-name": form.getAttribute("name"),
         ...this.state
       })
-    }).then(() => Link(form.getAttribute("action"))).catch(error => alert(error));
+    })
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
   };
   render() {
     return (
@@ -70,7 +72,7 @@ export default class Contact extends Component {
             <form
               name="contact"
               method="post"
-              action="/thank-you"
+              action="/thank-you/"
               data-netlify="true"
               data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
@@ -106,7 +108,7 @@ export default class Contact extends Component {
             </form>
         </Col>
         </Row>
-              </Layout>
+    </Layout>
     )
   }
 }
