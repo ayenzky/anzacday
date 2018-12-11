@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 // import {Col, Row} from 'react-bootstrap'
 import './pages.css'
 
-const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
 function encode(data) {
   return Object.keys(data)
@@ -48,31 +48,28 @@ export default class Contact extends Component {
                 method="post" 
                 action="/thank-you" 
                 data-netlify="true" 
-                data-netlify-honeypot="bot-field"
                 data-netlify-recaptcha="true"
                 onSubmit={this.handleSubmit}
                 >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="bot-field" />
             <div className="form-group mb-3">
               <label for="validationCustom01">Name</label>
-              <input type="text" className="form-control" id="validationCustom01" name="Name" required />
+              <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
             </div>
             <div className="form-group mb-3">
               <label for="validationCustom02">Address</label>
-              <input type="text" className="form-control" id="validationCustom02" name="Address" />
+              <input type="text" className="form-control" id="validationCustom02" name="Address" onChange={this.handleChange}/>
             </div>
             <div className="form-group mb-3">
               <label for="validationCustom03">Contact No.</label>
-              <input type="text" className="form-control" id="validationCustom03" name="Contact No." />
+              <input type="text" className="form-control" id="validationCustom03" name="Contact No." onChange={this.handleChange}/>
             </div>
             <div className="form-group mb-3">
               <label for="validationCustom04">Email</label>
-              <input type="email" className="form-control" id="validationCustom04" name="Email" />
+              <input type="email" className="form-control" id="validationCustom04" name="Email" onChange={this.handleChange}/>
             </div>
             <div className="form-group mb-3">
               <label for="validationCustom05">Message</label>
-              <textarea className="form-control" id="validationCustom05" name="Message" rows="3"></textarea>
+              <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
             </div>
             <div className="form-group mb-3">
                 <Recaptcha
