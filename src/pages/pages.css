@@ -1,0 +1,25 @@
+.breadcrumbs {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+.breadcrumbs li.bread-link {
+  position: relative;
+  text-transform: capitalize;
+  background: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.breadcrumbs li.bread-link a {
+  color: #555;
+  font-size:15px;
+}
+.breadcrumbs li.bread-link::after {
+  content: '/';
+  padding: 0 0.5em;
+}
+.breadcrumbs li.bread-link:nth-last-child(1)::after {
+  display: none;
+}
+.breadcrumbs li.bread-link:nth-last-child(1) a {
+  color: #cc9a5e;
+}

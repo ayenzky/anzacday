@@ -4,6 +4,7 @@ import Moment from 'react-moment'
 import Layout from '../components/layout'
 import {Row, Col} from 'react-bootstrap'
 import './anzac-news.css'
+import './pages.css'
 
 
 const IndexPage = ({ data }) => (  
