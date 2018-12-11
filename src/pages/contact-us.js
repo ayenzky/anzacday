@@ -36,8 +36,8 @@ export default () => (
         <p>We welcome comments on our site. Please advise us if you find any mistakes.</p>
         <p><strong>Note:</strong> Please address all correspondence to the Honorary Secretary.</p>
         <p>You can also reach us by fill out the form below.</p>
-        <form name="Contact Form" action="/thank-you" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact form" />
+        <form name="Contact Form" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="Contact Form" />
         <input type="hidden" name="bot-field" />
         <div class="form-group mb-3">
           <label for="validationCustom01">Name</label>
