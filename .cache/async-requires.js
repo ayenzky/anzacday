@@ -11,7 +11,8 @@ exports.components = {
   "component---src-pages-anzac-news-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/anzac-news.js" /* webpackChunkName: "component---src-pages-anzac-news-js" */),
   "component---src-pages-contact-us-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/contact-us.js" /* webpackChunkName: "component---src-pages-contact-us-js" */),
   "component---src-pages-list-of-pages-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/list-of-pages.js" /* webpackChunkName: "component---src-pages-list-of-pages-js" */),
-  "component---src-pages-photo-gallery-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/photo-gallery.js" /* webpackChunkName: "component---src-pages-photo-gallery-js" */)
+  "component---src-pages-photo-gallery-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/photo-gallery.js" /* webpackChunkName: "component---src-pages-photo-gallery-js" */),
+  "component---src-pages-thank-you-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/thank-you.js" /* webpackChunkName: "component---src-pages-thank-you-js" */)
 }
 
 exports.data = () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/.cache/data.json")
