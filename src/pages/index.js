@@ -1,6 +1,7 @@
 import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
+import { FacebookProvider, EmbeddedPost } from 'react-facebook'
 import Layout from '../components/layout'
 import './index.css'
 
@@ -18,30 +19,30 @@ const IndexPage = ({data}) => (
                 <p>On every 25th day of April for the past 100 years, “ANZAC Day” has been observed in Australia and New Zealand, becoming an honoured and sacred institution along the way.</p>
                 <p>This site includes a host of information about the origins of ANZAC Day, the Spirit of ANZAC and gives an overview of the conflicts in which Australian Defence Force personnel have served in times of war and peace.</p>
                 <p>We hope you will find something of value in the following pages and that you will join with us in continuing the tradition of honouring ANZAC Day.</p>
-                <p>Be sure to like us on&nbsp;<Link to="https://www.facebook.com/anzacdaycommemorationcommitteeqld">Facebook</Link></p>
-                <p>2018 Brisbane Dawn Service Programme available&nbsp;<Link to="http://main.anzacday.org.au/uploads/site_anzacday/pages/pdf/2018_Dawn_Servcie.pdf">here</Link></p>
+                <p>Be sure to like us on&nbsp;<a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+                <p>2018 Brisbane Dawn Service Programme available&nbsp;<a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1540972010/c9s7cl4mie8ougzfdyoa.pdf">here</a></p>
               </div>
             </Col>
           </Row>
         </Container>
-        <ul className="list-unstyled mb-0 d-flex flex-wrap" id="box-menu">
+        <ul className="mb-0 d-flex flex-wrap" id="box-menu">
           <li data-aos="zoom-in" data-aos-duration="50" data-aos-once="true" className="bg-dark-brown aos-init aos-animate">
-            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753799/online-shop-icon.png" alt=""/>Online Shop Including Catalogue</Link>
+            <Link to="/current-catalogue"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753799/online-shop-icon.png" alt=""/>Online Shop Including Catalogue</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="100" data-aos-once="true" className="bg-light-brown aos-init aos-animate">
-            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753764/about-ADDC.png" alt=""/>About the ADCC</Link>
+            <Link to="/about-us"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753764/about-ADDC.png" alt=""/>About the ADCC</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="200" data-aos-once="true" className="bg-light-brown aos-init">
-            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753721/school.png" alt=""/>School Orders and Information</Link>
+            <Link to="/adcc-merchandise-for-schools"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753721/school.png" alt=""/>School Orders and Information</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="300" data-aos-once="true" className="bg-dark-brown aos-init">
-            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753681/commemoration.png" alt=""/>Graves &amp; Memorials Grants Program</Link>
+            <Link to="/commemoration-activities"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753681/commemoration.png" alt=""/>Graves &amp; Memorials Grants Program</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" className="bg-dark-brown aos-init">
-            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753532/services.png" alt=""/>ANZAC Service Schedule and Guides</Link>
+            <Link to="/service-activities"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753532/services.png" alt=""/>ANZAC Service Schedule and Guides</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="500" data-aos-once="true" className="bg-light-brown aos-init">
-            <Link to="#"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753248/spirit.png" alt=""/>ANZAC Traditions Facts &amp; Folklore</Link>
+            <Link to="/the-spirit-of-anzac"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753248/spirit.png" alt=""/>ANZAC Traditions Facts &amp; Folklore</Link>
           </li>
         </ul>
     </section>
@@ -84,7 +85,7 @@ const IndexPage = ({data}) => (
                 <Col md={4} sm={6} className="mb-4" key={document.node.id}>
                   <div className="blog-lead">
                     <div className="blog-lead-img">
-                      <img className="img-fluid" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753557/blogthumb.png" alt=""/>
+                      <img className="img-fluid" src={document.node.featured_image.url} alt={document.node.title}/>
                     </div>
                     <div className="blog-lead-content mt-3">
                       <h4 className="mt-0"><Link to={`/${document.node.slug}`}>{document.node.title}</Link></h4>
@@ -102,6 +103,9 @@ const IndexPage = ({data}) => (
               ))}
               <Col md={4} sm={6} className="mb-4">
                 
+                <FacebookProvider appId="1499897476896631">
+                  <EmbeddedPost href="http://www.facebook.com" width="500" />
+                </FacebookProvider>
               </Col>
             </Row>
           </div>
@@ -120,7 +124,7 @@ const IndexPage = ({data}) => (
                 <p>This solemn ceremony is conducted every year in Brisbane’s ANZAC Square prior to ANZAC Day from 10am and noon approximately. The 2016 event took place on Thursday, the 21st day of April, and several thousand Queensland school students took part.</p>
                 <h3>The ANZAC Day Dawn Service</h3>
                 <p>Every year on the 25th day of April, the ANZAC Day Dawn Service starts at 04:28am sharp at Brisbane’s Shrine of Remembrance, ANZAC Square, located between Ann and Adelaide Streets. All are welcome to attend.</p>
-                <p className="learnmore d-flex"><Link to="#">Learn More</Link></p>
+                <p className="learnmore d-flex"><Link to="/annual-anzac-day-ceremonies">Learn More</Link></p>
               </div>
             </Col>
           </Row>
@@ -137,6 +141,10 @@ export const query = graphql`
       edges {
         node {
           id
+          featured_image {
+            id
+            url
+          }
           title
           shortdesc
           date(formatString: "MMMM DD YYYY")
