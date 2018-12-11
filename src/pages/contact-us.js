@@ -1,90 +1,92 @@
 import React, {Component} from 'react'
 import Recaptcha from 'react-google-recaptcha'
 import { Link } from 'gatsby'
-import Layout from '../components/layout'
+// import Layout from '../components/layout'
 // import {Col, Row} from 'react-bootstrap'
 import './pages.css'
 
-const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 }
+
 export default class Contact extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-      }
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-      handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
-      };
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-      handleRecaptcha = value => {
-        this.setState({ "g-recaptcha-response": value });
-      };
-    handleSubmit = e => {
-        e.preventDefault();
-        const form = e.target;
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({
-            "form-name": form.getAttribute("name"),
-            ...this.state
-          })
-        })
-          .then(() => Link(form.getAttribute("action")))
-          .catch(error => alert(error));
-      };
-    render () {
-        return (
-        <Layout pageTitle='Contact Us'>
-            <h2>test</h2>
-            <form 
-                name="contact" 
-                method="post" 
-                action="/thank-you" 
-                data-netlify="true" 
-                data-netlify-recaptcha="true"
-                onSubmit={this.handleSubmit}
-                >
-            <div className="form-group mb-3">
-              <label for="validationCustom01">Name</label>
-              <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
-            </div>
-            <div className="form-group mb-3">
-              <label for="validationCustom02">Address</label>
-              <input type="text" className="form-control" id="validationCustom02" name="Address" onChange={this.handleChange}/>
-            </div>
-            <div className="form-group mb-3">
-              <label for="validationCustom03">Contact No.</label>
-              <input type="text" className="form-control" id="validationCustom03" name="Contact No." onChange={this.handleChange}/>
-            </div>
-            <div className="form-group mb-3">
-              <label for="validationCustom04">Email</label>
-              <input type="email" className="form-control" id="validationCustom04" name="Email" onChange={this.handleChange}/>
-            </div>
-            <div className="form-group mb-3">
-              <label for="validationCustom05">Message</label>
-              <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
-            </div>
-            <div className="form-group mb-3">
-                <Recaptcha
-                    ref="recaptcha"
-                    sitekey={RECAPTCHA_KEY}
-                    onChange={this.handleRecaptcha}
-                />
-            </div>
-            <button className="_submit" type="submit">Submit form</button>
-            </form>
-        </Layout>
-    )
+  handleRecaptcha = value => {
+    this.setState({ "g-recaptcha-response": value });
+  };
 
-    }
-    
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/contact-us?no-cache=1", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => Link(form.getAttribute("action")))
+      .catch(error => alert(error));
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>reCAPTCHA 2</h1>
+        <form
+          name="contact-recaptcha"
+          method="post"
+          action="/thank-you/"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+          onSubmit={this.handleSubmit}
+        >
+          <noscript>
+            <p>This form won’t work with Javascript disabled</p>
+          </noscript>
+          <p>
+            <label>
+              Your name:<br />
+              <input type="text" name="name" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your email:<br />
+              <input type="email" name="email" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:<br />
+              <textarea name="message" onChange={this.handleChange} />
+            </label>
+          </p>
+          <Recaptcha
+            ref="recaptcha"
+            sitekey={RECAPTCHA_KEY}
+            onChange={this.handleRecaptcha}
+          />
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+      </div>
+    );
+  }
 }
 
 // export default () => (
