@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Recaptcha from 'react-google-recaptcha'
+// import Recaptcha from 'react-google-recaptcha'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
 import './pages.css'
-const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
+// const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
 
 function encode(data) {
   return Object.keys(data)
@@ -20,9 +20,9 @@ export default class Contact extends Component {
     this.setState({
       [e.target.name]: e.target.value });
   };
-  handleRecaptcha = value => {
-    this.setState({ "g-recaptcha-response": value });
-  };
+  // handleRecaptcha = value => {
+  //   this.setState({ "g-recaptcha-response": value });
+  // };
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -30,8 +30,7 @@ export default class Contact extends Component {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state
+        "form-name": form.getAttribute("name"), ...this.state
       })
     }).then(() => Link(form.getAttribute("action"))).catch(error => alert(error));
   };
@@ -97,18 +96,11 @@ export default class Contact extends Component {
               <label for="validationCustom05">Message</label>
               <textarea className="form-control" id="validationCustom05" name="Message" rows="3"></textarea>
             </div>
-            <div className="form-group mb-3">
-            <Recaptcha
-                ref="recaptcha"
-                sitekey={RECAPTCHA_KEY}
-                onChange={this.handleRecaptcha}
-              />
-            </div>
             <button className="_submit" type="submit">Submit form</button>
             </form>
         </Col>
         </Row>
-              </Layout>
+    </Layout>
     )
   }
 }
