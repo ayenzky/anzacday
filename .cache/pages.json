@@ -1281,6 +1281,11 @@
     },
     {
         "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "maps-showing-medical-facilities-c3d",
+        "path": "/maps-showing-medical-facilities"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
         "jsonName": "may-19-th-d69",
         "path": "/may-19th"
     },

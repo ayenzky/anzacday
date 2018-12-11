@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import Gallery from 'react-grid-gallery'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
+import './pages.css'
 
 const IMAGES =
 [{
@@ -193,9 +194,6 @@ const IMAGES =
         thumbnailHeight: 212
 }]
 
-  
-
-  
 
 export default () => (
   

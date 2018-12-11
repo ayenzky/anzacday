@@ -2,3 +2,22 @@
   position: relative;
   margin-bottom: 1.5em;
 }
+.learnmore {
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  margin-top:2em;
+}
+
+.learnmore a {
+  border:1.5px solid #fff;
+  color:#fff;
+  padding:15px 40px;
+  text-decoration:none;
+  border-radius: 100px
+}
+
+.learnmore a:hover {
+  background-color:#c68d4a;
+  border-color:#c68d4a;
+}

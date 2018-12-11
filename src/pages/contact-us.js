@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
+import './pages.css'
 
 export default () => (
   
@@ -35,7 +36,8 @@ export default () => (
         <p>We welcome comments on our site. Please advise us if you find any mistakes.</p>
         <p><strong>Note:</strong> Please address all correspondence to the Honorary Secretary.</p>
         <p>You can also reach us by fill out the form below.</p>
-        <form name="Contact Form" action="/thank-you" netlify>
+        <form name="Contact Form" action="/thank-you" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="bot-field" />
         <div class="form-group mb-3">
           <label for="validationCustom01">Name</label>
           <input type="text" class="form-control" id="validationCustom01" name="Name" required />
