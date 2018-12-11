@@ -194,6 +194,14 @@ section {
   background-color: transparent;
   padding: 0;
 }
+._submit {
+  background-color: #c68d4a;
+  color: #fff;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 100px;
+  outline: none;
+}
 @media (max-width:1024px) {
   h1 {
     font-size:6.5vw;

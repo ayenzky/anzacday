@@ -10,6 +10,8 @@ exports.components = {
   "component---cache-dev-404-page-js": preferDefault(require("/Users/allen/Projects/htdocs/webriqpage-anzacday/.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(require("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/404.js")),
   "component---src-pages-anzac-news-js": preferDefault(require("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/anzac-news.js")),
-  "component---src-pages-list-of-pages-js": preferDefault(require("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/list-of-pages.js"))
+  "component---src-pages-contact-us-js": preferDefault(require("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/contact-us.js")),
+  "component---src-pages-list-of-pages-js": preferDefault(require("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/list-of-pages.js")),
+  "component---src-pages-photo-gallery-js": preferDefault(require("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/photo-gallery.js"))
 }
 
