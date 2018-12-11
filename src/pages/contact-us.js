@@ -74,11 +74,9 @@ export default class Contact extends Component {
               method="post"
               action="/thank-you"
               data-netlify="true"
-              data-netlify-recaptcha="true"
+              data-netlify-recaptcha="false"
               onSubmit={this.handleSubmit}
             >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="bot-field" />
             <div className="form-group mb-3">
               <label for="validationCustom01">Name</label>
               <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
