@@ -67,6 +67,14 @@ export default class Contact extends Component {
             <p>We welcome comments on our site. Please advise us if you find any mistakes.</p>
             <p><strong>Note:</strong> Please address all correspondence to the Honorary Secretary.</p>
             <p>You can also reach us by fill out the form below.</p>
+            <form
+              name="contact"
+              method="post"
+              action="/thank-you"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+              onSubmit={this.handleSubmit}
+            >
             <div className="form-group mb-3">
               <label for="validationCustom01">Name</label>
               <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
