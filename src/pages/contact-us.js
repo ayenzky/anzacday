@@ -28,7 +28,7 @@ export default class Contact extends Component {
   };
 
   handleSubmit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     const form = e.target;
     fetch("/contact-us?no-cache=1", {
       method: "POST",
