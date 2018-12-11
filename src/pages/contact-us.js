@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 // import {Col, Row} from 'react-bootstrap'
 import './pages.css'
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
+const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
 
 function encode(data) {
   return Object.keys(data)
