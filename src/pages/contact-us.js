@@ -24,15 +24,18 @@ export default class Contact extends Component {
   //   this.setState({ "g-recaptcha-response": value });
   // };
   handleSubmit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     const form = e.target;
     fetch("/contact-us?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"), ...this.state
+        "form-name": form.getAttribute("name"), 
+        ...this.state
       })
-    }).then(() => Link(form.getAttribute("action"))).catch(error => alert(error));
+    })
+    .then(() => Link(form.getAttribute("action")))
+    .catch(error => alert(error));
   };
   render() {
     return (
@@ -94,9 +97,9 @@ export default class Contact extends Component {
             </div>
             <div className="form-group mb-3">
               <label for="validationCustom05">Message</label>
-              <textarea className="form-control" id="validationCustom05" name="Message" rows="3"></textarea>
+              <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
             </div>
-            <button className="_submit" type="submit">Submit form</button>
+            <button className="_submit" type="submit">Submit</button>
             </form>
         </Col>
         </Row>
