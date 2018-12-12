@@ -77,25 +77,33 @@ export default class Contact extends Component {
               data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
+            <noscript>
+                <p>This form won’t work with Javascript disabled</p>
+            </noscript>
             <div className="form-group mb-3">
-              <label for="validationCustom01">Name</label>
-              <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
+              <label for="validationCustom01">Name<br/>
+                <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
+              </label>
             </div>
             <div className="form-group mb-3">
-              <label for="validationCustom02">Address</label>
-              <input type="text" className="form-control" id="validationCustom02" name="Address" onChange={this.handleChange}/>
+              <label for="validationCustom02">Address<br/>
+                <input type="text" className="form-control" id="validationCustom02" name="Address" onChange={this.handleChange}/>
+              </label>
             </div>
             <div className="form-group mb-3">
-              <label for="validationCustom03">Contact No.</label>
-              <input type="text" className="form-control" id="validationCustom03" name="Contact No." onChange={this.handleChange}/>
+              <label for="validationCustom03">Contact No.<br/>
+                <input type="text" className="form-control" id="validationCustom03" name="Contact No." onChange={this.handleChange}/>
+              </label>
             </div>
             <div className="form-group mb-3">
-              <label for="validationCustom04">Email</label>
-              <input type="email" className="form-control" id="validationCustom04" name="Email" onChange={this.handleChange}/>
+              <label for="validationCustom04">Email<br/>
+                <input type="email" className="form-control" id="validationCustom04" name="Email" onChange={this.handleChange}/>
+              </label>
             </div>
             <div className="form-group mb-3">
-              <label for="validationCustom05">Message</label>
-              <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
+              <label for="validationCustom05">Message<br/>
+                <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
+              </label>
             </div>
             <div className="form-group mb-3">
             <Recaptcha
