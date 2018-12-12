@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
 import './pages.css'
-const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY ? process.env.SITE_RECAPTCHA_KEY : '6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1';
 
 function encode(data) {
   return Object.keys(data)
@@ -24,7 +24,7 @@ export default class Contact extends Component {
     this.setState({ "g-recaptcha-response": value });
   };
   handleSubmit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     const form = e.target;
     fetch("/contact-us?no-cache=1", {
       method: "POST",
@@ -82,27 +82,27 @@ export default class Contact extends Component {
             </noscript>
             <p className="form-group mb-3">
               <label>Name<br/>
-                <input type="text" name="Name" onChange={this.handleChange} />
+                <input className="form-control" type="text" name="Name" onChange={this.handleChange} />
               </label>
             </p>
             <p className="form-group mb-3">
               <label>Address<br/>
-                <input type="text" name="Address" onChange={this.handleChange}/>
+                <input className="form-control" type="text" name="Address" onChange={this.handleChange}/>
               </label>
             </p>
             <p className="form-group mb-3">
               <label>Contact No.<br/>
-                <input type="text" name="Contact No" onChange={this.handleChange}/>
+                <input className="form-control" type="text" name="Contact No" onChange={this.handleChange}/>
               </label>
             </p>
             <p className="form-group mb-3">
               <label>Email<br/>
-                <input type="email" name="Email" onChange={this.handleChange}/>
+                <input className="form-control" type="email" name="Email" onChange={this.handleChange}/>
               </label>
             </p>
             <p className="form-group mb-3">
               <label>Message<br/>
-                <textarea name="Message" onChange={this.handleChange}/>
+                <textarea className="form-control" name="Message" onChange={this.handleChange}/>
               </label>
             </p>
             <p className="form-group mb-3">
