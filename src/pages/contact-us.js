@@ -81,27 +81,27 @@ export default class Contact extends Component {
                 <p>This form won’t work with Javascript disabled</p>
             </noscript>
             <p>
-              <label for="validationCustom01">Name<br/>
+              <label>Name<br/>
                 <input type="text" name="Name" onChange={this.handleChange} />
               </label>
             </p>
             <p>
-              <label for="validationCustom02">Address<br/>
+              <label>Address<br/>
                 <input type="text" name="Address" onChange={this.handleChange}/>
               </label>
             </p>
             <p>
-              <label for="validationCustom03">Contact No.<br/>
-                <input type="text" name="Contact No." onChange={this.handleChange}/>
+              <label>Contact No.<br/>
+                <input type="text" name="Contact No" onChange={this.handleChange}/>
               </label>
             </p>
             <p>
-              <label for="validationCustom04">Email<br/>
+              <label>Email<br/>
                 <input type="email" name="Email" onChange={this.handleChange}/>
               </label>
             </p>
             <p>
-              <label for="validationCustom05">Message<br/>
+              <label>Message<br/>
                 <textarea name="Message"  onChange={this.handleChange}/>
               </label>
             </p>
