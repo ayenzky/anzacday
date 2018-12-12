@@ -26,6 +26,7 @@ export default class Contact extends Component {
   handleSubmit = e => {
     // e.preventDefault();
     const form = e.target;
+    console.log(form);
     fetch("/contact-us?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -70,7 +71,7 @@ export default class Contact extends Component {
             <p><strong>Note:</strong> Please address all correspondence to the Honorary Secretary.</p>
             <p>You can also reach us by fill out the form below.</p>
             <form
-              name="contact-recaptcha"
+              name="contact-form"
               method="post"
               action="/thank-you/"
               data-netlify="true"
