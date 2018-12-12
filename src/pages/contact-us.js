@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-// import Recaptcha from 'react-google-recaptcha'
+import Recaptcha from 'react-google-recaptcha'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
 import './pages.css'
-// const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
+const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
 
 function encode(data) {
   return Object.keys(data)
@@ -20,22 +20,22 @@ export default class Contact extends Component {
     this.setState({
       [e.target.name]: e.target.value });
   };
-  // handleRecaptcha = value => {
-  //   this.setState({ "g-recaptcha-response": value });
-  // };
+  handleRecaptcha = value => {
+    this.setState({ "g-recaptcha-response": value });
+  };
   handleSubmit = e => {
-    // e.preventDefault();
+    e.preventDefault();
     const form = e.target;
     fetch("/contact-us?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"), 
+        "form-name": form.getAttribute("name"),
         ...this.state
       })
     })
-    .then(() => Link(form.getAttribute("action")))
-    .catch(error => alert(error));
+      .then(() => Link(form.getAttribute("action")))
+      .catch(error => alert(error));
   };
   render() {
     return (
@@ -70,36 +70,51 @@ export default class Contact extends Component {
             <p><strong>Note:</strong> Please address all correspondence to the Honorary Secretary.</p>
             <p>You can also reach us by fill out the form below.</p>
             <form
-              name="contact"
+              name="contact-recaptcha"
               method="post"
-              action="/thank-you"
+              action="/thank-you/"
               data-netlify="true"
               data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="bot-field" />
-            <div className="form-group mb-3">
-              <label for="validationCustom01">Name</label>
-              <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
-            </div>
-            <div className="form-group mb-3">
-              <label for="validationCustom02">Address</label>
-              <input type="text" className="form-control" id="validationCustom02" name="Address" onChange={this.handleChange}/>
-            </div>
-            <div className="form-group mb-3">
-              <label for="validationCustom03">Contact No.</label>
-              <input type="text" className="form-control" id="validationCustom03" name="Contact No." onChange={this.handleChange}/>
-            </div>
-            <div className="form-group mb-3">
-              <label for="validationCustom04">Email</label>
-              <input type="email" className="form-control" id="validationCustom04" name="Email" onChange={this.handleChange}/>
-            </div>
-            <div className="form-group mb-3">
-              <label for="validationCustom05">Message</label>
-              <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
-            </div>
-            <button className="_submit" type="submit">Submit</button>
+            <noscript>
+                <p>This form won’t work with Javascript disabled</p>
+            </noscript>
+            <p>
+              <label>Name<br/>
+                <input type="text" name="Name" onChange={this.handleChange} />
+              </label>
+            </p>
+            <p>
+              <label>Address<br/>
+                <input type="text" name="Address" onChange={this.handleChange}/>
+              </label>
+            </p>
+            <p>
+              <label>Contact No.<br/>
+                <input type="text" name="Contact No" onChange={this.handleChange}/>
+              </label>
+            </p>
+            <p>
+              <label>Email<br/>
+                <input type="email" name="Email" onChange={this.handleChange}/>
+              </label>
+            </p>
+            <p>
+              <label>Message<br/>
+                <textarea name="Message"  onChange={this.handleChange}/>
+              </label>
+            </p>
+            <p>
+            <Recaptcha
+                ref="recaptcha"
+                sitekey={RECAPTCHA_KEY}
+                onChange={this.handleRecaptcha}
+              />
+            </p>
+            <p>
+                <button type="submit">Submit form</button>
+            </p>
             </form>
         </Col>
         </Row>

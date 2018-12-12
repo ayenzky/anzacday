@@ -13,7 +13,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: `@webriq/gatsby-source-strapi`,
       options: {
         apiURL: process.env.API_URI ? process.env.API_URI : 'http://localhost/',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
