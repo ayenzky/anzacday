@@ -81,29 +81,24 @@ export default class Contact extends Component {
                 <p>This form won’t work with Javascript disabled</p>
             </noscript>
             <p className="form-group mb-3">
-              <label>Name<br/>
-                <input className="form-control" type="text" name="Name" onChange={this.handleChange} />
-              </label>
+              <label>Name</label>
+              <input className="form-control" type="text" name="Name" onChange={this.handleChange} />
             </p>
             <p className="form-group mb-3">
-              <label>Address<br/>
-                <input className="form-control" type="text" name="Address" onChange={this.handleChange}/>
-              </label>
+              <label>Address</label>
+              <input className="form-control" type="text" name="Address" onChange={this.handleChange}/>
             </p>
             <p className="form-group mb-3">
-              <label>Contact No.<br/>
-                <input className="form-control" type="text" name="Contact No" onChange={this.handleChange}/>
-              </label>
+              <label>Contact No.</label>
+              <input className="form-control" type="text" name="Contact No" onChange={this.handleChange}/>
             </p>
             <p className="form-group mb-3">
-              <label>Email<br/>
-                <input className="form-control" type="email" name="Email" onChange={this.handleChange}/>
-              </label>
+              <label>Email</label>
+              <input className="form-control" type="email" name="Email" onChange={this.handleChange}/>
             </p>
             <p className="form-group mb-3">
-              <label>Message<br/>
-                <textarea className="form-control" name="Message" onChange={this.handleChange}/>
-              </label>
+              <label>Message</label>
+              <textarea className="form-control" name="Message" onChange={this.handleChange}/>
             </p>
             <p className="form-group mb-3">
             <Recaptcha
