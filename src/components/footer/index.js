@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import {Container, Row, Col, Image} from 'react-bootstrap'
 import './index.css'
 
@@ -12,30 +13,30 @@ export default () =>
             <h4 className="mt-0">ANZAC Day</h4>
           </div>
           <ul className="list-unstyled bottom-menu d-flex align-items-start flex-wrap flex-column flex-sm-row m-0">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about-us">About Us</a></li>
-              <li><a href="/history">History</a></li>
-              <li><a href="/education">Education</a></li>
-              <li><a href="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</a></li>
-              <li><a href="/anzac-news">Latest News</a></li>
-              <li><a href="/adcc-merchandise-for-schools">Schools Orders &amp; Information</a></li>
-              <li><a href="/commemoration-activities">Graves &amp; Memorials Grants Program</a></li>
-              <li><a href="/service-activities">ANZAC Day Services</a></li>
-              <li><a href="/annual-anzac-day-ceremonies">Annual ANZAC Day Ceremonies</a></li>
-              <li><a href="/just-soldiers">Just Soldiers</a></li>
-              <li><a href="/speeches">Speeches</a></li>
-              <li><a href="/the-spirit-of-anzac">The Spirit of Anzac</a></li>
-              <li><a href="/current-catalogue">Current Catalogue</a></li>
-              <li><a href="/digging">Book Support Page for Digging for Diggers</a></li>
-              <li><a href="/useful-local-contacts-and-resources">Useful Local Contacts &amp; Resources</a></li>
-              <li><a href="/gateway-to-hell">Gateway to Hell</a></li>
-              <li><a href="/the-rising-sun-badge">The Rising Sun Badge</a></li>
-              <li><a href="/photo-gallery">Photo Gallery</a></li>
-              <li><a href="/download-tips">Download Tips</a></li>
-              <li><a href="/awm-images">Copy of Images</a></li>
-              <li><a href="contact-us">Contact Us</a></li>
-              <li><a href="/privacy-policy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/history">History</Link></li>
+              <li><Link to="/education">Education</Link></li>
+              <li><Link to="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</Link></li>
+              <li><Link to="/anzac-news">Latest News</Link></li>
+              <li><Link to="/adcc-merchandise-for-schools">Schools Orders &amp; Information</Link></li>
+              <li><Link to="/commemoration-activities">Graves &amp; Memorials Grants Program</Link></li>
+              <li><Link to="/service-activities">ANZAC Day Services</Link></li>
+              <li><Link to="/annual-anzac-day-ceremonies">Annual ANZAC Day Ceremonies</Link></li>
+              <li><Link to="/just-soldiers">Just Soldiers</Link></li>
+              <li><Link to="/speeches">Speeches</Link></li>
+              <li><Link to="/the-spirit-of-anzac">The Spirit of Anzac</Link></li>
+              <li><Link to="/current-catalogue">Current Catalogue</Link></li>
+              <li><Link to="/digging">Book Support Page for Digging for Diggers</Link></li>
+              <li><Link to="/useful-local-contacts-and-resources">Useful Local Contacts &amp; Resources</Link></li>
+              <li><Link to="/gateway-to-hell">Gateway to Hell</Link></li>
+              <li><Link to="/the-rising-sun-badge">The Rising Sun Badge</Link></li>
+              <li><Link to="/photo-gallery">Photo Gallery</Link></li>
+              <li><Link to="/download-tips">Download Tips</Link></li>
+              <li><Link to="/awm-images">Copy of Images</Link></li>
+              <li><Link to="/contact-us">Contact Us</Link></li>
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link to="/terms">Terms</Link></li>
             </ul>
         </Col>
         <Col md={6} lg={4} className='mb-5'>

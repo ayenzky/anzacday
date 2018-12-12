@@ -12,7 +12,7 @@ export default () => (
     </ul>
     <Row>
     <Col xs={12}>
-      <h3>Thanks for filling out our form!</h3>
+      <h2>Thanks for filling out our form!</h2>
       <p>We have received your message and would like to thank you for writing to us. If your inquiry is urgent, please use the telephone number listed below to talk to one of our staff members. Otherwise, we will reply by email as soon as possible.</p>
       <p><a href="/">Return Home</a></p>
     </Col>
