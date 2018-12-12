@@ -80,38 +80,38 @@ export default class Contact extends Component {
             <noscript>
                 <p>This form won’t work with Javascript disabled</p>
             </noscript>
-            <div className="form-group mb-3">
+            <p className="form-group mb-3">
               <label for="validationCustom01">Name<br/>
                 <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
               </label>
-            </div>
-            <div className="form-group mb-3">
+            </p>
+            <p className="form-group mb-3">
               <label for="validationCustom02">Address<br/>
                 <input type="text" className="form-control" id="validationCustom02" name="Address" onChange={this.handleChange}/>
               </label>
-            </div>
-            <div className="form-group mb-3">
+            </p>
+            <p className="form-group mb-3">
               <label for="validationCustom03">Contact No.<br/>
                 <input type="text" className="form-control" id="validationCustom03" name="Contact No." onChange={this.handleChange}/>
               </label>
-            </div>
-            <div className="form-group mb-3">
+            </p>
+            <p className="form-group mb-3">
               <label for="validationCustom04">Email<br/>
                 <input type="email" className="form-control" id="validationCustom04" name="Email" onChange={this.handleChange}/>
               </label>
-            </div>
-            <div className="form-group mb-3">
+            </p>
+            <p className="form-group mb-3">
               <label for="validationCustom05">Message<br/>
                 <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
               </label>
-            </div>
-            <div className="form-group mb-3">
+            </p>
+            <p className="form-group mb-3">
             <Recaptcha
                 ref="recaptcha"
                 sitekey={RECAPTCHA_KEY}
                 onChange={this.handleRecaptcha}
               />
-            </div>
+            </p>
             <button className="_submit" type="submit">Submit form</button>
             </form>
         </Col>
