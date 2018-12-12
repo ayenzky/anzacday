@@ -80,32 +80,32 @@ export default class Contact extends Component {
             <noscript>
                 <p>This form won’t work with Javascript disabled</p>
             </noscript>
-            <p className="form-group mb-3">
+            <p>
               <label for="validationCustom01">Name<br/>
-                <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
+                <input type="text" name="Name" onChange={this.handleChange} />
               </label>
             </p>
-            <p className="form-group mb-3">
+            <p>
               <label for="validationCustom02">Address<br/>
-                <input type="text" className="form-control" id="validationCustom02" name="Address" onChange={this.handleChange}/>
+                <input type="text" name="Address" onChange={this.handleChange}/>
               </label>
             </p>
-            <p className="form-group mb-3">
+            <p>
               <label for="validationCustom03">Contact No.<br/>
-                <input type="text" className="form-control" id="validationCustom03" name="Contact No." onChange={this.handleChange}/>
+                <input type="text" name="Contact No." onChange={this.handleChange}/>
               </label>
             </p>
-            <p className="form-group mb-3">
+            <p>
               <label for="validationCustom04">Email<br/>
-                <input type="email" className="form-control" id="validationCustom04" name="Email" onChange={this.handleChange}/>
+                <input type="email" name="Email" onChange={this.handleChange}/>
               </label>
             </p>
-            <p className="form-group mb-3">
+            <p>
               <label for="validationCustom05">Message<br/>
-                <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
+                <textarea name="Message"  onChange={this.handleChange}/>
               </label>
             </p>
-            <p className="form-group mb-3">
+            <p>
             <Recaptcha
                 ref="recaptcha"
                 sitekey={RECAPTCHA_KEY}
