@@ -70,43 +70,42 @@ export default class Contact extends Component {
             <p><strong>Note:</strong> Please address all correspondence to the Honorary Secretary.</p>
             <p>You can also reach us by fill out the form below.</p>
             <form
-          name="contact-recaptcha"
-          method="post"
-          action="/thanks/"
-          data-netlify="true"
-          data-netlify-recaptcha="true"
-          onSubmit={this.handleSubmit}
-        >
-          <noscript>
-            <p>This form won’t work with Javascript disabled</p>
-          </noscript>
-          <p>
-            <label>
-              Your name:<br />
-              <input type="text" name="name" onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your email:<br />
-              <input type="email" name="email" onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message:<br />
-              <textarea name="message" onChange={this.handleChange} />
-            </label>
-          </p>
-              <Recaptcha
+              name="contact-recaptcha"
+              method="post"
+              action="/thank-you/"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+              onSubmit={this.handleSubmit}
+            >
+            <div className="form-group mb-3">
+              <label for="validationCustom01">Name</label>
+              <input type="text" className="form-control" id="validationCustom01" name="Name" onChange={this.handleChange} />
+            </div>
+            <div className="form-group mb-3">
+              <label for="validationCustom02">Address</label>
+              <input type="text" className="form-control" id="validationCustom02" name="Address" onChange={this.handleChange}/>
+            </div>
+            <div className="form-group mb-3">
+              <label for="validationCustom03">Contact No.</label>
+              <input type="text" className="form-control" id="validationCustom03" name="Contact No." onChange={this.handleChange}/>
+            </div>
+            <div className="form-group mb-3">
+              <label for="validationCustom04">Email</label>
+              <input type="email" className="form-control" id="validationCustom04" name="Email" onChange={this.handleChange}/>
+            </div>
+            <div className="form-group mb-3">
+              <label for="validationCustom05">Message</label>
+              <textarea className="form-control" id="validationCustom05" name="Message" rows="3" onChange={this.handleChange}/>
+            </div>
+            <div className="form-group mb-3">
+            <Recaptcha
                 ref="recaptcha"
                 sitekey={RECAPTCHA_KEY}
                 onChange={this.handleRecaptcha}
               />
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+            </div>
+            <button className="_submit" type="submit">Submit form</button>
+            </form>
         </Col>
         </Row>
     </Layout>
