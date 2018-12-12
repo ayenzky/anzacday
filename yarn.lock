@@ -928,6 +928,16 @@
     "@webassemblyjs/wast-parser" "1.7.8"
     "@xtuc/long" "4.2.1"
 
+"@webriq/gatsby-source-strapi@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@webriq/gatsby-source-strapi/-/gatsby-source-strapi-0.0.6.tgz#30ef9508e752f208e9553edf3b3f98703e97e709"
+  dependencies:
+    axios "^0.18.0"
+    gatsby-node-helpers "^0.3.0"
+    gatsby-source-filesystem "^1.5.39"
+    lodash "^4.17.11"
+    pluralize "^7.0.0"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
