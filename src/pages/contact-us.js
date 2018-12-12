@@ -112,7 +112,9 @@ export default class Contact extends Component {
                 onChange={this.handleRecaptcha}
               />
             </p>
-            <button className="_submit" type="submit">Submit form</button>
+            <p>
+                <button type="submit">Submit form</button>
+            </p>
             </form>
         </Col>
         </Row>
