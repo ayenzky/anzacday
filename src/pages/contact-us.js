@@ -80,32 +80,32 @@ export default class Contact extends Component {
             <noscript>
                 <p>This form won’t work with Javascript disabled</p>
             </noscript>
-            <p>
+            <p className="form-group mb-3">
               <label>Name<br/>
                 <input type="text" name="Name" onChange={this.handleChange} />
               </label>
             </p>
-            <p>
+            <p className="form-group mb-3">
               <label>Address<br/>
                 <input type="text" name="Address" onChange={this.handleChange}/>
               </label>
             </p>
-            <p>
+            <p className="form-group mb-3">
               <label>Contact No.<br/>
                 <input type="text" name="Contact No" onChange={this.handleChange}/>
               </label>
             </p>
-            <p>
+            <p className="form-group mb-3">
               <label>Email<br/>
                 <input type="email" name="Email" onChange={this.handleChange}/>
               </label>
             </p>
-            <p>
+            <p className="form-group mb-3">
               <label>Message<br/>
-                <textarea name="Message"  onChange={this.handleChange}/>
+                <textarea name="Message" onChange={this.handleChange}/>
               </label>
             </p>
-            <p>
+            <p className="form-group mb-3">
             <Recaptcha
                 ref="recaptcha"
                 sitekey={RECAPTCHA_KEY}
@@ -113,7 +113,7 @@ export default class Contact extends Component {
               />
             </p>
             <p>
-                <button type="submit">Submit form</button>
+            <button className="_submit" type="submit">Submit form</button>
             </p>
             </form>
         </Col>
