@@ -1,18 +1,19 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import {Container, Row, Col, Image} from 'react-bootstrap'
-import './index.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import {Container, Row, Col} from 'react-bootstrap'
+import styl from './index.module.css'
 
 export default () =>
   <footer>
-    <div id='footer'>
+    <div id={styl.footer}>
     <Container>
       <Row>
         <Col md={12} lg={6} className='mb-5'>
           <div className="intro mb-4">
             <h4 className="mt-0">ANZAC Day</h4>
           </div>
-          <ul className="list-unstyled bottom-menu d-flex align-items-start flex-wrap flex-column flex-sm-row m-0">
+          <ul className={styl.bottomMenu + " list-unstyled d-flex align-items-start flex-wrap flex-column flex-sm-row m-0"}>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about-us">About Us</Link></li>
               <li><Link to="/history">History</Link></li>
@@ -55,19 +56,19 @@ export default () =>
           </Col>
         <Col md={6} lg={2} className='mb-5'>
         <p>Gallipoli Roses Available to Purchase Here</p>
-            <a href="https://www.treloarroses.com.au/index.php?route=product/product&product_id=11151&search=Gallipoli" target="_blank" rel="noopener noreferrer"><Image fluid src="https://res.cloudinary.com/db6xmqefe/image/upload/v1538377200/treloar_zqjhof.jpg"/></a>
+            <a href="https://www.treloarroses.com.au/index.php?route=product/product&product_id=11151&search=Gallipoli" target="_blank" rel="noopener noreferrer" title="Gallipoli Roses"><LazyLoadImage className="img-fluid" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1538377200/treloar_zqjhof.jpg" alt="Gallipoli Roses"/></a>
             <p className="mt-4">
-              <a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer">
-                <Image src="https://res.cloudinary.com/db6xmqefe/image/upload/v1538378894/facebook_e2subm.svg"/>
+              <a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer" title="facebook">
+                <LazyLoadImage src="https://res.cloudinary.com/db6xmqefe/image/upload/v1538378894/facebook_e2subm.svg" alt="facebook"/>
               </a>
             </p>
         </Col>
       </Row>
     </Container>
     </div>
-    <div id='copyright' className="py-4">
+    <div id={styl.copyright} className="py-4">
       <Container>
-        <p className="text-white mb-0">Copyright © {(new Date().getFullYear())} <a href="mailto:Office.adcc@anzacday.org.au">ANZAC Day Commemoration Committee (Queensland)</a>&nbsp;Incorporated.</p>
+        <p className="text-white mb-0">Copyright © {(new Date().getFullYear())} <a href="mailto:Office.adcc@anzacday.org.au">ANZAC Day Commemoration Committee (Queensland)</a> Incorporated. - All Rights Reserved - Designed by&nbsp;<a href="https://www.webriq.services/" title="WebriQ Goes Mad" rel="noopener noreferrer" target="_blank">WebriQ Goes Mad</a> - Powered by&nbsp;<a href="https://www.webriq.com/" title="webriq" rel="noopener noreferrer" target="_blank">WebriQ</a></p>
       </Container>
     </div>
   </footer>

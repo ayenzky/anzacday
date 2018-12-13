@@ -1,8 +1,9 @@
 import React from 'react'
 import {Container, Row, Col, Media} from 'react-bootstrap'
 // import Slide_1600w from '../../images/slide4-1600w.jpg'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Match } from "@reach/router"
-import './index.css'
+import styl from './index.module.css'
 
 
 // export default class Hero extends Component {
@@ -44,18 +45,18 @@ const Hero = ({children}) => (
       props.match ? (
         <div className='hero'>
           <Media>
-            <img className='w-100 mb-0' src='https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_414/v1538371271/slide.jpg' 
+            <LazyLoadImage effect="opacity" className='w-100 mb-0' src='https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_414/v1538371271/slide.jpg' 
             srcSet='https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_414/v1538371271/slide.jpg 414w,
                       https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_568/v1538371271/slide.jpg 568w,
                       https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_667/v1538371271/slide.jpg 667w,
                       https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_767/v1538371271/slide.jpg 767w,
                       https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_823/v1538371271/slide.jpg 823w,
                       https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_1366/v1538371271/slide.jpg 1366w,
-                      https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_1600/v1538371271/slide.jpg 1600w' alt=''/>
+                      https://res.cloudinary.com/db6xmqefe/image/upload/c_scale,w_1600/v1538371271/slide.jpg 1600w' alt='ANZAC banner'/>
           </Media>
         </div>
       ) : (
-        <div className='hero-main'>
+        <div className={styl.heroMain}>
           <Container>
             <Row>
               <Col sm={8} md={7}>

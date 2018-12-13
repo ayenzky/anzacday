@@ -28,7 +28,7 @@ export default ({pageTitle, data, children, layoutClass}) =>
     render = {data => (
       <Container fluid className='p-0'>
         <Helmet
-          title = {data.site.siteMetadata.title}
+          title = {pageTitle ? pageTitle +" - "+ data.site.siteMetadata.title : data.site.siteMetadata.title}
           meta ={[
             {name: 'description', content: 'anzac day commemoration committee'},
             {name: 'keywords', content: 'anzac day, history, education, commemoration'}

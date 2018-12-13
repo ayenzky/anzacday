@@ -5,7 +5,7 @@ import {Col, Row} from 'react-bootstrap'
 import './pages.css'
 
 export default () => (  
-  <Layout pageTitle='Thank You'>
+  <Layout pageTitle='Thank You' layoutClass='main-page'>
     <ul className='d-flex list-unstyled breadcrumbs mb-5'>
       <li className='bread-link'><Link to='/'>Home</Link></li>
       <li className='bread-link'><Link to='/thank-you'>Thank You</Link></li>

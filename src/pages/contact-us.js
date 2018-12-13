@@ -40,7 +40,7 @@ export default class Contact extends Component {
   };
   render() {
     return (
-      <Layout pageTitle='Contact Us'>
+      <Layout pageTitle='Contact Us' layoutClass='main-page'>
         <ul className='d-flex list-unstyled breadcrumbs mb-5'>
           <li className='bread-link'><Link to='/'>Home</Link></li>
           <li className='bread-link'><Link to='/contact-us'>Contact Us</Link></li>

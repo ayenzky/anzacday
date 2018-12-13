@@ -79,11 +79,11 @@
 
 .blog-list-created li:first-child {
   border:none;
-  padding-left:0;
+  padding-left:0 !important;
 }
 
 .blog-list-created li {
-  padding:0 0.5em;
+  padding:0 0.5em !important;
   border-left:1px solid #c9c9c9;
   line-height:1;
 }
@@ -239,7 +239,7 @@
 }
 
 @media (max-width:767px) {
-  .page #box-menu li {
+  #box-menu li {
     width:50%;
   }
 }

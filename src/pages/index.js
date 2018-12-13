@@ -2,6 +2,8 @@ import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
 import { FacebookProvider, EmbeddedPost } from 'react-facebook'
+// import LazyLoad from 'react-lazyload'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Layout from '../components/layout'
 import './index.css'
 
@@ -19,35 +21,37 @@ const IndexPage = ({data}) => (
                 <p>On every 25th day of April for the past 100 years, “ANZAC Day” has been observed in Australia and New Zealand, becoming an honoured and sacred institution along the way.</p>
                 <p>This site includes a host of information about the origins of ANZAC Day, the Spirit of ANZAC and gives an overview of the conflicts in which Australian Defence Force personnel have served in times of war and peace.</p>
                 <p>We hope you will find something of value in the following pages and that you will join with us in continuing the tradition of honouring ANZAC Day.</p>
-                <p>Be sure to like us on&nbsp;<a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer">Facebook</a></p>
-                <p>2018 Brisbane Dawn Service Programme available&nbsp;<a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1540972010/c9s7cl4mie8ougzfdyoa.pdf">here</a></p>
+                <p>Be sure to like us on <a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer" title="facebook">Facebook</a></p>
+                <p>2018 Brisbane Dawn Service Programme available <a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1540972010/c9s7cl4mie8ougzfdyoa.pdf" title="2018 Brisbane Dawn Service Programme">here</a></p>
               </div>
             </Col>
           </Row>
         </Container>
         <ul className="mb-0 d-flex flex-wrap" id="box-menu">
           <li data-aos="zoom-in" data-aos-duration="50" data-aos-once="true" className="bg-dark-brown aos-init aos-animate">
-            <Link to="/current-catalogue"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753799/online-shop-icon.png" alt=""/>Online Shop Including Catalogue</Link>
+            <Link to="/current-catalogue" title="online shop">
+              <LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753799/online-shop-icon.png" alt="online shop" height="53"/>Online Shop Including Catalogue
+            </Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="100" data-aos-once="true" className="bg-light-brown aos-init aos-animate">
-            <Link to="/about-us"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753764/about-ADDC.png" alt=""/>About the ADCC</Link>
+            <Link to="/about-us" title="about us"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753764/about-ADDC.png" alt="about ADCC" height="53"/>About the ADCC</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="200" data-aos-once="true" className="bg-light-brown aos-init">
-            <Link to="/adcc-merchandise-for-schools"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753721/school.png" alt=""/>School Orders and Information</Link>
+            <Link to="/adcc-merchandise-for-schools" title="adcc merchandise"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753721/school.png" alt="school orders" height="53"/>School Orders and Information</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="300" data-aos-once="true" className="bg-dark-brown aos-init">
-            <Link to="/commemoration-activities"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753681/commemoration.png" alt=""/>Graves &amp; Memorials Grants Program</Link>
+            <Link to="/commemoration-activities" title="commemoration activities"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753681/commemoration.png" alt="graves" height="53"/>Graves &amp; Memorials Grants Program</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="400" data-aos-once="true" className="bg-dark-brown aos-init">
-            <Link to="/service-activities"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753532/services.png" alt=""/>ANZAC Service Schedule and Guides</Link>
+            <Link to="/service-activities" title="services activities"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753532/services.png" alt="ANZAC Services" height="53"/>ANZAC Service Schedule and Guides</Link>
           </li>
           <li data-aos="zoom-in" data-aos-duration="500" data-aos-once="true" className="bg-light-brown aos-init">
-            <Link to="/the-spirit-of-anzac"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753248/spirit.png" alt=""/>ANZAC Traditions Facts &amp; Folklore</Link>
+            <Link to="/the-spirit-of-anzac" title="spirit of ANZAC"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753248/spirit.png" alt="ANZAC traditions" height="53"/>ANZAC Traditions Facts &amp; Folklore</Link>
           </li>
         </ul>
     </section>
     <section id="war-identity-education">
-        <div id="war-identity-img"></div>
+        <div id="war-identity-img" className="d-none d-md-block"></div>
         <Container>
           <Row>
             <Col md={7} className="ml-md-auto aos-init aos-animate" data-aos="fade-left" data-aos-once="true">
@@ -58,9 +62,9 @@ const IndexPage = ({data}) => (
                 <p>You can find what you are looking for by Themes, or Individual Wars.</p>
                 <p>The list of relevant resources under the theme or war you select is colour-coded:</p>
                 <ul className="list-unstyled d-flex legend flex-wrap">
-                  <li className="pr-3 pb-3"><img className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752757/ec.jpg" width="25" alt=""/>Early Childhood</li>
-                  <li className="pr-3 pb-3"><img className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752829/primary.jpg" width="25" alt=""/>Primary</li>
-                  <li className="pr-3 pb-0"><img className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752742/secondary.jpg" width="25" alt=""/>Secondary</li>
+                  <li className="pr-3 pb-3"><LazyLoadImage effect="blur" className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752757/ec.jpg" width="25" height="25" alt="early childhood"/>Early Childhood</li>
+                  <li className="pr-3 pb-3"><LazyLoadImage effect="blur" className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752829/primary.jpg" width="25" height="25" alt="primary"/>Primary</li>
+                  <li className="pr-3 pb-0"><LazyLoadImage effect="blur" className="mr-2" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752742/secondary.jpg" width="25" height="25" alt="secondary"/>Secondary</li>
                 </ul>
                 <p>There is also a brief description for each resource.</p>
                 <p>The description will:</p>
@@ -85,17 +89,17 @@ const IndexPage = ({data}) => (
                 <Col md={4} sm={6} className="mb-4" key={document.node.id}>
                   <div className="blog-lead">
                     <div className="blog-lead-img">
-                      <img className="img-fluid" src={document.node.featured_image.url} alt={document.node.title}/>
+                      <LazyLoadImage effect="blur" className="img-fluid" src={document.node.featured_image.url} alt={document.node.title}/>
                     </div>
                     <div className="blog-lead-content mt-3">
-                      <h4 className="mt-0"><Link to={`/${document.node.slug}`}>{document.node.title}</Link></h4>
+                      <h4 className="mt-0"><Link to={`/${document.node.slug}`} title={document.node.title}>{document.node.title}</Link></h4>
                       <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
-                        <li className="text-capitalize"><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt=""/><Link to={`/authors/${document.node.author.id}`}>{document.node.author.username}</Link></li>
-                        <li><img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt=""/>{document.node.date}</li>
+                        <li className="text-capitalize"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt="author icon"/><Link to={`/authors/${document.node.author.id}`} title={document.node.author.username}>{document.node.author.username}</Link></li>
+                        <li><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt="clock icon"/>{document.node.date}</li>
                       </ul>
                       <p>{document.node.shortdesc}</p>
                       <p className="readmore">
-                        <Link to={`/${document.node.slug}`}>Read More<img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753135/arrow-pointing-to-right.svg" alt=""/></Link>
+                        <Link to={`/${document.node.slug}`} title="read more">Read More<LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753135/arrow-pointing-to-right.svg" alt="arrow"/></Link>
                       </p>
                     </div>
                   </div>
@@ -124,7 +128,7 @@ const IndexPage = ({data}) => (
                 <p>This solemn ceremony is conducted every year in Brisbane’s ANZAC Square prior to ANZAC Day from 10am and noon approximately. The 2016 event took place on Thursday, the 21st day of April, and several thousand Queensland school students took part.</p>
                 <h3>The ANZAC Day Dawn Service</h3>
                 <p>Every year on the 25th day of April, the ANZAC Day Dawn Service starts at 04:28am sharp at Brisbane’s Shrine of Remembrance, ANZAC Square, located between Ann and Adelaide Streets. All are welcome to attend.</p>
-                <p className="learnmore d-flex"><Link to="/annual-anzac-day-ceremonies">Learn More</Link></p>
+                <p className="learnmore d-flex"><Link to="/annual-anzac-day-ceremonies" title="annual anzac day ceremonies">Learn More</Link></p>
               </div>
             </Col>
           </Row>
