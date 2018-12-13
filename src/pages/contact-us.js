@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
 import './pages.css'
-const RECAPTCHA_KEY = "6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1";
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY ? process.env.SITE_RECAPTCHA_KEY : '6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1';
 
 function encode(data) {
   return Object.keys(data)
@@ -24,8 +24,9 @@ export default class Contact extends Component {
     this.setState({ "g-recaptcha-response": value });
   };
   handleSubmit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     const form = e.target;
+    console.log(form);
     fetch("/contact-us?no-cache=1", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -39,7 +40,7 @@ export default class Contact extends Component {
   };
   render() {
     return (
-      <Layout pageTitle='Contact Us'>
+      <Layout pageTitle='Contact Us' layoutClass='main-page'>
         <ul className='d-flex list-unstyled breadcrumbs mb-5'>
           <li className='bread-link'><Link to='/'>Home</Link></li>
           <li className='bread-link'><Link to='/contact-us'>Contact Us</Link></li>
@@ -70,7 +71,7 @@ export default class Contact extends Component {
             <p><strong>Note:</strong> Please address all correspondence to the Honorary Secretary.</p>
             <p>You can also reach us by fill out the form below.</p>
             <form
-              name="contact-recaptcha"
+              name="contact-form"
               method="post"
               action="/thank-you/"
               data-netlify="true"
@@ -81,29 +82,24 @@ export default class Contact extends Component {
                 <p>This form won’t work with Javascript disabled</p>
             </noscript>
             <p className="form-group mb-3">
-              <label>Name<br/>
-                <input type="text" name="Name" onChange={this.handleChange} />
-              </label>
+              <label>Name</label>
+              <input className="form-control" type="text" name="Name" onChange={this.handleChange} />
             </p>
             <p className="form-group mb-3">
-              <label>Address<br/>
-                <input type="text" name="Address" onChange={this.handleChange}/>
-              </label>
+              <label>Address</label>
+              <input className="form-control" type="text" name="Address" onChange={this.handleChange}/>
             </p>
             <p className="form-group mb-3">
-              <label>Contact No.<br/>
-                <input type="text" name="Contact No" onChange={this.handleChange}/>
-              </label>
+              <label>Contact No.</label>
+              <input className="form-control" type="text" name="Contact No" onChange={this.handleChange}/>
             </p>
             <p className="form-group mb-3">
-              <label>Email<br/>
-                <input type="email" name="Email" onChange={this.handleChange}/>
-              </label>
+              <label>Email</label>
+              <input className="form-control" type="email" name="Email" onChange={this.handleChange}/>
             </p>
             <p className="form-group mb-3">
-              <label>Message<br/>
-                <textarea name="Message" onChange={this.handleChange}/>
-              </label>
+              <label>Message</label>
+              <textarea className="form-control" name="Message" onChange={this.handleChange}/>
             </p>
             <p className="form-group mb-3">
             <Recaptcha

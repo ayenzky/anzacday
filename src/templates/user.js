@@ -1,6 +1,7 @@
 import React from 'react'  
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import '../pages/pages.css'
 
 const UserTemplate = ({ data }) => (  
   <Layout pageTitle={data.strapiUsers.username}>

@@ -1995,11 +1995,6 @@
         "path": "/terms"
     },
     {
-        "componentChunkName": "component---src-templates-single-js",
-        "jsonName": "thank-you-d16",
-        "path": "/thank-you"
-    },
-    {
         "componentChunkName": "component---src-pages-thank-you-js",
         "jsonName": "thank-you-a93",
         "path": "/thank-you/"

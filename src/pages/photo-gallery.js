@@ -197,7 +197,7 @@ const IMAGES =
 
 export default () => (
   
-  <Layout pageTitle='Photo Gallery'>
+  <Layout pageTitle='Photo Gallery' layoutClass='main-page'>
     <ul className='d-flex list-unstyled breadcrumbs mb-5'>
       <li className='bread-link'><Link to='/'>Home</Link></li>
       <li className='bread-link'><Link to='/photo-gallery'>Photo Gallery</Link></li>

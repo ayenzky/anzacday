@@ -1,4 +1,4 @@
-#box-side {
+#boxSide {
   position:relative;
   width:100%;
   padding-left:0;
@@ -7,7 +7,7 @@
   height:100%;
 }
 
-#box-side li {
+#boxSide li {
   width:100%;
   margin-bottom: 0;
   text-align:center;
@@ -26,11 +26,11 @@
   padding-left: 0;
 }
 
-#box-side li:nth-child(even) {
+#boxSide li:nth-child(even) {
   background-color: #cc9a5e; 
 }
 
-#box-side li a {
+#boxSide li a {
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -50,37 +50,37 @@
   transition:400ms ease-in-out;
 }
 
-#box-side li:hover a {
+#boxSide li:hover a {
   opacity:1;
 }
 
-#box-side li a img {
+#boxSide li a img {
   margin-bottom:1em;
 }
 
 
 @media (min-width:414px) {
-  #box-side li {
+  #boxSide li {
     width:50%;
     background-color: #c68d4a;
   }
-  #box-side li:nth-child(even) {
+  #boxSide li:nth-child(even) {
     background-color: #c68d4a; 
   }
-  #box-side li:nth-child(2) {
+  #boxSide li:nth-child(2) {
     background-color:#cc9a5e;
   }
-  #box-side li:nth-child(3n-3) {
+  #boxSide li:nth-child(3n-3) {
     background-color:#cc9a5e;
   }
 }
 
 @media screen and (min-width: 991px) {
-  #box-side li {
+  #boxSide li {
     width: 100%;
     background-color: #c68d4a !important;
   }
-  #box-side li:nth-child(even) {
+  #boxSide li:nth-child(even) {
     background-color: #cc9a5e !important; 
   }
 }

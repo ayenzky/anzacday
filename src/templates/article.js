@@ -10,7 +10,7 @@ const ArticleTemplate = ({ data }) => {
   // console.log(breadcrumbHelper.helper2)
   
   return (  
-    <Layout pageTitle={data.strapiArticles.title}>
+    <Layout pageTitle={data.strapiArticles.title} layoutClass='main-page'>
       <Breadcrumb breadData={breadcrumbData} title='ANZAC News' slug='anzac-news'/>
       <p>by <Link className='text-capitalize' to={`/authors/${data.strapiArticles.author.id}`}>{data.strapiArticles.author.username}</Link></p>
       <ReactMarkdown escapeHtml={false} source={data.strapiArticles.content} />

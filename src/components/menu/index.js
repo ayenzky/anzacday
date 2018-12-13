@@ -46,25 +46,25 @@ export default class Menu extends Component {
                   <h5 className="mt-0 font-weight-light">Legend:</h5>
                 </li>
                 <li className="d-flex align-items-center">
-                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752757/ec.jpg" alt=""/>
+                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752757/ec.jpg" alt="early childhood"/>
                   <span>Early Childhood</span>
                 </li>
                 <li className="d-flex align-items-center">
-                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752829/primary.jpg" alt=""/>
+                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752829/primary.jpg" alt="primary"/>
                   <span>Primary</span>
                 </li>
                 <li className="d-flex align-items-center">
-                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752742/secondary.jpg" alt=""/>
+                  <img src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539752742/secondary.jpg" alt="secondary"/>
                   <span>Secondary</span>
                 </li>
               </ul>
-              <Nav className="d-flex flex-column main-nav mb-0 mt-4">
-                <li className="menu-item"><Nav.Link href="/">Home</Nav.Link></li>
-                <li className="menu-item"><Nav.Link href="/about-us">About Us</Nav.Link></li>
+              <Nav className="d-flex flex-column main-nav w-100 mb-0 mt-4">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/about-us">About Us</Nav.Link>
                 <NavDropdown title="Wars" id="basic-nav-dropdown">
-                  <li className="dropdown-item ecps legends">
-                    <NavDropdown.Item className="ecps legends" href="#action/3.1">1899-1902 BOER WAR</NavDropdown.Item>
-                  </li>
+                  <div className="dropdown-item ecps legends">
+                    <Nav.Link href="/1899-1902-boer-war" className="ecps legends">1899-1902 BOER WAR</Nav.Link>
+                  </div>
                   <NavDropdown.Divider className="mt-0" />
                   <NavDropdown alignRight title="1914-1918 WORLD WAR 1" id="basic-nav-dropdown">
                     <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown-1">
@@ -203,54 +203,39 @@ export default class Menu extends Component {
                     </li>
                   </ul>
                 </NavDropdown>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/history">History</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/education">Education</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/adcc-merchandise-for-schools">Schools Orders &amp; Information</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/service-activities">ANZAC Day Services</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/poetry">Poetry</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/just-soldiers">Just Soldiers</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/speeches">Speeches</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/annual-anzac-day-ceremonies">Annual ANZAC Day Ceremonies</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/the-spirit-of-anzac">The Spirit of ANZAC</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/current-catalogue">Current Catalogue</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/photo-gallery">Photo Gallery</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/download-tips">Download Tips</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/awm-images">Copying of Images</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/anzac-news">Latest News</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</Nav.Link>
-                </li>
-                <li className="menu-item" role="menuitem">
+                
                   <Nav.Link href="/contact-us">Contact Us</Nav.Link>
-                </li>
+                
               </Nav>
             </div>
           }
