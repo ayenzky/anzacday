@@ -9,7 +9,6 @@ import './single.css'
 
 const PageTemplate = ({ data }) => {
     var breadcrumbData = breadcrumbHelper.helper1(data);
-    console.log(breadcrumbData)
     return (
       <Layout pageTitle={data.strapiPages.title} layoutClass='main-page'>
           <Breadcrumb breadData={breadcrumbData}/>
