@@ -128,7 +128,7 @@ const IndexPage = ({data}) => (
                 <p>This solemn ceremony is conducted every year in Brisbane’s ANZAC Square prior to ANZAC Day from 10am and noon approximately. The 2016 event took place on Thursday, the 21st day of April, and several thousand Queensland school students took part.</p>
                 <h3>The ANZAC Day Dawn Service</h3>
                 <p>Every year on the 25th day of April, the ANZAC Day Dawn Service starts at 04:28am sharp at Brisbane’s Shrine of Remembrance, ANZAC Square, located between Ann and Adelaide Streets. All are welcome to attend.</p>
-                <p className="learnmore d-flex"><Link to="/annual-anzac-day-ceremonies" title="annual anzac day ceremonies">Learn More</Link></p>
+                <p className="learnmore d-flex"><Link to="/annual-anzac-day-ceremonies" title="Annual ANZAC Day Ceremonies">Annual ANZAC Day Ceremonies</Link></p>
               </div>
             </Col>
           </Row>
