@@ -45,13 +45,9 @@
   color:#fff;
   text-transform:uppercase;
   text-decoration:none;
-  opacity:0.6;
   -webkit-transition:400ms ease-in-out;
   transition:400ms ease-in-out;
-}
-
-#boxSide li:hover a {
-  opacity:1;
+  font-weight: 500;
 }
 
 #boxSide li a img {

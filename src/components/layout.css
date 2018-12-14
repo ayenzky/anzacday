@@ -81,23 +81,18 @@ a:hover {
   width: 10%;
 }
 
-.list-unstyled li {
-  background: none !important;
-  padding-left: 0 !important;
-}
-
 p {
   margin-bottom:1.3em;
 }
 
 a {
-  color:#cc9a5e;
+  color:#885f2e;
   -webkit-transition:500ms ease-in-out;
   transition:500ms ease-in-out;
 }
 
 a:hover {
-  color:#c68d4a;
+  color:#a97232;
 }
 
 h1, h2, h3, h4 {
@@ -131,11 +126,11 @@ small, .font_small {
 }
 
 .bg-dark-brown {
-  background-color:#c68d4a;
+  background-color:#a97232;
 }
 
 .text-dark-brown {
-  color:#c68d4a;
+  color:#a97232;
 }
 
 .bg-light-brown {
@@ -195,7 +190,7 @@ section {
   padding: 0;
 }
 ._submit {
-  background-color: #c68d4a;
+  background-color: #a97232;
   color: #fff;
   padding: 15px 40px;
   text-decoration: none;

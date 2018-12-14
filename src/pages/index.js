@@ -68,7 +68,7 @@ const IndexPage = ({data}) => (
                 </ul>
                 <p>There is also a brief description for each resource.</p>
                 <p>The description will:</p>
-                <ul className="list-unstyled checked">
+                <ul className="pl-0 checked">
                   <li>Indicate a summary of the contents</li>
                   <li>Indicate if it is a Queensland related resource</li>
                   <li>Advise whether it is a *classroom-ready unit, or an *interactive resource, or *supplementary information about the topic</li>
@@ -99,7 +99,7 @@ const IndexPage = ({data}) => (
                       </ul>
                       <p>{document.node.shortdesc}</p>
                       <p className="readmore">
-                        <Link to={`/${document.node.slug}`} title="read more">Read More<LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753135/arrow-pointing-to-right.svg" alt="arrow"/></Link>
+                        <Link to={`/${document.node.slug}`} title="read more">Read More<LazyLoadImage effect="blur" src="https://res.cloudinary.com/da3oztzpf/image/upload/v1544767976/arrow-pointing-to-right.svg" alt="arrow"/></Link>
                       </p>
                     </div>
                   </div>

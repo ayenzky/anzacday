@@ -54,26 +54,25 @@
   color:#fff;
   text-transform:uppercase;
   text-decoration:none;
-  opacity:0.6;
   -webkit-transition:400ms ease-in-out;
   transition:400ms ease-in-out;
-}
-
-#box-menu li:hover a {
-  opacity:1;
+  font-weight: 500;
 }
 
 #box-menu li a img {
   margin-bottom:1em;
 }
+
+
 .checked li {
   background:url(https://res.cloudinary.com/db6xmqefe/image/upload/v1539753091/check.svg) no-repeat left 5px;
   padding-left:1.5em;
   margin-bottom:.5em;
+  list-style: none;
 }
 .blog-list-created {
   font-size:15px;
-  color:#c9c9c9;
+  color:#555;
   margin-bottom:1.5em;
 }
 
