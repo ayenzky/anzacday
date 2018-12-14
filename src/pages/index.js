@@ -22,7 +22,7 @@ const IndexPage = ({data}) => (
                 <p>This site includes a host of information about the origins of ANZAC Day, the Spirit of ANZAC and gives an overview of the conflicts in which Australian Defence Force personnel have served in times of war and peace.</p>
                 <p>We hope you will find something of value in the following pages and that you will join with us in continuing the tradition of honouring ANZAC Day.</p>
                 <p>Be sure to like us on <a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer" title="facebook">Facebook</a></p>
-                <p>2018 Brisbane Dawn Service Programme available <a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1540972010/c9s7cl4mie8ougzfdyoa.pdf" title="2018 Brisbane Dawn Service Programme">here</a></p>
+                <p><a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1540972010/c9s7cl4mie8ougzfdyoa.pdf" title="2018 Brisbane Dawn Service Programme">2018 Brisbane Dawn Service Programme</a> is available here.</p>
               </div>
             </Col>
           </Row>
@@ -116,7 +116,7 @@ const IndexPage = ({data}) => (
         </Container>
       </section>
       <section id="anzac-day-student" className="section" style={{
-        backgroundImage:'url(//res.cloudinary.com/dazemr1k4/image/upload/v1445928759/anzac/img/bgimg.jpg)',
+        backgroundImage:'url(https://res.cloudinary.com/da3oztzpf/image/upload/v1544753203/bgimg.webp)',
         backgroundSize:'cover',
         backgroundRepeat:'no-repeat',
         backgroundPosition:'center'}}>
