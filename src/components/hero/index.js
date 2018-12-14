@@ -45,14 +45,14 @@ const Hero = ({children}) => (
       props.match ? (
         <div className='hero'>
           <Media>
-            <LazyLoadImage effect="opacity" className='w-100 mb-0' src='https://res.cloudinary.com/da3oztzpf/image/upload/v1544752218/slide.webp' 
-            srcSet='https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_414/v1544752218/slide.webp 414w,
-                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_568/v1544752218/slide.webp 568w,
-                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_667/v1544752218/slide.webp 667w,
-                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_767/v1544752218/slide.webp 767w,
-                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_823/v1544752218/slide.webp 823w,
-                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_1366/v1544752218/slide.webp 1366w,
-                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_1600/v1544752218/slide.webp 1600w' alt='ANZAC banner'/>
+            <LazyLoadImage effect="blur" className='w-100 mb-0' src='https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_414/v1544776966/slide.jpg' 
+            srcSet='https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_414/v1544776966/slide.jpg 414w,
+                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_568/v1544776966/slide.jpg 568w,
+                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_667/v1544776966/slide.jpg 667w,
+                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_767/v1544776966/slide.jpg 767w,
+                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_823/v1544776966/slide.jpg 823w,
+                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_1366/v1544776966/slide.jpg 1366w,
+                      https://res.cloudinary.com/da3oztzpf/image/upload/c_scale,w_1600/v1544776966/slide.jpg 1600w' alt='ANZAC banner'/>
           </Media>
         </div>
       ) : (
