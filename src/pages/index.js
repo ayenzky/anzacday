@@ -89,7 +89,7 @@ const IndexPage = ({data}) => (
                 <Col md={4} sm={6} className="mb-4" key={document.node.id}>
                   <div className="blog-lead">
                     <div className="blog-lead-img">
-                      <LazyLoadImage effect="blur" className="img-fluid" src={document.node.featured_image.url} alt={document.node.title}/>
+                      <img className="img-fluid" src={document.node.featured_image.url} alt={document.node.title}/>
                     </div>
                     <div className="blog-lead-content mt-3">
                       <h4 className="mt-0"><Link to={`/${document.node.slug}`} title={document.node.title}>{document.node.title}</Link></h4>
