@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 import {Nav, NavDropdown} from 'react-bootstrap'
 import Sidebar from 'react-sidebar'
 import './index.css'
@@ -59,75 +60,75 @@ export default class Menu extends Component {
                 </li>
               </ul>
               <Nav className="d-flex flex-column main-nav w-100 mb-0 mt-4">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about-us">About Us</Nav.Link>
+                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/about-us">About Us</Link>
                 <NavDropdown title="Wars" id="basic-nav-dropdown">
                   <div className="dropdown-item ecps legends">
-                    <Nav.Link href="/1899-1902-boer-war" className="ecps legends">1899-1902 BOER WAR</Nav.Link>
+                    <Link to="/1899-1902-boer-war" className="nav-link ecps legends">1899-1902 BOER WAR</Link>
                   </div>
                   <NavDropdown.Divider className="mt-0" />
                   <NavDropdown alignRight title="1914-1918 WORLD WAR 1" id="basic-nav-dropdown">
                     <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown-1">
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww1-general">WW1-General</Nav.Link>
+                        <Link className="nav-link" to="/ww1-general">WW1-General</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww1-gallipoli">WW1-Gallipoli</Nav.Link>
+                        <Link className="nav-link" to="/ww1-gallipoli">WW1-Gallipoli</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww1-western-front">WW1-Western Front</Nav.Link>
+                        <Link className="nav-link" to="/ww1-western-front">WW1-Western Front</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww1-middle-east">WW1-Middle East</Nav.Link>
+                        <Link className="nav-link" to="/ww1-middle-east">WW1-Middle East</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww1-home-front">WW1-Home Front</Nav.Link>
+                        <Link className="nav-link" to="/ww1-home-front">WW1-Home Front</Link>
                       </li>
                     </ul>
                   </NavDropdown>
                   <NavDropdown alignRight title="1939-1945 WORD WAR 2" id="basic-nav-dropdown">
                     <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown-1-2">
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww2-general">WW2-General</Nav.Link>
+                        <Link className="nav-link" to="/ww2-general">WW2-General</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww2-europe-middle-east">WW2-Europe/Middle East</Nav.Link>
+                        <Link className="nav-link" to="/ww2-europe-middle-east">WW2-Europe/Middle East</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww2-asia-pacific">WW2-Asia/Pacific</Nav.Link>
+                        <Link className="nav-link" to="/ww2-asia-pacific">WW2-Asia/Pacific</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww2-prisoner-of-war">WW2-Prisoner of War</Nav.Link>
+                        <Link className="nav-link" to="/ww2-prisoner-of-war">WW2-Prisoner of War</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/ww2-home-front">WW2-Home Front</Nav.Link>
+                        <Link className="nav-link" to="/ww2-home-front">WW2-Home Front</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/1945-49-bcof-british-commonwealth-occupation-force-japan">1945-49 BCOF (British Commonwealth Occupation Force - Japan)</Nav.Link>
+                        <Link className="nav-link" to="/1945-49-bcof-british-commonwealth-occupation-force-japan">1945-49 BCOF (British Commonwealth Occupation Force - Japan)</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/1950-1953-korea">1950-1953 Korea</Nav.Link>
+                        <Link className="nav-link" to="/1950-1953-korea">1950-1953 Korea</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/1950-1960-malayan-emergency">1950-1960 Malayan Emergency</Nav.Link>
+                        <Link className="nav-link" to="/1950-1960-malayan-emergency">1950-1960 Malayan Emergency</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/1964-1966-indonesia">1964-1966 Indonesia</Nav.Link>
+                        <Link className="nav-link" to="/1964-1966-indonesia">1964-1966 Indonesia</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/1962-1972-vietnam">1962-1972 Vietnam</Nav.Link>
+                        <Link className="nav-link" to="/1962-1972-vietnam">1962-1972 Vietnam</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/1990-1991-gulf">1990-1991 Gulf</Nav.Link>
+                        <Link className="nav-link" to="/1990-1991-gulf">1990-1991 Gulf</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/2003-2006-iraq-2003">2003-2006 Iraq 2003</Nav.Link>
+                        <Link className="nav-link" to="/2003-2006-iraq-2003">2003-2006 Iraq 2003</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/1947-2006-peacekeeping-general">1947-2006 Peacekeeping - General</Nav.Link>
+                        <Link className="nav-link" to="/1947-2006-peacekeeping-general">1947-2006 Peacekeeping - General</Link>
                       </li>
                       <li className="dropdown-item ecps legends" role="menuitem">
-                        <Nav.Link href="/1999-2000-peacekeeping-east-timor">1999-2000 Peacekeeping - East Timor</Nav.Link>
+                        <Link className="nav-link" to="/1999-2000-peacekeeping-east-timor">1999-2000 Peacekeeping - East Timor</Link>
                       </li>
                     </ul>
                   </NavDropdown>
@@ -135,106 +136,106 @@ export default class Menu extends Component {
                 <NavDropdown alignRight title="Themes" id="basic-nav-dropdown">
                   <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown2">
                     <li className="dropdown-item ecps legends" role="menuitem">
-                      <Nav.Link href="/commemoration">Commemoration</Nav.Link>
+                      <Link className="nav-link" to="/commemoration">Commemoration</Link>
                     </li>
                     <li className="dropdown-item ecps legends" role="menuitem">
-                      <Nav.Link href="/heroes">Heroes</Nav.Link>
+                      <Link className="nav-link" to="/heroes">Heroes</Link>
                     </li>
                     <li className="dropdown-item ecps legends" role="menuitem">
-                      <Nav.Link href="/anzac-day">Anzac Day</Nav.Link>
+                      <Link className="nav-link" to="/anzac-day">Anzac Day</Link>
                     </li>
                     <li className="dropdown-item ecps legends" role="menuitem">
-                      <Nav.Link href="/women">Women</Nav.Link>
+                      <Link className="nav-link" to="/women">Women</Link>
                     </li>
                     <li className="dropdown-item ps legends" role="menuitem">
-                      <Nav.Link href="/community">Community</Nav.Link>
+                      <Link className="nav-link" to="/community">Community</Link>
                     </li>
                     <li className="dropdown-item ecps legends" role="menuitem">
-                      <Nav.Link href="/victoria-cross">Victoria Cross</Nav.Link>
+                      <Link className="nav-link" to="/victoria-cross">Victoria Cross</Link>
                     </li>
                     <li className="dropdown-item ecps legends" role="menuitem">
-                      <Nav.Link href="/family">Family</Nav.Link>
+                      <Link className="nav-link" to="/family">Family</Link>
                     </li>
                     <li className="dropdown-item ps legends" role="menuitem">
-                      <Nav.Link href="/memorials">Memorials</Nav.Link>
+                      <Link className="nav-link" to="/memorials">Memorials</Link>
                     </li>
                   </ul>
                 </NavDropdown>
                 <NavDropdown alignRight title="Interactives" id="basic-nav-dropdown">
                   <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown3">
                     <li className="dropdown-item ps legends" role="menuitem">
-                      <Nav.Link href="/last-voyage-of-ae2">Last Voyage of AE2</Nav.Link>
+                      <Link className="nav-link" to="/last-voyage-of-ae2">Last Voyage of AE2</Link>
                     </li>
                     <li className="dropdown-item ps legends" role="menuitem">
-                      <Nav.Link href="/charge-at-beersheba">Charge at Beersheba</Nav.Link>
+                      <Link className="nav-link" to="/charge-at-beersheba">Charge at Beersheba</Link>
                     </li>
                     <li className="dropdown-item ps legends" role="menuitem">
-                      <Nav.Link href="/smithy-interactive">Smithy Interactive</Nav.Link>
+                      <Link className="nav-link" to="/smithy-interactive">Smithy Interactive</Link>
                     </li>
                     <li className="dropdown-item p legends" role="menuitem">
-                      <Nav.Link href="/who-am-i">Who Am I?</Nav.Link>
+                      <Link className="nav-link" to="/who-am-i">Who Am I?</Link>
                     </li>
                     <li className="dropdown-item ecps legends" role="menuitem">
-                      <Nav.Link href="/battle-casualties">Battle Casualties</Nav.Link>
+                      <Link className="nav-link" to="/battle-casualties">Battle Casualties</Link>
                     </li>
                     <li className="dropdown-item ecps legends" role="menuitem">
-                      <Nav.Link href="/infantryman">Infantryman</Nav.Link>
+                      <Link className="nav-link" to="/infantryman">Infantryman</Link>
                     </li>
                     <li className="dropdown-item ecp legends" role="menuitem">
-                      <Nav.Link href="/where-in-the-world">Where in the World?</Nav.Link>
+                      <Link className="nav-link" to="/where-in-the-world">Where in the World?</Link>
                     </li>
                     <li className="dropdown-item ecp legends" role="menuitem">
-                      <Nav.Link href="/checking-your-gear">Checking Your Gear</Nav.Link>
+                      <Link className="nav-link" to="/checking-your-gear">Checking Your Gear</Link>
                     </li>
                     <li className="dropdown-item ecp legends" role="menuitem">
-                      <Nav.Link href="/suitcase-treasure">Suitcase Treasure</Nav.Link>
+                      <Link className="nav-link" to="/suitcase-treasure">Suitcase Treasure</Link>
                     </li>
                     <li className="dropdown-item ecp legends" role="menuitem">
-                      <Nav.Link href="/anzac-puzzles">ANZAC Puzzles</Nav.Link>
+                      <Link className="nav-link" to="/anzac-puzzles">ANZAC Puzzles</Link>
                     </li>
                     <li className="dropdown-item ecp legends" role="menuitem">
-                      <Nav.Link href="/uniforms-over-time">Uniforms Over Time</Nav.Link>
+                      <Link className="nav-link" to="/uniforms-over-time">Uniforms Over Time</Link>
                     </li>
                     <li className="dropdown-item ecp legends" role="menuitem">
-                      <Nav.Link href="/flying-the-flag">Flying the Flag</Nav.Link>
+                      <Link className="nav-link" to="/flying-the-flag">Flying the Flag</Link>
                     </li>
                     <li className="dropdown-item ecp legends" role="menuitem">
-                      <Nav.Link href="/women-in-war">Women in War</Nav.Link>
+                      <Link className="nav-link" to="/women-in-war">Women in War</Link>
                     </li>
                   </ul>
                 </NavDropdown>
                 
-                  <Nav.Link href="/history">History</Nav.Link>
+                  <Link className="nav-link" to="/history">History</Link>
                 
-                  <Nav.Link href="/education">Education</Nav.Link>
+                  <Link className="nav-link" to="/education">Education</Link>
                 
-                  <Nav.Link href="/adcc-merchandise-for-schools">Schools Orders &amp; Information</Nav.Link>
+                  <Link className="nav-link" to="/adcc-merchandise-for-schools">Schools Orders &amp; Information</Link>
                 
-                  <Nav.Link href="/service-activities">ANZAC Day Services</Nav.Link>
+                  <Link className="nav-link" to="/service-activities">ANZAC Day Services</Link>
                 
-                  <Nav.Link href="/poetry">Poetry</Nav.Link>
+                  <Link className="nav-link" to="/poetry">Poetry</Link>
                 
-                  <Nav.Link href="/just-soldiers">Just Soldiers</Nav.Link>
+                  <Link className="nav-link" to="/just-soldiers">Just Soldiers</Link>
                 
-                  <Nav.Link href="/speeches">Speeches</Nav.Link>
+                  <Link className="nav-link" to="/speeches">Speeches</Link>
                 
-                  <Nav.Link href="/annual-anzac-day-ceremonies">Annual ANZAC Day Ceremonies</Nav.Link>
+                  <Link className="nav-link" to="/annual-anzac-day-ceremonies">Annual ANZAC Day Ceremonies</Link>
                 
-                  <Nav.Link href="/the-spirit-of-anzac">The Spirit of ANZAC</Nav.Link>
+                  <Link className="nav-link" to="/the-spirit-of-anzac">The Spirit of ANZAC</Link>
                 
-                  <Nav.Link href="/current-catalogue">Current Catalogue</Nav.Link>
+                  <Link className="nav-link" to="/current-catalogue">Current Catalogue</Link>
                 
-                  <Nav.Link href="/photo-gallery">Photo Gallery</Nav.Link>
+                  <Link className="nav-link" to="/photo-gallery">Photo Gallery</Link>
                 
-                  <Nav.Link href="/download-tips">Download Tips</Nav.Link>
+                  <Link className="nav-link" to="/download-tips">Download Tips</Link>
                 
-                  <Nav.Link href="/awm-images">Copying of Images</Nav.Link>
+                  <Link className="nav-link" to="/awm-images">Copying of Images</Link>
                 
-                  <Nav.Link href="/anzac-news">Latest News</Nav.Link>
+                  <Link className="nav-link" to="/anzac-news">Latest News</Link>
                 
-                  <Nav.Link href="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</Nav.Link>
+                  <Link className="nav-link" to="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</Link>
                 
-                  <Nav.Link href="/contact-us">Contact Us</Nav.Link>
+                  <Link className="nav-link" to="/contact-us">Contact Us</Link>
                 
               </Nav>
             </div>
