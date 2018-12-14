@@ -15,3 +15,8 @@ img {
   font-weight: 500;
   color: #fff;
 }
+
+.list-unstyled li {
+  background: none !important;
+  padding-left: 0 !important;
+}
