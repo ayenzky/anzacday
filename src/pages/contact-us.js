@@ -35,8 +35,6 @@ export default class Contact extends Component {
         ...this.state
       })
     })
-      .then(() => Link(form.getAttribute("action")))
-      .catch(error => alert(error));
   };
   render() {
     return (
