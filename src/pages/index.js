@@ -2,7 +2,7 @@ import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
 import {FacebookProvider, Page} from 'react-facebook'
-// import LazyLoad from 'react-lazyload'
+import Moment from 'react-moment'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Layout from '../components/layout'
 import './index.css'
@@ -86,7 +86,7 @@ const IndexPage = ({data}) => (
           <div data-aos="fade-up" data-aos-once="true" className="content blog-list aos-init aos-animate">
             <Row>
               {data.allStrapiArticles.edges.map(document => (
-                <Col md={4} sm={6} className="mb-4" key={document.node.id}>
+                <Col md={6} lg={4} className="mb-4" key={document.node.id}>
                   <div className="blog-lead">
                     <div className="blog-lead-img">
                       <img className="img-fluid" src={document.node.featured_image.url} alt={document.node.title}/>
@@ -95,7 +95,7 @@ const IndexPage = ({data}) => (
                       <h4 className="mt-0"><Link to={`/${document.node.slug}`} title={document.node.title}>{document.node.title}</Link></h4>
                       <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
                         <li className="text-capitalize"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt="author icon"/><Link to={`/authors/${document.node.author.id}`} title={document.node.author.username}>{document.node.author.username}</Link></li>
-                        <li><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt="clock icon"/>{document.node.date}</li>
+                        <li><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt="clock icon"/><Moment format="D MMM YYYY" withTitle>{document.node.date}</Moment></li>
                       </ul>
                       <p>{document.node.shortdesc}</p>
                       <p className="readmore">
@@ -105,7 +105,7 @@ const IndexPage = ({data}) => (
                   </div>
                 </Col>
               ))}
-              <Col md={4} sm={6} className="mb-4">
+              <Col md={6} lg={4} className="mb-4">
                 <FacebookProvider appId="1499897476896631">
                   <Page href="https://www.facebook.com/anzacdaycommemorationcommitteeqld/" tabs="timeline" width="500" height="550" smallHeader="true" />
                 </FacebookProvider>  
