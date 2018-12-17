@@ -4,7 +4,7 @@ import { Link, navigateTo } from 'gatsby'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
 import './pages.css'
-const RECAPTCHA_KEY = '6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1';
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY ? process.env.SITE_RECAPTCHA_KEY : '6Lf8CoAUAAAAAI3mIxwo_kEL4X06djUMGpjhfHP1';
 
 function encode(data) {
   return Object.keys(data)
@@ -24,7 +24,7 @@ export default class Contact extends Component {
     this.setState({ "g-recaptcha-response": value });
   };
   handleSubmit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     const form = e.target;
     console.log(form);
     fetch("/contact-us?no-cache=1", {
@@ -34,10 +34,9 @@ export default class Contact extends Component {
         "form-name": form.getAttribute("name"),
         ...this.state
       })
-      .then(navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error))
-
     })
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
   };
   render() {
     return (
@@ -50,8 +49,8 @@ export default class Contact extends Component {
         <Col xs={12}>
             <p><strong>Postal Address:</strong> ADCC PO Box 3246 STAFFORD DC QLD 4053<br/>21 Wolverhampton Street STAFFORD QLD 4053</p>
             <p><strong>Office Hours:</strong> (Monday – Friday 9.00am – 4.00pm)</p>
-            <p><strong>Telephone:</strong> <a href="tel:0732637118" title="0732637118">07 3263 7118</a></p>
-            <p><strong>Fax:</strong> <a href="tel:0731750608" title="0731750608">07 3175 0608</a></p>
+            <p><strong>Telephone:</strong> 07 3263 7118</p>
+            <p><strong>Fax:</strong> 07 3175 0608</p>
             <p><strong>Email:</strong> <a href="mailto:office.adcc@anzacday.org.au">office.adcc@anzacday.org.au</a></p>
             <h3>We love getting emails but ...Why some emails do not receive a reply.</h3>
             <p>The ANZAC Day Commemoration Committee members are mostly volunteers who are stretched to the limit during the weeks leading up to ANZAC Day. We receive lots of emails and we make every effort to respond appropriately to those which contain what we believe are fair requests for help.</p>
