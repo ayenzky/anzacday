@@ -13,8 +13,6 @@ import Sidebar from './sidebar'
 import './layout.css'
 import favicon from '../images/favicon.ico'
 
-console.log(favicon)
-
 export default ({pageTitle, data, children, layoutClass}) =>
 
   <StaticQuery
