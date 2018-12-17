@@ -162,7 +162,7 @@ export default class Menu extends Component {
                   </ul>
                 </NavDropdown>
                 <NavDropdown alignRight title="Interactives" id="basic-nav-dropdown">
-                  <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown3">
+                  <ul className="drop-classification pl-0" aria-labelledby="navbarDropdown3">
                     <li className="dropdown-item ps legends" role="menuitem">
                       <Link className="nav-link" to="/last-voyage-of-ae2">Last Voyage of AE2</Link>
                     </li>
