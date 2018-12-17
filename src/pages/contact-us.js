@@ -24,7 +24,7 @@ export default class Contact extends Component {
     this.setState({ "g-recaptcha-response": value });
   };
   handleSubmit = e => {
-    // e.preventDefault();
+    e.preventDefault();
     const form = e.target;
     console.log(form);
     fetch("/contact-us?no-cache=1", {
