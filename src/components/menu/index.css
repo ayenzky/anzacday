@@ -16,6 +16,10 @@
   margin-right:0.5em;
 }
 
+.drop-classification {
+  list-style: none;
+}
+
 .legends {
   padding-left:2em;
   

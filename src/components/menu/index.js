@@ -68,7 +68,7 @@ export default class Menu extends Component {
                   </div>
                   <NavDropdown.Divider className="mt-0" />
                   <NavDropdown alignRight title="1914-1918 WORLD WAR 1" id="basic-nav-dropdown">
-                    <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown-1">
+                    <ul className="drop-classification pl-0" aria-labelledby="navbarDropdown-1">
                       <li className="dropdown-item ecps legends" role="menuitem">
                         <Link className="nav-link" to="/ww1-general">WW1-General</Link>
                       </li>
@@ -87,7 +87,7 @@ export default class Menu extends Component {
                     </ul>
                   </NavDropdown>
                   <NavDropdown alignRight title="1939-1945 WORD WAR 2" id="basic-nav-dropdown">
-                    <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown-1-2">
+                    <ul className="drop-classification pl-0" aria-labelledby="navbarDropdown-1-2">
                       <li className="dropdown-item ecps legends" role="menuitem">
                         <Link className="nav-link" to="/ww2-general">WW2-General</Link>
                       </li>
@@ -134,7 +134,7 @@ export default class Menu extends Component {
                   </NavDropdown>
                 </NavDropdown>
                 <NavDropdown alignRight title="Themes" id="basic-nav-dropdown">
-                  <ul className="list-unstyled pl-5" aria-labelledby="navbarDropdown2">
+                  <ul className="drop-classification pl-0" aria-labelledby="navbarDropdown2">
                     <li className="dropdown-item ecps legends" role="menuitem">
                       <Link className="nav-link" to="/commemoration">Commemoration</Link>
                     </li>
