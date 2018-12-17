@@ -11,7 +11,9 @@ import Header from './header'
 import Hero from './hero'
 import Sidebar from './sidebar'
 import './layout.css'
+import favicon from '../images/favicon.ico'
 
+console.log(favicon)
 
 export default ({pageTitle, data, children, layoutClass}) =>
 
@@ -32,6 +34,9 @@ export default ({pageTitle, data, children, layoutClass}) =>
           meta ={[
             {name: 'description', content: 'anzac day commemoration committee'},
             {name: 'keywords', content: 'anzac day, history, education, commemoration'}
+          ]}
+          link={[
+            { rel: 'shortcut icon', type: 'img/x-icon', href: `${favicon}` }
           ]}
         >
         <html lang="en" />
