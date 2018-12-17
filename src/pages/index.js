@@ -116,7 +116,7 @@ const IndexPage = ({data}) => (
         </Container>
       </section>
       <section id="anzac-day-student" className="section" style={{
-        backgroundImage:'url(https://res.cloudinary.com/da3oztzpf/image/upload/v1544753203/bgimg.webp)',
+        backgroundImage:'url(https://res.cloudinary.com/da3oztzpf/image/upload/v1545010806/bgimg.jpg)',
         backgroundSize:'cover',
         backgroundRepeat:'no-repeat',
         backgroundPosition:'center'}}>
