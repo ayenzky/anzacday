@@ -42,7 +42,7 @@ export default class Menu extends Component {
           }}
           sidebar={
             <div id="nav-brand-side" className="pb-4">
-              <ul className="list-unstyled classification pl-5">
+              <ul className="list-unstyled classification pl-0">
                 <li>
                   <h5 className="mt-0 font-weight-light">Legend:</h5>
                 </li>
