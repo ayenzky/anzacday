@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Recaptcha from 'react-google-recaptcha'
-import { Link } from 'gatsby'
+import { Link, navigateTo } from 'gatsby'
 import Layout from '../components/layout'
 import {Col, Row} from 'react-bootstrap'
 import './pages.css'
@@ -24,7 +24,7 @@ export default class Contact extends Component {
     this.setState({ "g-recaptcha-response": value });
   };
   handleSubmit = e => {
-    // e.preventDefault();
+    e.preventDefault();
     const form = e.target;
     console.log(form);
     fetch("/contact-us?no-cache=1", {
@@ -33,7 +33,10 @@ export default class Contact extends Component {
       body: encode({
         "form-name": form.getAttribute("name"),
         ...this.state
-      }).then(alert())
+      })
+      .then(navigateTo(form.getAttribute('action')))
+      .catch(error => alert(error))
+
     })
   };
   render() {
