@@ -33,7 +33,7 @@ export default class Contact extends Component {
       body: encode({
         "form-name": form.getAttribute("name"),
         ...this.state
-      })
+      }).then(alert())
     })
   };
   render() {

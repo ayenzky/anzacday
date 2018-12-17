@@ -18,7 +18,7 @@ export default () =>
               <li><Link to="/about-us">About Us</Link></li>
               <li><Link to="/history">History</Link></li>
               <li><Link to="/education">Education</Link></li>
-              <li><Link to="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</Link></li>
+              <li><a href="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</a></li>
               <li><Link to="/anzac-news">Latest News</Link></li>
               <li><Link to="/adcc-merchandise-for-schools">Schools Orders &amp; Information</Link></li>
               <li><Link to="/commemoration-activities">Graves &amp; Memorials Grants Program</Link></li>

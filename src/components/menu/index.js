@@ -233,7 +233,7 @@ export default class Menu extends Component {
                 
                   <Link className="nav-link" to="/anzac-news">Latest News</Link>
                 
-                  <Link className="nav-link" to="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</Link>
+                  <a className="nav-link" href="https://shop.anzacday.org.au/" target="_blank" rel="noopener noreferrer">Shop</a>
                 
                   <Link className="nav-link" to="/contact-us">Contact Us</Link>
                 
