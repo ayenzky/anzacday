@@ -4194,9 +4194,9 @@ gatsby-source-filesystem@^2.0.3:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-source-strapi@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-0.0.5.tgz#779ebf61b2fdc33716c815ca03d84a3ef19032b7"
+gatsby-source-strapi@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-0.0.6.tgz#bee0fa3d887cf9950e9c3053fb813b97deb43c76"
   dependencies:
     axios "^0.18.0"
     gatsby-node-helpers "^0.3.0"
