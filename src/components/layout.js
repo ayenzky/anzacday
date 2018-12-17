@@ -47,12 +47,12 @@ export default ({pageTitle, data, children, layoutClass}) =>
         <Location>
           {({ location }) => {
             return (
-               <div className={location.pathname === '/' ? 'container-fluid' : 'container py-9'}>
+               <div className={location.pathname === '/' ? 'container-fluid' : 'container pt-9'}>
                   <Row className='align-items-start'>
                     <Col lg={location.pathname === '/' ? '12 p-0' : '8 mb-5'}>
                       {children}    
                     </Col>
-                    <div className={location.pathname !== '/' ? 'col-md-12 col-lg-4 px-0 px-lg-3' : 'd-none'}>
+                    <div className={location.pathname !== '/' ? 'col-md-12 col-lg-4 px-0 px-lg-3 pb-0 pb-lg-5' : 'd-none'}>
                       <Sidebar/>
                     </div>
                   </Row>
