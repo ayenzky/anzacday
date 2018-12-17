@@ -46,9 +46,9 @@ export default () =>
             </div>
             <p>ADCC PO Box 3246 STAFFORD DC QLD 4053<br/>21 Wolverhampton Street STAFFORD QLD 4053</p>
             <ul className="list-unstyled mt-3 ml-0">
-              <li>Tel.: 07 3263 7118</li>
-              <li>Fax: 07 3175 0608</li>
-              <li>Email:&nbsp;<a href="mailto:office.adcc@anzacday.org.au">office.adcc@anzacday.org.au</a></li>
+              <li>Tel.: <a href="tel:0732637118" title="0732637118">07 3263 7118</a></li>
+              <li>Fax: <a href="tel:0731750608" title="0731750608">07 3175 0608</a></li>
+              <li>Email:&nbsp;<a href="mailto:office.adcc@anzacday.org.au" title="office.adcc@anzacday.org.au">office.adcc@anzacday.org.au</a></li>
             </ul>
             <h4>Openning Hours</h4>
             <p className='mb-0'>Monday - Friday</p>
