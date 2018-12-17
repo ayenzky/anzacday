@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
-import { FacebookProvider, EmbeddedPost } from 'react-facebook'
+import {FacebookProvider, Page} from 'react-facebook'
 // import LazyLoad from 'react-lazyload'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Layout from '../components/layout'
@@ -106,10 +106,9 @@ const IndexPage = ({data}) => (
                 </Col>
               ))}
               <Col md={4} sm={6} className="mb-4">
-                
                 <FacebookProvider appId="1499897476896631">
-                  <EmbeddedPost href="http://www.facebook.com" width="500" />
-                </FacebookProvider>
+                  <Page href="https://www.facebook.com/anzacdaycommemorationcommitteeqld/" tabs="timeline" width="500" height="550" smallHeader="true" />
+                </FacebookProvider>  
               </Col>
             </Row>
           </div>
