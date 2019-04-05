@@ -1,4 +1,50 @@
+// const queries = require('./src/utils/algolia')
 require('dotenv').config()
+
+const pageQuery = `{
+  allStrapiPages {
+      edges {
+        node {
+          objectID: id
+          title
+          slug
+        }
+      }
+    }
+}`
+
+const postQuery = `{
+  allStrapiArticles {
+      edges {
+        node {
+          id
+          title
+          slug
+        }
+      }
+    }
+}`
+
+const queries = [
+  {
+    query: pageQuery,
+    transformer: ({ data }) => data.allStrapiPages.edges.map(({ node }) => node), // optional
+    indexName: 'Pages', // overrides main index name, optional
+    settings: {
+      // optional, any index settings
+    },
+  },
+  {
+    query: postQuery,
+    transformer: ({ data }) => data.allStrapiArticles.edges.map(({ node }) => node), // optional
+    indexName: 'Posts', // overrides main index name, optional
+    settings: {
+      // optional, any index settings
+    },
+  }
+];
+
+
 module.exports = {
   siteMetadata: {
     title: 'ANZAC Day Commemoration Committee',
@@ -26,6 +72,15 @@ module.exports = {
           identifier: process.env.STRAPI_USER,
           password: process.env.STRAPI_PASSWORD,
         }
+      },
+    },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: 'BZA49JMRQV',
+        apiKey: 'e5761a975096a48e4eaedf0bd8f3d4b8',
+        queries,
+        chunkSize: 10000, // default: 1000
       },
     },
     {

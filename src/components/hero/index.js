@@ -2,6 +2,7 @@ import React from 'react'
 import {Container, Row, Col, Media} from 'react-bootstrap'
 // import Slide_1600w from '../../images/slide4-1600w.jpg'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Match } from "@reach/router"
 import styl from './index.module.css'
 
