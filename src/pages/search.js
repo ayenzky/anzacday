@@ -34,7 +34,7 @@ class App extends Component {
             searchClient={searchClient}
             indexName="Pages"
           >
-            <SearchBox />
+            <SearchBox type="search" />
             <div className="mt-5">
             <Configure hitsPerPage={8} />
             <Index indexName="Pages">
