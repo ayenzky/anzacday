@@ -23,3 +23,57 @@
 .breadcrumbs li.bread-link:nth-last-child(1) a {
   color: #885f2e;
 }
+
+.search-page .ais-SearchBox-form {
+  display: flex;
+  justify-content: flex-start;
+}
+.search-page .ais-SearchBox-form .ais-SearchBox-reset {
+  border: none;
+  outline: none;
+}
+.search-page .ais-SearchBox-form .ais-SearchBox-reset svg {
+  width: 18px;
+  height: 18px;
+  fill:#cc9a5e;
+}
+.search-page .ais-SearchBox-form input:focus {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.search-page .ais-SearchBox-form input {
+  border-radius: 5px;
+  border:1px solid #ddd;
+  background: #fff url(../images/magnifier.svg);
+  background-repeat: no-repeat;
+  background-position:right 10px center;
+  padding: 0.8rem;
+  width: 100%;
+}
+.search-page .ais-SearchBox-form .ais-SearchBox-submit {
+  display: none;
+}
+
+.search-page .ais-Hits-list {
+  margin:0;
+  padding: 0;
+}
+.search-page .ais-Hits-list li {
+  background-image: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.search-page .ais-Pagination-list {
+  margin:0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search-page .ais-Pagination-list li {
+  background-image: none;
+
+}

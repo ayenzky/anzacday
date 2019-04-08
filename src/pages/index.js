@@ -2,10 +2,16 @@ import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
 import {FacebookProvider, Page} from 'react-facebook'
-import Moment from 'react-moment'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Layout from '../components/layout'
 import './index.css'
+import Search from "../components/Search"
+
+const searchIndices = [
+  { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
+  { name: `Posts`, title: `News`, hitComp: `PostHit` },
+]
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -13,7 +19,8 @@ const IndexPage = ({data}) => (
         <Container>
           <Row>
             <Col md={8} sm={6}>
-              <div data-aos="fade-right" data-aos-once="true" className="content py-7 aos-init aos-animate">
+              <Search collapse indices={searchIndices} />
+              <div data-aos="fade-right" data-aos-once="true" className="content py-7 pt-4 aos-init aos-animate">
                 <h1 className="heading-1 text-dark-brown">Welcome to the ANZAC Day Commemoration Committee</h1>
                 <p>ABN 46 457 412 054</p>
                 <p>“ANZAC” was the name given to a combined force of First Australian Imperial Force and New Zealand Army troops who landed on Turkey’s Gallipoli Peninsula at around dawn on Sunday, the 25th day of April, 1915, barely nine months after the outbreak of World War I.</p>
@@ -28,6 +35,7 @@ const IndexPage = ({data}) => (
           </Row>
         </Container>
         <ul className="mb-0 d-flex flex-wrap" id="box-menu">
+          
           <li data-aos="zoom-in" data-aos-duration="50" data-aos-once="true" className="bg-dark-brown aos-init aos-animate">
             <Link to="/current-catalogue" title="online shop">
               <LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753799/online-shop-icon.png" alt="online shop" height="53"/>Online Shop Including Catalogue
@@ -95,7 +103,7 @@ const IndexPage = ({data}) => (
                       <h4 className="mt-0"><Link to={`/${document.node.slug}`} title={document.node.title}>{document.node.title}</Link></h4>
                       <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
                         <li className="text-capitalize"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt="author icon"/><Link to={`/authors/${document.node.author.id}`} title={document.node.author.username}>{document.node.author.username}</Link></li>
-                        <li><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt="clock icon"/><Moment format="D MMM YYYY" withTitle>{document.node.date}</Moment></li>
+                        <li><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt="clock icon"/>{document.node.date}</li>
                       </ul>
                       <p>{document.node.shortdesc}</p>
                       <p className="readmore">
@@ -150,7 +158,7 @@ export const query = graphql`
           }
           title
           shortdesc
-          date(formatString: "MMMM DD YYYY")
+          date(formatString: "D MMM YYYY")
           slug
           author {
             id
