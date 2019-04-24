@@ -50,7 +50,7 @@ export default () =>
               <li>Fax: <a href="tel:0731750608" title="0731750608">07 3175 0608</a></li>
               <li>Email:&nbsp;<a href="mailto:office.adcc@anzacday.org.au" title="office.adcc@anzacday.org.au">office.adcc@anzacday.org.au</a></li>
             </ul>
-            <h4>Openning Hours</h4>
+            <h4>Opening Hours</h4>
             <p className='mb-0'>Monday - Friday</p>
             <p>9:00 am - 4:00 pm</p>
           </Col>
