@@ -29,7 +29,7 @@ const IndexPage = ({data}) => (
                 <p>This site includes a host of information about the origins of ANZAC Day, the Spirit of ANZAC and gives an overview of the conflicts in which Australian Defence Force personnel have served in times of war and peace.</p>
                 <p>We hope you will find something of value in the following pages and that you will join with us in continuing the tradition of honouring ANZAC Day.</p>
                 <p>Be sure to like us on <a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer" title="facebook">Facebook</a></p>
-                <p><a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1554959299/AD_0306_ANZAC_DawnService_2019_p3.pdf" target="_blank" title="2019 Brisbane Dawn Service Programme">2019 Brisbane Dawn Service Programme</a> is available here.</p>
+                <p><a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1554959299/AD_0306_ANZAC_DawnService_2019_p3.pdf" target="_blank" rel="noopener noreferrer" title="2019 Brisbane Dawn Service Programme">2019 Brisbane Dawn Service Programme</a> is available here.</p>
               </div>
             </Col>
           </Row>
@@ -87,14 +87,17 @@ const IndexPage = ({data}) => (
         </Container>
       </section>
       <section id="latest-news" className="section">
-        <Container>
+        <Container fluid>
+          <Row>
+          <Col md={`${10} mx-auto`}>
           <div className="intro">
             <h2>Latest News</h2>
           </div>
-          <div data-aos="fade-up" data-aos-once="true" className="content blog-list aos-init aos-animate">
+          <div className="content blog-list aos-init aos-animate">
+            
             <Row>
               {data.allStrapiArticles.edges.map(document => (
-                <Col md={6} lg={4} className="mb-4" key={document.node.id}>
+                <Col md={6} lg={3} className="mb-4" key={document.node.id}>
                   <div className="blog-lead">
                     <div className="blog-lead-img">
                       <img className="img-fluid" src={document.node.featured_image.url} alt={document.node.title}/>
@@ -113,13 +116,24 @@ const IndexPage = ({data}) => (
                   </div>
                 </Col>
               ))}
-              <Col md={6} lg={4} className="mb-4">
+              <Col md={6} lg={3} className="mb-4">
                 <FacebookProvider appId="1499897476896631">
                   <Page href="https://www.facebook.com/anzacdaycommemorationcommitteeqld/" tabs="timeline" width="500" height="550" smallHeader="true" />
                 </FacebookProvider>  
               </Col>
+               <Col md={6} lg={3} className="mb-4">
+                <div className="border text-center py-5 px-4 bg-dark-brown shadow text-white h-100 d-flex align-items-center">
+                  <div className="content">
+                    <h3 className="mt-4">WE ARE MOVING</h3>
+                    <p>from the end of August 2019 our new premises will be at</p>
+                    <p><strong>Unit 2<br/> 14 Boothby Street<br/> Kedron 4031</strong></p>
+                  </div>
+                </div>
+              </Col>
             </Row>
           </div>
+          </Col>
+          </Row>
         </Container>
       </section>
       <section id="anzac-day-student" className="section" style={{
