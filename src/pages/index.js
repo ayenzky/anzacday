@@ -2,6 +2,7 @@ import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
 import {FacebookProvider, Page} from 'react-facebook'
+import Logo from '../images/favicon.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Layout from '../components/layout'
@@ -117,18 +118,19 @@ const IndexPage = ({data}) => (
                 </Col>
               ))}
               <Col md={6} lg={3} className="mb-4">
-                <FacebookProvider appId="1499897476896631">
-                  <Page href="https://www.facebook.com/anzacdaycommemorationcommitteeqld/" tabs="timeline" width="500" height="550" smallHeader="true" />
-                </FacebookProvider>  
-              </Col>
-               <Col md={6} lg={3} className="mb-4">
-                <div className="border text-center py-5 px-4 bg-dark-brown shadow text-white h-100 d-flex align-items-center">
+                <div className="border text-center py-5 px-4 shadow h-100 d-flex align-items-center">
                   <div className="content">
-                    <h3 className="mt-4">WE ARE MOVING</h3>
+                    <img src={Logo} alt="alt" width={180}/>
+                    <h3 className="mt-4 text-dark-brown">WE ARE MOVING</h3>
                     <p>from the end of August 2019 our new premises will be at</p>
                     <p><strong>Unit 2<br/> 14 Boothby Street<br/> Kedron 4031</strong></p>
                   </div>
                 </div>
+              </Col>
+              <Col md={6} lg={3} className="mb-4">
+                <FacebookProvider appId="1499897476896631">
+                  <Page href="https://www.facebook.com/anzacdaycommemorationcommitteeqld/" tabs="timeline" width="500" height="550" smallHeader="true" />
+                </FacebookProvider>  
               </Col>
             </Row>
           </div>
