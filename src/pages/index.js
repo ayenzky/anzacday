@@ -118,12 +118,17 @@ const IndexPage = ({data}) => (
                 </Col>
               ))}
               <Col md={6} lg={3} className="mb-4">
-                <div className="border text-center py-5 px-4 shadow h-100 d-flex align-items-center">
+                <div className="border text-center py-4 px-4 shadow h-100 d-flex align-items-center">
                   <div className="content">
-                    <img src={Logo} alt="alt" width={180}/>
+                    <img src={Logo} alt="alt" width={150}/>
                     <h3 className="mt-4 text-dark-brown">WE ARE MOVING</h3>
                     <p>from the end of August 2019 our new premises will be at</p>
                     <p><strong>Unit 2<br/> 14 Boothby Street<br/> Kedron 4031</strong></p>
+                    <ul className="list-unstyled mt-3 ml-0">
+                    <li>Tel.: <a href="tel:0732637118" title="0732637118">07 3263 7118</a></li>
+                    <li>Fax: <a href="tel:0731750608" title="0731750608">07 3175 0608</a></li>
+                    <li>Email:&nbsp;<a href="mailto:office.adcc@anzacday.org.au" title="office.adcc@anzacday.org.au">office.adcc@anzacday.org.au</a></li>
+                  </ul>
                   </div>
                 </div>
               </Col>
