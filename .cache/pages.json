@@ -101,6 +101,11 @@
     },
     {
         "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "a-gift-of-the-people-60f",
+        "path": "/a-gift-of-the-people"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
         "jsonName": "a-is-for-anzacs-ef9",
         "path": "/a-is-for-anzacs"
     },
@@ -158,6 +163,11 @@
         "componentChunkName": "component---src-templates-article-js",
         "jsonName": "adcc-100-year-celebration-a6a",
         "path": "/adcc-100-year-celebration"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "adcc-logo-22b",
+        "path": "/adcc-logo"
     },
     {
         "componentChunkName": "component---src-templates-single-js",
@@ -286,8 +296,8 @@
     },
     {
         "componentChunkName": "component---src-templates-single-js",
-        "jsonName": "australias-war-dead-b21",
-        "path": "/australia’s-war-dead"
+        "jsonName": "australias-war-dead-250",
+        "path": "/australias-war-dead"
     },
     {
         "componentChunkName": "component---src-templates-user-js",
@@ -313,6 +323,11 @@
         "componentChunkName": "component---src-templates-single-js",
         "jsonName": "b-map-of-the-area-73f",
         "path": "/b-map-of-the-area"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "badges-6df",
+        "path": "/badges"
     },
     {
         "componentChunkName": "component---src-templates-single-js",
@@ -1691,6 +1706,11 @@
     },
     {
         "componentChunkName": "component---src-templates-single-js",
+        "jsonName": "proud-sponsors-of-the-annual-queensland-anzac-day-badge-appeal-836",
+        "path": "/proud-sponsors-of-the-annual-queensland-anzac-day-badge-appeal"
+    },
+    {
+        "componentChunkName": "component---src-templates-single-js",
         "jsonName": "q-is-for-questions-671",
         "path": "/q-is-for-questions"
     },
@@ -1723,6 +1743,11 @@
         "componentChunkName": "component---src-templates-single-js",
         "jsonName": "sanananda-7aa",
         "path": "/sanananda"
+    },
+    {
+        "componentChunkName": "component---src-pages-search-js",
+        "jsonName": "search-a73",
+        "path": "/search/"
     },
     {
         "componentChunkName": "component---src-templates-single-js",

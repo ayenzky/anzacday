@@ -12,6 +12,7 @@ exports.components = {
   "component---src-pages-contact-us-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/contact-us.js" /* webpackChunkName: "component---src-pages-contact-us-js" */),
   "component---src-pages-list-of-pages-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/list-of-pages.js" /* webpackChunkName: "component---src-pages-list-of-pages-js" */),
   "component---src-pages-photo-gallery-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/photo-gallery.js" /* webpackChunkName: "component---src-pages-photo-gallery-js" */),
+  "component---src-pages-search-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/search.js" /* webpackChunkName: "component---src-pages-search-js" */),
   "component---src-pages-thank-you-js": () => import("/Users/allen/Projects/htdocs/webriqpage-anzacday/src/pages/thank-you.js" /* webpackChunkName: "component---src-pages-thank-you-js" */)
 }
 

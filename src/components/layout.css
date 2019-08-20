@@ -14,37 +14,6 @@ body {
   -moz-osx-font-smoothing:grayscale;
   margin: 0;
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-progress {
-  vertical-align: baseline;
-}
-[hidden],
-template {
-  display: none;
-}
 a {
   word-break: break-word;
   background-color: transparent;
@@ -144,7 +113,9 @@ small, .font_small {
 .text-light-brown {
   color:#cc9a5e;
 }
-
+.shadow {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
+}
 strong {
   font-weight: 500;
 }
@@ -192,6 +163,10 @@ section {
 .blockquote-footer {
   background-color: transparent;
   padding: 0;
+}
+.form-control {
+  padding: 0.8rem;
+  border-radius: 4px;
 }
 ._submit {
   background-color: #a97232;

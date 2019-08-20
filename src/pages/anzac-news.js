@@ -1,6 +1,5 @@
 import React from 'react'  
 import { Link, graphql } from 'gatsby'
-import Moment from 'react-moment'
 import Layout from '../components/layout'
 import {Row, Col} from 'react-bootstrap'
 import './anzac-news.css'
@@ -20,7 +19,7 @@ const IndexPage = ({ data }) => (
           <h2><Link to={`/${document.node.slug}`}>{document.node.title}</Link></h2>
           <ul className='list-unstyled d-flex'>
             <li className='mr-3'>By: <Link className='text-capitalize' to={`/authors/${document.node.author.id}`}>{document.node.author.username}</Link></li>
-            <li>Published: <Moment format="D MMM YYYY" withTitle>{document.node.date}</Moment></li>
+            <li>Published: {document.node.date}</li>
           </ul>
           <p>{document.node.shortdesc}</p>
           <div className='learnmore d-flex justify-content-start mt-0'>
@@ -45,7 +44,7 @@ export const pageQuery = graphql`
           title
           shortdesc
           content
-          date
+          date(formatString: "D MMM YYYY")
           slug
           author {
             id

@@ -2,10 +2,17 @@ import React from 'react'
 import {graphql, Link} from 'gatsby'
 import {Container, Row, Col} from 'react-bootstrap'
 import {FacebookProvider, Page} from 'react-facebook'
-import Moment from 'react-moment'
+import Logo from '../images/favicon.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Layout from '../components/layout'
 import './index.css'
+import Search from "../components/Search"
+
+const searchIndices = [
+  { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
+  { name: `Posts`, title: `News`, hitComp: `PostHit` },
+]
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -13,7 +20,8 @@ const IndexPage = ({data}) => (
         <Container>
           <Row>
             <Col md={8} sm={6}>
-              <div data-aos="fade-right" data-aos-once="true" className="content py-7 aos-init aos-animate">
+              <Search collapse indices={searchIndices} />
+              <div data-aos="fade-right" data-aos-once="true" className="content py-7 pt-4 aos-init aos-animate">
                 <h1 className="heading-1 text-dark-brown">Welcome to the ANZAC Day Commemoration Committee</h1>
                 <p>ABN 46 457 412 054</p>
                 <p>“ANZAC” was the name given to a combined force of First Australian Imperial Force and New Zealand Army troops who landed on Turkey’s Gallipoli Peninsula at around dawn on Sunday, the 25th day of April, 1915, barely nine months after the outbreak of World War I.</p>
@@ -22,12 +30,13 @@ const IndexPage = ({data}) => (
                 <p>This site includes a host of information about the origins of ANZAC Day, the Spirit of ANZAC and gives an overview of the conflicts in which Australian Defence Force personnel have served in times of war and peace.</p>
                 <p>We hope you will find something of value in the following pages and that you will join with us in continuing the tradition of honouring ANZAC Day.</p>
                 <p>Be sure to like us on <a href="https://www.facebook.com/anzacdaycommemorationcommitteeqld" target="_blank" rel="noopener noreferrer" title="facebook">Facebook</a></p>
-                <p><a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1540972010/c9s7cl4mie8ougzfdyoa.pdf" title="2018 Brisbane Dawn Service Programme">2018 Brisbane Dawn Service Programme</a> is available here.</p>
+                <p><a href="https://res.cloudinary.com/da3oztzpf/image/upload/v1554959299/AD_0306_ANZAC_DawnService_2019_p3.pdf" target="_blank" rel="noopener noreferrer" title="2019 Brisbane Dawn Service Programme">2019 Brisbane Dawn Service Programme</a> is available here.</p>
               </div>
             </Col>
           </Row>
         </Container>
         <ul className="mb-0 d-flex flex-wrap" id="box-menu">
+          
           <li data-aos="zoom-in" data-aos-duration="50" data-aos-once="true" className="bg-dark-brown aos-init aos-animate">
             <Link to="/current-catalogue" title="online shop">
               <LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753799/online-shop-icon.png" alt="online shop" height="53"/>Online Shop Including Catalogue
@@ -79,14 +88,17 @@ const IndexPage = ({data}) => (
         </Container>
       </section>
       <section id="latest-news" className="section">
-        <Container>
+        <Container fluid>
+          <Row>
+          <Col md={`${10} mx-auto`}>
           <div className="intro">
             <h2>Latest News</h2>
           </div>
-          <div data-aos="fade-up" data-aos-once="true" className="content blog-list aos-init aos-animate">
+          <div className="content blog-list aos-init aos-animate">
+            
             <Row>
               {data.allStrapiArticles.edges.map(document => (
-                <Col md={6} lg={4} className="mb-4" key={document.node.id}>
+                <Col md={6} lg={3} className="mb-4" key={document.node.id}>
                   <div className="blog-lead">
                     <div className="blog-lead-img">
                       <img className="img-fluid" src={document.node.featured_image.url} alt={document.node.title}/>
@@ -95,7 +107,7 @@ const IndexPage = ({data}) => (
                       <h4 className="mt-0"><Link to={`/${document.node.slug}`} title={document.node.title}>{document.node.title}</Link></h4>
                       <ul className="list-unstyled blog-list-created d-flex align-items-center justify-content-start">
                         <li className="text-capitalize"><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753182/001-male.svg" alt="author icon"/><Link to={`/authors/${document.node.author.id}`} title={document.node.author.username}>{document.node.author.username}</Link></li>
-                        <li><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt="clock icon"/><Moment format="D MMM YYYY" withTitle>{document.node.date}</Moment></li>
+                        <li><LazyLoadImage effect="blur" src="https://res.cloudinary.com/db6xmqefe/image/upload/v1539753206/002-clock-with-white-face.svg" alt="clock icon"/>{document.node.date}</li>
                       </ul>
                       <p>{document.node.shortdesc}</p>
                       <p className="readmore">
@@ -105,13 +117,29 @@ const IndexPage = ({data}) => (
                   </div>
                 </Col>
               ))}
-              <Col md={6} lg={4} className="mb-4">
+              <Col md={6} lg={3} className="mb-4">
+                <div className="border text-center py-4 px-4 shadow h-100 d-flex align-items-center">
+                  <div className="content">
+                    <img src={Logo} alt="alt" width={150}/>
+                    <h3 className="mt-4 text-dark-brown">WE ARE MOVING</h3>
+                    <p>from the end of August 2019 our new premises will be at</p>
+                    <p><strong>Unit 2<br/> 14 Boothby Street<br/> Kedron 4031</strong></p>
+                    <ul className="list-unstyled mt-3 ml-0">
+                    <li>Tel.: <a href="tel:0732637118" title="0732637118">07 3263 7118</a></li>
+                    <li>Email:&nbsp;<a href="mailto:office.adcc@anzacday.org.au" title="office.adcc@anzacday.org.au">office.adcc@anzacday.org.au</a></li>
+                  </ul>
+                  </div>
+                </div>
+              </Col>
+              <Col md={6} lg={3} className="mb-4">
                 <FacebookProvider appId="1499897476896631">
                   <Page href="https://www.facebook.com/anzacdaycommemorationcommitteeqld/" tabs="timeline" width="500" height="550" smallHeader="true" />
                 </FacebookProvider>  
               </Col>
             </Row>
           </div>
+          </Col>
+          </Row>
         </Container>
       </section>
       <section id="anzac-day-student" className="section" style={{
@@ -150,7 +178,7 @@ export const query = graphql`
           }
           title
           shortdesc
-          date(formatString: "MMMM DD YYYY")
+          date(formatString: "D MMM YYYY")
           slug
           author {
             id
